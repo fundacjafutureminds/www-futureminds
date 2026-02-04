@@ -16,11 +16,11 @@
 
 ### Hero (HERO)
 
-- [ ] **HERO-01**: Pełnoekranowa sekcja (100vh), ciemne tło #32373c
-- [ ] **HERO-02**: Logo FMF-white.png w lewym górnym rogu
-- [ ] **HERO-03**: Dekoracyjna ilustracja rakiety (liniowa, outline) jako tło
-- [ ] **HERO-04**: Tekst misji fundacji — paragrafy z zielonymi akcentami (#9AFC4E)
-- [ ] **HERO-05**: Strzałka w dół na dole sekcji (separator/scroll indicator)
+- [x] **HERO-01**: Pełnoekranowa sekcja (100vh), ciemne tło #32373c
+- [x] **HERO-02**: Logo FMF-white.png w lewym górnym rogu
+- [x] **HERO-03**: Dekoracyjna ilustracja rakiety (liniowa, outline) jako tło
+- [x] **HERO-04**: Tekst misji fundacji — paragrafy z zielonymi akcentami (#9AFC4E)
+- [x] **HERO-05**: Strzałka w dół na dole sekcji (separator/scroll indicator)
 - [ ] **HERO-06**: Animacja fadeIn na elementach tekstowych
 
 ### Nawigacja (NAV)
@@ -138,11 +138,11 @@
 | FUND-04 | Phase 1: Fundamenty | Complete |
 | FUND-05 | Phase 1: Fundamenty | Complete |
 | FUND-06 | Phase 1: Fundamenty | Complete |
-| HERO-01 | Phase 2: Hero | Pending |
-| HERO-02 | Phase 2: Hero | Pending |
-| HERO-03 | Phase 2: Hero | Pending |
-| HERO-04 | Phase 2: Hero | Pending |
-| HERO-05 | Phase 2: Hero | Pending |
+| HERO-01 | Phase 2: Hero | Complete |
+| HERO-02 | Phase 2: Hero | Complete |
+| HERO-03 | Phase 2: Hero | Complete |
+| HERO-04 | Phase 2: Hero | Complete |
+| HERO-05 | Phase 2: Hero | Complete |
 | HERO-06 | Phase 10: Integracja i Deploy | Pending |
 | NAV-01 | Phase 3: Nawigacja | Pending |
 | NAV-02 | Phase 3: Nawigacja | Pending |
