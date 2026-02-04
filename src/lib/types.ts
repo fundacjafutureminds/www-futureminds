@@ -3,34 +3,35 @@ export interface NavItem {
   href: string;
 }
 
-export interface Program {
-  title: string;
-  description: string;
-  icon: string;
+export interface StickyNavLink {
+  label: string;
   href: string;
 }
 
 export interface Partner {
   name: string;
-  logo?: string;
+  src: string;
+  href?: string;
+}
+
+export interface Program {
+  title: string;
+  description: string;
+  href: string;
+  logo: string;
 }
 
 export interface Project {
   title: string;
   description: string;
-  tags: string[];
+  image?: string;
   href?: string;
 }
 
-export interface NewsItem {
+export interface Article {
   title: string;
-  excerpt: string;
-  date: string;
+  author?: string;
+  category: string;
   href: string;
   image?: string;
-}
-
-export interface FooterColumn {
-  title: string;
-  links: { label: string; href: string }[];
 }
