@@ -52,12 +52,10 @@ Plans:
   3. Dekoracyjna ilustracja rakiety (liniowa, outline) wyswietla sie jako tlo sekcji
   4. Tekst misji fundacji jest czytelny, z zielonymi akcentami (#9AFC4E) na wybranych slowach
   5. Na dole sekcji widoczna strzalka w dol (scroll indicator)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 02-01: Struktura Hero — layout 100vh, tlo, pozycjonowanie
-- [ ] 02-02: Logo, rakieta, tekst misji z akcentami
-- [ ] 02-03: Strzalka scroll indicator + animacja fadeIn
+- [ ] 02-01-PLAN.md — Ekstrakcja HeroSection do komponentu: dzieci-panorama4.png jako ilustracja, h-screen, klikalna strzalka scroll
 
 ### Phase 3: Nawigacja
 **Goal**: Uzytkownik widzi pasek nawigacyjny z logo i 8 linkami do sekcji strony
@@ -196,7 +194,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Fundamenty | 3/3 | Complete | 2026-02-04 |
-| 2. Hero | 0/3 | Not started | - |
+| 2. Hero | 0/1 | Not started | - |
 | 3. Nawigacja | 0/1 | Not started | - |
 | 4. Programy Edukacyjne | 0/3 | Not started | - |
 | 5. Programy Stypendialne | 0/3 | Not started | - |
