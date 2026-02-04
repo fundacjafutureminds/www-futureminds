@@ -35,13 +35,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Hierarchia typografii jest zdefiniowana — 100px/w100 dla sekcji, 42px/w600 dla naglowkow, 30px/w600 dla sidebar, 19px/w200 dla body, 10px/uppercase dla CTA
   4. StickySection renderuje lewa kolumne 350px z zachowaniem sticky:top
   5. constants.ts zawiera pelne dane (9 partnerow, wszystkie programy, 6 projektow, artykuly)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 01-01: Aktualizacja globals.css @theme i palety kolorow
-- [ ] 01-02: Integracja fontu neue-haas-grotesk-display + hierarchia typografii
-- [ ] 01-03: Aktualizacja StickySection (350px, sticky:top, sticky_parent)
-- [ ] 01-04: Aktualizacja constants.ts z pelnymi danymi
+- [ ] 01-01-PLAN.md — Paleta kolorow + font Plus Jakarta Sans + hierarchia typografii (globals.css, layout.tsx)
+- [ ] 01-02-PLAN.md — Pelne dane i interfejsy TypeScript (types.ts, constants.ts)
+- [ ] 01-03-PLAN.md — Przebudowa StickySection (350px, sticky, separator, warianty)
 
 ### Phase 2: Hero
 **Goal**: Uzytkownik laduje strone i widzi pelnoekranowa sekcje powitalna z logo fundacji, ilustracja rakiety i tekstem misji — identyczna z oryginalem
@@ -196,7 +195,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Fundamenty | 0/4 | Not started | - |
+| 1. Fundamenty | 0/3 | Planned | - |
 | 2. Hero | 0/3 | Not started | - |
 | 3. Nawigacja | 0/1 | Not started | - |
 | 4. Programy Edukacyjne | 0/3 | Not started | - |
