@@ -132,13 +132,68 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (wypełnione podczas tworzenia roadmap) | | |
+| FUND-01 | Phase 1: Fundamenty | Pending |
+| FUND-02 | Phase 1: Fundamenty | Pending |
+| FUND-03 | Phase 1: Fundamenty | Pending |
+| FUND-04 | Phase 1: Fundamenty | Pending |
+| FUND-05 | Phase 1: Fundamenty | Pending |
+| FUND-06 | Phase 1: Fundamenty | Pending |
+| HERO-01 | Phase 2: Hero | Pending |
+| HERO-02 | Phase 2: Hero | Pending |
+| HERO-03 | Phase 2: Hero | Pending |
+| HERO-04 | Phase 2: Hero | Pending |
+| HERO-05 | Phase 2: Hero | Pending |
+| HERO-06 | Phase 10: Integracja i Deploy | Pending |
+| NAV-01 | Phase 3: Nawigacja | Pending |
+| NAV-02 | Phase 3: Nawigacja | Pending |
+| NAV-03 | Phase 3: Nawigacja | Pending |
+| PROG-01 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-02 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-03 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-04 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-05 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-06 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-07 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-08 | Phase 4: Programy Edukacyjne | Pending |
+| PROG-09 | Phase 10: Integracja i Deploy | Pending |
+| STYP-01 | Phase 5: Programy Stypendialne | Pending |
+| STYP-02 | Phase 5: Programy Stypendialne | Pending |
+| STYP-03 | Phase 5: Programy Stypendialne | Pending |
+| STYP-04 | Phase 5: Programy Stypendialne | Pending |
+| STYP-05 | Phase 5: Programy Stypendialne | Pending |
+| STYP-06 | Phase 5: Programy Stypendialne | Pending |
+| STYP-07 | Phase 5: Programy Stypendialne | Pending |
+| STYP-08 | Phase 10: Integracja i Deploy | Pending |
+| PROJ-01 | Phase 6: Projekty | Pending |
+| PROJ-02 | Phase 6: Projekty | Pending |
+| PROJ-03 | Phase 6: Projekty | Pending |
+| PROJ-04 | Phase 6: Projekty | Pending |
+| PROJ-05 | Phase 6: Projekty | Pending |
+| SZKL-01 | Phase 7: Szkolenia | Pending |
+| SZKL-02 | Phase 7: Szkolenia | Pending |
+| SZKL-03 | Phase 7: Szkolenia | Pending |
+| SZKL-04 | Phase 7: Szkolenia | Pending |
+| SZKL-05 | Phase 7: Szkolenia | Pending |
+| BAZW-01 | Phase 8: Baza Wiedzy | Pending |
+| BAZW-02 | Phase 8: Baza Wiedzy | Pending |
+| BAZW-03 | Phase 8: Baza Wiedzy | Pending |
+| BAZW-04 | Phase 8: Baza Wiedzy | Pending |
+| BAZW-05 | Phase 8: Baza Wiedzy | Pending |
+| FOOT-01 | Phase 9: Footer | Pending |
+| FOOT-02 | Phase 9: Footer | Pending |
+| FOOT-03 | Phase 9: Footer | Pending |
+| FOOT-04 | Phase 9: Footer | Pending |
+| GENR-01 | Phase 10: Integracja i Deploy | Pending |
+| GENR-02 | Phase 10: Integracja i Deploy | Pending |
+| GENR-03 | Phase 10: Integracja i Deploy | Pending |
+| GENR-04 | Phase 10: Integracja i Deploy | Pending |
+| GENR-05 | Phase 10: Integracja i Deploy | Pending |
 
 **Coverage:**
-- v1 requirements: 46 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 46 ⚠️
+- v1 requirements: 56 total
+- Mapped to phases: 56/56
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-04 after initial definition*
+*Last updated: 2026-02-04 — traceability updated after roadmap creation*
