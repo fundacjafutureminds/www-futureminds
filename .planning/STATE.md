@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 2 — Hero (fundamenty kompletne, zweryfikowane)
+**Current focus:** Phase 2 — Hero (plan 01 complete)
 
 ## Current Position
 
-Phase: 1 of 10 (Fundamenty) — COMPLETE ✓
-Plan: 3 of 3 in current phase
-Status: Phase complete, verified (5/5 must-haves)
-Last activity: 2026-02-04 — Phase 1 verified and complete
+Phase: 2 of 10 (Hero)
+Plan: 1 of 1 in current phase
+Status: Phase 02 complete
+Last activity: 2026-02-04 — Completed 02-01-PLAN.md
 
-Progress: [███░░░░░░░░░░░░░░░░░░░░░░░] 3/26 (12%)
+Progress: [████░░░░░░░░░░░░░░░░░░░░░░] 4/26 (15%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 2.3 min
-- Total execution time: 7 min
+- Total plans completed: 4
+- Average duration: 2.5 min
+- Total execution time: 10 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-fundamenty | 3/3 | 7 min | 2.3 min |
+| 02-hero | 1/1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (3 min), 01-03 (2 min)
+- Last 5 plans: 01-01 (2 min), 01-02 (3 min), 01-03 (2 min), 02-01 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -54,17 +55,21 @@ Recent decisions affecting current work:
 - 01-03: Separator jako div z w-px self-stretch i warunkowym kolorem
 - 01-03: Numer sekcji text-5xl font-extralight text-fm-green
 - 01-03: Tytul bez word-splitting — naturalny word wrap
+- 02-01: opacity-[0.15] dla ilustracji dzieci-panorama4.png (subtelne tlo)
+- 02-01: Brak overflow-hidden na hero (chroni sticky w sekcjach ponizej)
+- 02-01: Anchor <a> zamiast <div> dla scroll indicator (natywny smooth scroll)
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
 - Font neue-haas-grotesk-display wymaga Adobe Fonts embed code od usera (fallback: system sans-serif)
+- Opacity ilustracji hero (0.15) moze wymagac wizualnego dostrojenia
 
 ## Session Continuity
 
-Last session: 2026-02-04T12:58:42Z
-Stopped at: Completed 01-03-PLAN.md (Phase 01 complete)
+Last session: 2026-02-04T19:25:44Z
+Stopped at: Completed 02-01-PLAN.md (Phase 02 complete)
 Resume file: None
