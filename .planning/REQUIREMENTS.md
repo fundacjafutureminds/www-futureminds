@@ -7,12 +7,12 @@
 
 ### Fundamenty (FUND)
 
-- [ ] **FUND-01**: Paleta kolorów zaktualizowana — #9AFC4E (lime green), #32373c (dark bg), #FFFFFF (text)
-- [ ] **FUND-02**: Font neue-haas-grotesk-display zintegrowany via Adobe Fonts/Typekit embed
-- [ ] **FUND-03**: Hierarchia typografii: 100px/w100 (sekcje), 42px/w600 (nagłówki), 30px/w600 (sidebar), 19px/w200 (body), 10px/uppercase (CTA)
-- [ ] **FUND-04**: StickySection zaktualizowany — lewa kolumna 350px, sticky:top, sticky_parent
-- [ ] **FUND-05**: globals.css @theme zaktualizowany z prawidłową paletą FM
-- [ ] **FUND-06**: constants.ts zaktualizowany z pełnymi danymi (9 partnerów, wszystkie programy, projekty)
+- [x] **FUND-01**: Paleta kolorów zaktualizowana — #9AFC4E (lime green), #32373c (dark bg), #FFFFFF (text)
+- [x] **FUND-02**: Font Plus Jakarta Sans zintegrowany via next/font/google (fallback dla neue-haas-grotesk)
+- [x] **FUND-03**: Hierarchia typografii: 100px/w200 (sekcje), 42px/w600 (nagłówki), 30px/w600 (sidebar), 19px/w200 (body), 10px/uppercase (CTA)
+- [x] **FUND-04**: StickySection zaktualizowany — lewa kolumna 350px, sticky:top, items-start, separator
+- [x] **FUND-05**: globals.css @theme zaktualizowany z prawidłową paletą FM
+- [x] **FUND-06**: constants.ts zaktualizowany z pełnymi danymi (9 partnerów, wszystkie programy, projekty)
 
 ### Hero (HERO)
 
@@ -132,12 +132,12 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FUND-01 | Phase 1: Fundamenty | Pending |
-| FUND-02 | Phase 1: Fundamenty | Pending |
-| FUND-03 | Phase 1: Fundamenty | Pending |
-| FUND-04 | Phase 1: Fundamenty | Pending |
-| FUND-05 | Phase 1: Fundamenty | Pending |
-| FUND-06 | Phase 1: Fundamenty | Pending |
+| FUND-01 | Phase 1: Fundamenty | Complete |
+| FUND-02 | Phase 1: Fundamenty | Complete |
+| FUND-03 | Phase 1: Fundamenty | Complete |
+| FUND-04 | Phase 1: Fundamenty | Complete |
+| FUND-05 | Phase 1: Fundamenty | Complete |
+| FUND-06 | Phase 1: Fundamenty | Complete |
 | HERO-01 | Phase 2: Hero | Pending |
 | HERO-02 | Phase 2: Hero | Pending |
 | HERO-03 | Phase 2: Hero | Pending |
