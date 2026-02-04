@@ -1,37 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Cardo } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const cardo = Cardo({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "700"],
-  variable: "--font-serif",
+  variable: "--font-plus-jakarta",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Fundacja Future Minds",
+    default: "Fundacja Future Minds – Nauka i technologia to nasza pasja. Edukacja to nasza misja.",
     template: "%s | Fundacja Future Minds",
   },
   description:
-    "Fundacja Future Minds — edukacja, stypendia, szkolenia i projekty technologiczne dla młodych ludzi.",
-  keywords: [
-    "fundacja",
-    "edukacja",
-    "stypendia",
-    "szkolenia",
-    "technologia",
-    "Future Minds",
-  ],
+    "Fundacja Future Minds wspiera każde dziecko i młodą osobę w realizacji pełnego potencjału poprzez innowacyjną edukację STEAM.",
 };
 
 export default function RootLayout({
@@ -40,9 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className={`${inter.variable} ${cardo.variable}`}>
+    <html lang="pl" className={plusJakartaSans.variable}>
       <body className="antialiased">
-        <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
