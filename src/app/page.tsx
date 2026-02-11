@@ -2,97 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ProgramyEdukacyjneSection } from "@/components/sections/ProgramyEdukacyjneSection";
 import { StickySection } from "@/components/ui/StickySection";
 import {
-  PROGRAMS,
   PROJECTS,
   PARTNER_LOGOS,
-  EDUCATION_SECTION_NAV,
   SCHOLARSHIP_SECTION_NAV,
   TRAINING_SECTION_NAV,
   KNOWLEDGE_SECTION_NAV,
 } from "@/lib/constants";
-
-/* ──────────────────── PROGRAMY EDUKACYJNE ──────────────────── */
-
-function ProgramyEdukacyjneSection() {
-  return (
-    <StickySection
-      id="programy-edukacyjne"
-      title="Programy Edukacyjne"
-      sectionNumber="01"
-      navLinks={EDUCATION_SECTION_NAV}
-    >
-      {/* Intro headings */}
-      <div className="mb-16 space-y-8">
-        <h3 className="max-w-3xl text-3xl leading-snug font-light text-white md:text-4xl">
-          Realizujemy{" "}
-          <span className="text-fm-green">globalne i lokalne</span> programy
-          edukacyjne, które uzupełniają braki systemu edukacyjnego
-          <span className="text-fm-green">.</span>
-        </h3>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Dążymy do kształtowania odpowiedzialnego i zaangażowanego
-          społeczeństwa, które myśli krytycznie i jest gotowe na dynamiczne
-          zmieniający się świat.
-        </p>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Naszą misją jest sprawienie, aby głos dzieci był słyszalny oraz
-          wykorzystanie ich pomysłów i wizji do inspirowania liderów na całym
-          świecie.
-        </p>
-      </div>
-
-      {/* Global programs label */}
-      <p className="mb-8 text-sm tracking-widest text-fm-text-muted uppercase">
-        Globalne programy edukacyjne:
-      </p>
-
-      {/* Program cards */}
-      <div className="space-y-8">
-        {PROGRAMS.map((program) => (
-          <div
-            key={program.title}
-            className="rounded-sm border border-white/10 p-8 transition-colors hover:border-fm-green/30"
-          >
-            <div className="mb-6">
-              <Image
-                src={program.logo}
-                alt={program.title}
-                width={200}
-                height={70}
-                className="h-12 w-auto brightness-0 invert"
-              />
-            </div>
-            <p className="mb-6 max-w-2xl leading-relaxed text-fm-text">
-              {program.description}
-            </p>
-            <Link
-              href={program.href}
-              className="inline-block border border-white/20 px-6 py-2 text-xs tracking-widest text-fm-text-muted uppercase transition-colors hover:border-fm-green hover:text-fm-green"
-            >
-              WIĘCEJ
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      {/* Custom programs */}
-      <div className="mt-20">
-        <h3 className="mb-6 max-w-3xl text-2xl leading-snug font-light text-white md:text-3xl">
-          Tworzymy również autorskie programy edukacyjne dostosowane do
-          indywidualnych potrzeb i specyfiki regionu lub branży.
-        </h3>
-        <p className="max-w-2xl leading-relaxed text-fm-text">
-          Niezależnie od tego, czy chodzi o specyfikę gospodarczą danego regionu,
-          wymagania konkretnego sektora, nasze programy są projektowane tak, aby
-          odpowiadały na wyzwania i potrzeby społeczności, w której będą
-          realizowane.
-        </p>
-      </div>
-    </StickySection>
-  );
-}
 
 /* ─────────────────── PROGRAMY STYPENDIALNE ─────────────────── */
 
