@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProgramyEdukacyjneSection } from "@/components/sections/ProgramyEdukacyjneSection";
 import { StickySection } from "@/components/ui/StickySection";
@@ -277,43 +276,17 @@ function BazaWiedzySection() {
   );
 }
 
-/* ──────────────────────── SEPARATOR ──────────────────────── */
-
-function SectionSeparator() {
-  return (
-    <div className="flex justify-center py-16">
-      <Image
-        src="/images/Strzalka-w-dol.png"
-        alt=""
-        width={59}
-        height={13}
-        className="opacity-40"
-      />
-    </div>
-  );
-}
-
 /* ─────────────────────── MAIN PAGE ─────────────────────── */
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* Flex kontener: sticky Navbar (lewa kolumna) + sekcje tresci (prawa kolumna) */}
-      <div className="mx-auto flex max-w-[1400px]">
-        <Navbar />
-        {/* Separator pionowy miedzy navbar a trescia */}
-        <div className="hidden w-px self-stretch bg-white/10 lg:block" />
-        {/* Prawa kolumna z sekcjami tresci */}
-        <div className="min-w-0 flex-1">
-          <SectionSeparator />
-          <ProgramyEdukacyjneSection />
-          <ProgramyStypendialneSection />
-          <ProjektySection />
-          <SzkoleniaSection />
-          <BazaWiedzySection />
-        </div>
-      </div>
+      <ProgramyEdukacyjneSection />
+      <ProgramyStypendialneSection />
+      <ProjektySection />
+      <SzkoleniaSection />
+      <BazaWiedzySection />
     </>
   );
 }
