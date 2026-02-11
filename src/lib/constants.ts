@@ -36,9 +36,16 @@ export const PROGRAMS: Program[] = [
   {
     title: "OZEdukacja",
     description:
-      "Program OZEdukacja, stworzony z inicjatywy Fundacji Enea Energia Wspólnoty i realizowany przez Fundację Future Minds, to ogólnopolski program edukacyjny dla uczniów klas 6–8, którego celem jest budowanie świadomości energetycznej i promocja odnawialnych źródeł energii.",
+      "Program OZEdukacja, stworzony z inicjatywy Fundacji Enea Energia Wspólnoty i realizowany przez Fundację Future Minds, to ogólnopolski program edukacyjny dla uczniów klas 6–8, którego celem jest budowanie świadomości energetycznej i promocja odnawialnych źródeł energii. Program obejmuje konkurs, filmy edukacyjne i scenariusze lekcji.",
     href: "https://www.oze.edu.pl/",
     logo: "/images/logo-short-light-1024x363.png",
+  },
+  {
+    title: "Edukacja Energetyczna",
+    description:
+      "Program ten kształtuje świadomość energetyczną u dzieci, prowadząc je przez cały cykl energii - od produkcji, przez przechowywanie, po jej wykorzystanie. Dzięki analizie różnorodnych źródeł energii, dzieci uczą się świadomych wyborów, zwłaszcza w kontekście odnawialnych źródeł. Główne projekty badawcze koncentrują się na zielonej energii, oszczędzaniu i innowacyjnych rozwiązaniach dla bezpieczeństwa energetycznego.",
+    href: "http://energia.fll.edu.pl",
+    logo: "/images/Lobo-Edukacja-Energetyczna.png",
   },
 ];
 
