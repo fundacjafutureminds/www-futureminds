@@ -381,13 +381,21 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Navbar />
-      <SectionSeparator />
-      <ProgramyEdukacyjneSection />
-      <ProgramyStypendialneSection />
-      <ProjektySection />
-      <SzkoleniaSection />
-      <BazaWiedzySection />
+      {/* Flex kontener: sticky Navbar (lewa kolumna) + sekcje tresci (prawa kolumna) */}
+      <div className="mx-auto flex max-w-[1400px]">
+        <Navbar />
+        {/* Separator pionowy miedzy navbar a trescia */}
+        <div className="hidden w-px self-stretch bg-white/10 lg:block" />
+        {/* Prawa kolumna z sekcjami tresci */}
+        <div className="min-w-0 flex-1">
+          <SectionSeparator />
+          <ProgramyEdukacyjneSection />
+          <ProgramyStypendialneSection />
+          <ProjektySection />
+          <SzkoleniaSection />
+          <BazaWiedzySection />
+        </div>
+      </div>
     </>
   );
 }
