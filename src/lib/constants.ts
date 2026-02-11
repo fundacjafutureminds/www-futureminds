@@ -9,13 +9,13 @@ import type {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Aktualności", href: "/aktualnosci" },
-  { label: "O nas", href: "/o-nas" },
-  { label: "Kontakt", href: "/kontakt" },
   { label: "Programy edukacyjne", href: "#programy-edukacyjne" },
   { label: "Programy stypendialne", href: "#programy-stypendialne" },
   { label: "Projekty", href: "#projekty" },
   { label: "Szkolenia", href: "#szkolenia" },
-  { label: "Baza wiedzy", href: "#baza-wiedzy" },
+  { label: "Publikacje", href: "#baza-wiedzy" },
+  { label: "O nas", href: "/o-nas" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 export const PROGRAMS: Program[] = [
