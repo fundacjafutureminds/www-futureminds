@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 4 in progress — Programy Edukacyjne (plan 01 complete)
+**Current focus:** Phase 4 complete — Programy Edukacyjne (plan 01 + 02 gap closure done)
 
 ## Current Position
 
 Phase: 4 of 10 (Programy Edukacyjne)
-Plan: 1 of 1 in current phase
-Status: Phase 04 plan 01 complete (ProgramyEdukacyjneSection wyekstrahowany, 4 programy)
-Last activity: 2026-02-11 — Phase 4 plan 01 executed (04-01-PLAN.md)
+Plan: 2 of 2 in current phase
+Status: Phase 04 complete (sticky sidebar 01 Programy Edukacyjne, per-sekcyjne StickySection sidebary)
+Last activity: 2026-02-12 — Phase 4 plan 02 executed (04-02-PLAN.md gap closure)
 
-Progress: [██████░░░░░░░░░░░░░░░░░░░░] 6/26 (23%)
+Progress: [███████░░░░░░░░░░░░░░░░░░░] 7/27 (26%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 2.5 min
-- Total execution time: 15 min
+- Total plans completed: 7
+- Average duration: 2.6 min
+- Total execution time: 18 min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [██████░░░░░░░░░░░░░░░░░
 | 01-fundamenty | 3/3 | 7 min | 2.3 min |
 | 02-hero | 1/1 | 3 min | 3 min |
 | 03-nawigacja | 1/1 | 2 min | 2 min |
-| 04-programy-edukacyjne | 1/1 | 3 min | 3 min |
+| 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (3 min), 01-03 (2 min), 02-01 (3 min), 03-01 (2 min), 04-01 (3 min)
+- Last 5 plans: 01-03 (2 min), 02-01 (3 min), 03-01 (2 min), 04-01 (3 min), 04-02 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -70,6 +70,9 @@ Recent decisions affecting current work:
 - 04-01: Loga programow bez brightness-0 invert (juz jasne na ciemnym tle)
 - 04-01: CTA WIECEJ z bg-[#FFFFFF0A] i hover:bg-fm-green (styl Elementor)
 - 04-01: Karty z border-l border-[#FFFFFF3B] zamiast pelnego border
+- 04-02: Usuniety globalny Navbar z page.tsx — per-sekcyjne StickySection sidebary (LOCKED DECISION Macieja)
+- 04-02: Sekcje top-level we fragmencie JSX — naprawia podwojny sidebar
+- 04-02: Overlay dekoracyjny wewnatrz StickySection children z relative wrapper
 
 ### Pending Todos
 
@@ -82,6 +85,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-11T23:35:00Z
-Stopped at: Completed 04-01-PLAN.md (Phase 04 plan 01 complete)
+Last session: 2026-02-12T00:25:00Z
+Stopped at: Completed 04-02-PLAN.md (Phase 04 complete — gap closure done)
 Resume file: None
