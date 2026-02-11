@@ -65,10 +65,10 @@ Plans:
   1. Navbar wyswietla logo fundacji i 8 linkow nawigacyjnych na ciemnym tle
   2. Linki prowadza do: Aktualnosci, Programy edukacyjne, Programy stypendialne, Projekty, Szkolenia, Publikacje, O nas, Kontakt
   3. Dekoracyjny trojkat outline (Obszar-roboczy-2-kopia-2.png) jest widoczny obok menu
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 03-01: Navbar — layout, logo, linki, trojkat dekoracyjny
+- [ ] 03-01-PLAN.md — Przebudowa Navbar na sticky kolumne z logo, 8 linkami, trojkatami i animacjami fadeIn
 
 ### Phase 4: Programy Edukacyjne
 **Goal**: Uzytkownik scrolluje do sekcji Programy Edukacyjne i widzi sticky sidebar z numerem sekcji oraz karty 3 programow (FLL, BtC, OZEdukacja) z opisami i linkami
