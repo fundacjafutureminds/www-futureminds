@@ -80,10 +80,11 @@ Plans:
   3. Trzy karty programow (FIRST LEGO League, Build the Change, OZEdukacja) wyswietlaja logo, opis i link "WIECEJ"
   4. Sekcja "programy szyte na miare" z opisem i CTA jest widoczna ponizej kart
   5. Dekoracyjny overlay Tlo-EDUKACYJNE3.png jest widoczny na tle sekcji (~20% opacity)
-**Plans:** 1 plan
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Ekstrakcja ProgramyEdukacyjneSection: 4 programy, overlay, duzy naglowek 100px, intro headings, karty z border-l, sekcja "szyte na miare"
+- [x] 04-01-PLAN.md — Ekstrakcja ProgramyEdukacyjneSection: 4 programy, overlay, duzy naglowek 100px, intro headings, karty z border-l, sekcja "szyte na miare"
+- [ ] 04-02-PLAN.md — Gap closure: usunac globalny Navbar, owinac ProgramyEdukacyjneSection w StickySection z numerem 01
 
 ### Phase 5: Programy Stypendialne
 **Goal**: Uzytkownik scrolluje do sekcji Programy Stypendialne i widzi sticky sidebar, logotypy 9 partnerow, karty CTA o stypendiach oraz widget blogu
@@ -194,7 +195,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 1. Fundamenty | 3/3 | Complete | 2026-02-04 |
 | 2. Hero | 1/1 | Complete | 2026-02-04 |
 | 3. Nawigacja | 1/1 | Complete | 2026-02-11 |
-| 4. Programy Edukacyjne | 0/1 | Not started | - |
+| 4. Programy Edukacyjne | 1/2 | In progress | - |
 | 5. Programy Stypendialne | 0/3 | Not started | - |
 | 6. Projekty | 0/2 | Not started | - |
 | 7. Szkolenia | 0/2 | Not started | - |
