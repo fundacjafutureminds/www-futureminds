@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Fundamenty** - Kolory, fonty, typografia, bazowe komponenty i dane
 - [x] **Phase 2: Hero** - Pelnoekranowa sekcja powitalna z logo, rakieta i tekstem misji
-- [ ] **Phase 3: Nawigacja** - Navbar z logo, linkami i dekoracjami
+- [x] **Phase 3: Nawigacja** - Navbar z logo, linkami i dekoracjami
 - [ ] **Phase 4: Programy Edukacyjne** - Sticky sidebar + karty programow FLL/BtC/OZEdukacja
 - [ ] **Phase 5: Programy Stypendialne** - Sticky sidebar + partnerzy + karty CTA + blog widget
 - [ ] **Phase 6: Projekty** - Sticky sidebar + grid 6 kart projektow
@@ -68,7 +68,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 03-01-PLAN.md — Przebudowa Navbar na sticky kolumne z logo, 8 linkami, trojkatami i animacjami fadeIn
+- [x] 03-01-PLAN.md — Przebudowa Navbar na sticky kolumne z logo, 8 linkami, trojkatami i animacjami fadeIn
 
 ### Phase 4: Programy Edukacyjne
 **Goal**: Uzytkownik scrolluje do sekcji Programy Edukacyjne i widzi sticky sidebar z numerem sekcji oraz karty 3 programow (FLL, BtC, OZEdukacja) z opisami i linkami
@@ -195,7 +195,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 |-------|----------------|--------|-----------|
 | 1. Fundamenty | 3/3 | Complete | 2026-02-04 |
 | 2. Hero | 1/1 | Complete | 2026-02-04 |
-| 3. Nawigacja | 0/1 | Not started | - |
+| 3. Nawigacja | 1/1 | Complete | 2026-02-11 |
 | 4. Programy Edukacyjne | 0/3 | Not started | - |
 | 5. Programy Stypendialne | 0/3 | Not started | - |
 | 6. Projekty | 0/2 | Not started | - |
