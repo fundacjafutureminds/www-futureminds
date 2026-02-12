@@ -124,8 +124,87 @@ export function ProgramyStypendialneSection() {
             </div>
           </div>
 
-          {/* Karty CTA — placeholder, implementacja w Plan 02 */}
-          {/* TODO: Plan 05-02 doda 3 karty CTA + strzałkę separator */}
+          {/* Karty CTA */}
+          <div className="mt-16 w-[78%]">
+            {/* Dwie pierwsze karty obok siebie */}
+            <div className="flex gap-0">
+              {SCHOLARSHIP_CTA_CARDS.slice(0, 2).map((card) => (
+                <div key={card.keyword} className="w-[50%] space-y-6 pr-8">
+                  <h3
+                    className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
+                    style={{
+                      fontFamily:
+                        "'neue-haas-grotesk-display', var(--font-sans)",
+                    }}
+                  >
+                    {card.title}
+                    <br />
+                    <span className="text-fm-green text-[70px]">
+                      {card.keyword}
+                    </span>
+                    <br />
+                    {card.suffix}
+                  </h3>
+                  <Image
+                    src={card.image}
+                    alt={`${card.title} ${card.keyword} ${card.suffix}`}
+                    width={400}
+                    height={300}
+                    className="w-full"
+                  />
+                  <Link
+                    href={card.href}
+                    className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+                  >
+                    WIECEJ &gt;
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Trzecia karta — szersza (~87%) */}
+            <div className="mt-12 w-[87%] space-y-6">
+              <h3
+                className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
+                style={{
+                  fontFamily:
+                    "'neue-haas-grotesk-display', var(--font-sans)",
+                }}
+              >
+                {SCHOLARSHIP_CTA_CARDS[2].title}
+                <br />
+                <span className="text-fm-green text-[70px]">
+                  {SCHOLARSHIP_CTA_CARDS[2].keyword}
+                </span>
+                <br />
+                {SCHOLARSHIP_CTA_CARDS[2].suffix}
+              </h3>
+              <Image
+                src={SCHOLARSHIP_CTA_CARDS[2].image}
+                alt={`${SCHOLARSHIP_CTA_CARDS[2].title} ${SCHOLARSHIP_CTA_CARDS[2].keyword} ${SCHOLARSHIP_CTA_CARDS[2].suffix}`}
+                width={600}
+                height={400}
+                className="w-full"
+              />
+              <Link
+                href={SCHOLARSHIP_CTA_CARDS[2].href}
+                className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+              >
+                WIECEJ &gt;
+              </Link>
+            </div>
+          </div>
+
+          {/* Separator strzałka */}
+          <div className="mt-16 flex justify-center" style={{ width: "60%" }}>
+            <Image
+              src="/images/Strzalka-w-dol.png"
+              alt=""
+              width={59}
+              height={13}
+              className="opacity-40"
+            />
+          </div>
         </div>
       </div>
     </StickySection>
