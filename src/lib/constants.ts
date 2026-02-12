@@ -3,6 +3,8 @@ import type {
   Program,
   Project,
   Article,
+  BlogPost,
+  ScholarshipCtaCard,
   NavItem,
   StickyNavLink,
 } from "./types";
@@ -64,19 +66,63 @@ export const SCHOLARSHIP_SECTION_NAV: StickyNavLink[] = [
   { label: "Dla szkół", href: "/stypendia" },
 ];
 
+export const SCHOLARSHIP_BLOG_POSTS: BlogPost[] = [
+  {
+    title: "Stypendia FIRST LEGO League 2024/2025",
+    category: "Programy stypendialne",
+    excerpt:
+      "Nowy sezon stypendialny startuje! Dowiedz się jak wziąć udział w programie...",
+    href: "/aktualnosci",
+  },
+  {
+    title: "Podsumowanie sezonu stypendialnego 2023/2024",
+    category: "Programy stypendialne",
+    excerpt:
+      "W minionym sezonie fundacja przyznała stypendia ponad 200 uczniom z całej Polski...",
+    href: "/aktualnosci",
+  },
+];
+
+export const SCHOLARSHIP_CTA_CARDS: ScholarshipCtaCard[] = [
+  {
+    title: "Jak",
+    keyword: "ufundować",
+    suffix: "stypendium?",
+    image: "/images/pudelko1.png",
+    href: "/csr",
+  },
+  {
+    title: "Jak",
+    keyword: "otrzymać",
+    suffix: "stypendium?",
+    image: "/images/dzieci-stypendia-1.png",
+    href: "/stypendia",
+  },
+  {
+    title: "Jak",
+    keyword: "zostać sponsorem",
+    suffix: "FIRST LEGO League?",
+    image: "/images/dzieci-fll.png",
+    href: "/csr",
+  },
+];
+
 export const PARTNER_LOGOS: Partner[] = [
   { name: "Rockwell Automation", src: "/images/Logo-Rockwell.png" },
-  { name: "John Deere", src: "/images/jo.png" },
-  { name: "RTX", src: "/images/Logo-RTX.png" },
-  { name: "Collins Aerospace", src: "/images/Collins-aerospace-white.png" },
-  { name: "ENEA", src: "/images/logo-ENEA-3-biale.png" },
-  { name: "Mmaltic", src: "/images/mmaltic.png" },
-  { name: "Xerox", src: "/images/2.png" },
-  { name: "OTIS", src: "/images/3.png" },
   {
     name: "LEGO Education",
     src: "/images/Screen-Shot-2019-12-27-at-1.50.07-PM-1024x232-1.png",
   },
+  { name: "RTX", src: "/images/Logo-RTX.png" },
+  {
+    name: "Collins Aerospace",
+    src: "/images/Collins_Aerospace_logo_stack_white_300.png",
+  },
+  { name: "ENEA", src: "/images/Untitled-designapt.png" },
+  { name: "Mmaltic", src: "/images/mmaltic.png" },
+  { name: "OTIS", src: "/images/3.png" },
+  { name: "Xerox", src: "/images/2.png" },
+  { name: "John Deere", src: "/images/jo.png" },
 ];
 
 export const PROJECTS: Project[] = [

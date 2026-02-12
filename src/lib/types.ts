@@ -35,3 +35,19 @@ export interface Article {
   href: string;
   image?: string;
 }
+
+export interface BlogPost {
+  title: string;
+  category: string;
+  excerpt: string;
+  href: string;
+  image?: string;
+}
+
+export interface ScholarshipCtaCard {
+  title: string;
+  keyword: string;
+  suffix: string;
+  image: string;
+  href: string;
+}
