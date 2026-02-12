@@ -2,94 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProgramyEdukacyjneSection } from "@/components/sections/ProgramyEdukacyjneSection";
+import { ProgramyStypendialneSection } from "@/components/sections/ProgramyStypendialneSection";
 import { StickySection } from "@/components/ui/StickySection";
 import {
   PROJECTS,
-  PARTNER_LOGOS,
-  SCHOLARSHIP_SECTION_NAV,
   TRAINING_SECTION_NAV,
   KNOWLEDGE_SECTION_NAV,
 } from "@/lib/constants";
-
-/* ─────────────────── PROGRAMY STYPENDIALNE ─────────────────── */
-
-function ProgramyStypendialneSection() {
-  return (
-    <StickySection
-      id="programy-stypendialne"
-      title="Programy Stypendialne"
-      sectionNumber="02"
-      navLinks={SCHOLARSHIP_SECTION_NAV}
-    >
-      {/* Intro headings */}
-      <div className="mb-16 space-y-8">
-        <h3 className="max-w-3xl text-3xl leading-snug font-light text-white md:text-4xl">
-          Łączymy{" "}
-          <span className="text-fm-green">
-            odpowiedzialne społecznie firmy
-          </span>{" "}
-          z dziećmi, które potrzebują wsparcia na starcie.
-        </h3>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Sukces opiera się na duchu dzielenia się - dzielenia się wiedzą,
-          doświadczeniem i możliwościami.
-        </p>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Poprzez umożliwienie młodym ludziom uczestnictwa w międzynarodowych
-          programach edukacyjnych, nie tylko umacniamy ich kompetencje w obszarze
-          nauki, technologii, inżynierii i matematyki, ale również inspirujemy
-          ich do wykorzystywania zdobytej wiedzy na rzecz rozwiązywania
-          rzeczywistych problemów świata.
-        </p>
-      </div>
-
-      {/* Partner logos */}
-      <div className="mb-16">
-        <p className="mb-8 text-sm tracking-widest text-fm-text-muted uppercase">
-          Partnerzy strategiczni
-        </p>
-        <div className="flex flex-wrap items-center gap-10">
-          {PARTNER_LOGOS.map((partner) => (
-            <Image
-              key={partner.name}
-              src={partner.src}
-              alt={partner.name}
-              width={140}
-              height={50}
-              className="h-10 w-auto opacity-70 brightness-0 invert transition-opacity hover:opacity-100"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* CTA cards */}
-      <div className="grid gap-6 md:grid-cols-2">
-        <Link
-          href="/csr"
-          className="group block rounded-sm border border-white/10 p-8 transition-colors hover:border-fm-green/30"
-        >
-          <h4 className="mb-4 text-xl font-light text-white transition-colors group-hover:text-fm-green">
-            Jak ufundować stypendium?
-          </h4>
-          <span className="inline-block border border-white/20 px-6 py-2 text-xs tracking-widest text-fm-text-muted uppercase transition-colors group-hover:border-fm-green group-hover:text-fm-green">
-            WIĘCEJ &gt;
-          </span>
-        </Link>
-        <Link
-          href="/stypendia"
-          className="group block rounded-sm border border-white/10 p-8 transition-colors hover:border-fm-green/30"
-        >
-          <h4 className="mb-4 text-xl font-light text-white transition-colors group-hover:text-fm-green">
-            Jak otrzymać stypendium?
-          </h4>
-          <span className="inline-block border border-white/20 px-6 py-2 text-xs tracking-widest text-fm-text-muted uppercase transition-colors group-hover:border-fm-green group-hover:text-fm-green">
-            WIĘCEJ &gt;
-          </span>
-        </Link>
-      </div>
-    </StickySection>
-  );
-}
 
 /* ──────────────────────── PROJEKTY ──────────────────────── */
 
