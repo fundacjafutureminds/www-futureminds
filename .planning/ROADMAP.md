@@ -103,19 +103,19 @@ Plans:
 - [x] 05-02-PLAN.md — 3 karty CTA z naglowkami 70px, obrazkami i przyciskami + strzalka separator
 
 ### Phase 6: Projekty
-**Goal**: Uzytkownik scrolluje do sekcji Projekty i widzi sticky sidebar oraz grid 6 kart projektow z tytulami, opisami i linkami
+**Goal**: Uzytkownik scrolluje do sekcji Projekty i widzi sticky sidebar oraz grid 7 kart projektow z tytulami, opisami i logami (bez CTA) — wiernie odwzorowujac Elementor
 **Depends on**: Phase 1
 **Requirements**: PROJ-01, PROJ-02, PROJ-03, PROJ-04, PROJ-05
 **Success Criteria** (what must be TRUE):
   1. Lewa kolumna 350px z napisem "03 Projekty" jest sticky podczas scrollowania
   2. Intro naglowki z zielonymi akcentami sa widoczne
-  3. Grid 6 kart projektow wyswietla tytul, opis i CTA "WIECEJ" dla kazdego projektu
+  3. Grid 7 kart projektow w 3 kolumnach (3+3+1) wyswietla logo, tytul i opis
   4. Dekoracyjny overlay trybik3.png jest widoczny na tle (~20% opacity)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 06-01: Sticky sidebar + naglowki + overlay
-- [ ] 06-02: Grid 6 kart projektow ze stylingiem
+- [ ] 06-01-PLAN.md — Dane (types.ts + constants.ts: 7 projektow, secondaryImage) + ekstrakcja ProjektySection z overlayem i naglowkami
+- [ ] 06-02-PLAN.md — Grid 3-kolumnowy 7 kart projektow z border-l, logami, typografia + strzalka separator
 
 ### Phase 7: Szkolenia
 **Goal**: Uzytkownik scrolluje do sekcji Szkolenia i widzi sticky sidebar, opis szkolen oraz rzad ikon technologii
