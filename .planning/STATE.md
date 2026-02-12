@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 4 complete — Programy Edukacyjne (plan 01 + 02 gap closure done)
+**Current focus:** Phase 5 in progress — Programy Stypendialne (plan 01 done, plan 02 pending)
 
 ## Current Position
 
-Phase: 4 of 10 (Programy Edukacyjne)
-Plan: 2 of 2 in current phase
-Status: Phase 04 complete (sticky sidebar 01 Programy Edukacyjne, per-sekcyjne StickySection sidebary)
-Last activity: 2026-02-12 — Phase 4 plan 02 executed (04-02-PLAN.md gap closure)
+Phase: 5 of 10 (Programy Stypendialne)
+Plan: 1 of 2 in current phase
+Status: Plan 05-01 complete (dane stypendialne + komponent ProgramyStypendialneSection z overlayem i layoutem 60/40)
+Last activity: 2026-02-12 — Phase 5 plan 01 executed (05-01-PLAN.md)
 
-Progress: [███████░░░░░░░░░░░░░░░░░░░] 7/27 (26%)
+Progress: [████████░░░░░░░░░░░░░░░░░░] 8/27 (30%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 2.6 min
-- Total execution time: 18 min
+- Total execution time: 21 min
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [███████░░░░░░░░░░░░░░░░
 | 02-hero | 1/1 | 3 min | 3 min |
 | 03-nawigacja | 1/1 | 2 min | 2 min |
 | 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
+| 05-programy-stypendialne | 1/2 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (2 min), 02-01 (3 min), 03-01 (2 min), 04-01 (3 min), 04-02 (3 min)
+- Last 5 plans: 02-01 (3 min), 03-01 (2 min), 04-01 (3 min), 04-02 (3 min), 05-01 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - 04-02: Usuniety globalny Navbar z page.tsx — per-sekcyjne StickySection sidebary (LOCKED DECISION Macieja)
 - 04-02: Sekcje top-level we fragmencie JSX — naprawia podwojny sidebar
 - 04-02: Overlay dekoracyjny wewnatrz StickySection children z relative wrapper
+- 05-01: Kolejnosc PARTNER_LOGOS i obrazki Collins/ENEA zgodnie z Elementor research
+- 05-01: Blog widget z SCHOLARSHIP_BLOG_POSTS renderowany w prawej kolumnie 40%
+- 05-01: Podwojny overlay (Tlo-STYPENDIA.png + skrzydlo2.png) z roznymi opacity
 
 ### Pending Todos
 
@@ -85,6 +89,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-12T00:25:00Z
-Stopped at: Completed 04-02-PLAN.md (Phase 04 complete — gap closure done)
+Last session: 2026-02-12T10:59:30Z
+Stopped at: Completed 05-01-PLAN.md (dane stypendialne + komponent sekcji)
 Resume file: None
