@@ -96,12 +96,11 @@ Plans:
   3. 9 logotypow partnerow (Rockwell, John Deere, RTX, Collins, ENEA, Mmaltic + 3) wyswietla sie w gridzie
   4. Dwie karty CTA ("Jak ufundowac stypendium?" z pudelko1.png i "Jak otrzymac stypendium?" z dzieci-stypendia-1.png) sa widoczne
   5. Blog widget z 2 najnowszymi wpisami (statyczne) jest widoczny
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 05-01: Sticky sidebar + naglowki + overlay
-- [ ] 05-02: Grid logotypow partnerow (9 logo)
-- [ ] 05-03: Karty CTA (ufundowac/otrzymac stypendium) + blog widget
+- [ ] 05-01-PLAN.md — Dane (types.ts + constants.ts) + ekstrakcja ProgramyStypendialneSection z overlayem, naglowkami, logotypami i layoutem 60/40
+- [ ] 05-02-PLAN.md — 3 karty CTA z naglowkami 70px, obrazkami i przyciskami + strzalka separator
 
 ### Phase 6: Projekty
 **Goal**: Uzytkownik scrolluje do sekcji Projekty i widzi sticky sidebar oraz grid 6 kart projektow z tytulami, opisami i linkami
@@ -196,7 +195,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 2. Hero | 1/1 | Complete | 2026-02-04 |
 | 3. Nawigacja | 1/1 | Complete | 2026-02-11 |
 | 4. Programy Edukacyjne | 2/2 | Complete | 2026-02-12 |
-| 5. Programy Stypendialne | 0/3 | Not started | - |
+| 5. Programy Stypendialne | 0/2 | Not started | - |
 | 6. Projekty | 0/2 | Not started | - |
 | 7. Szkolenia | 0/2 | Not started | - |
 | 8. Baza Wiedzy | 0/2 | Not started | - |
