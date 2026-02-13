@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Nawigacja** - Navbar z logo, linkami i dekoracjami
 - [x] **Phase 4: Programy Edukacyjne** - Sticky sidebar + karty programow FLL/BtC/OZEdukacja
 - [x] **Phase 5: Programy Stypendialne** - Sticky sidebar + partnerzy + karty CTA + blog widget
-- [ ] **Phase 6: Projekty** - Sticky sidebar + grid 6 kart projektow
+- [x] **Phase 6: Projekty** - Sticky sidebar + grid 7 kart projektow
 - [ ] **Phase 7: Szkolenia** - Sticky sidebar + opis + ikony technologii
 - [ ] **Phase 8: Baza Wiedzy** - Sticky sidebar + grid artykulow
 - [ ] **Phase 9: Footer** - Stopka z danymi kontaktowymi i social links
@@ -114,8 +114,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Dane (types.ts + constants.ts: 7 projektow, secondaryImage) + ekstrakcja ProjektySection z overlayem i naglowkami
-- [ ] 06-02-PLAN.md — Grid 3-kolumnowy 7 kart projektow z border-l, logami, typografia + strzalka separator
+- [x] 06-01-PLAN.md — Dane (types.ts + constants.ts: 7 projektow, secondaryImage) + ekstrakcja ProjektySection z overlayem i naglowkami
+- [x] 06-02-PLAN.md — Grid 3-kolumnowy 7 kart projektow z border-l, logami, typografia + strzalka separator
 
 ### Phase 7: Szkolenia
 **Goal**: Uzytkownik scrolluje do sekcji Szkolenia i widzi sticky sidebar, opis szkolen oraz rzad ikon technologii
@@ -196,7 +196,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 3. Nawigacja | 1/1 | Complete | 2026-02-11 |
 | 4. Programy Edukacyjne | 2/2 | Complete | 2026-02-12 |
 | 5. Programy Stypendialne | 2/2 | Complete | 2026-02-12 |
-| 6. Projekty | 0/2 | Not started | - |
+| 6. Projekty | 2/2 | Complete | 2026-02-13 |
 | 7. Szkolenia | 0/2 | Not started | - |
 | 8. Baza Wiedzy | 0/2 | Not started | - |
 | 9. Footer | 0/2 | Not started | - |
