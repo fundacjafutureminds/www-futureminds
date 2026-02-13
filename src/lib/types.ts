@@ -25,6 +25,7 @@ export interface Project {
   title: string;
   description: string;
   image?: string;
+  secondaryImage?: string; // Drugie logo (np. Enigma ma 2 loga)
   href?: string;
 }
 

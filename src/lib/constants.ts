@@ -129,39 +129,48 @@ export const PROJECTS: Project[] = [
   {
     title: "Metropolitalna Liga ENIGMY",
     description:
-      "Projekt \u201eMetropolitalna Liga ENIGMY\u201d, zrealizowany przez Fundacj\u0119 Future Minds i Stowarzyszenie Metropolia Pozna\u0144 z finansowaniem europejskim, znacz\u0105co wzmocni\u0142 umiej\u0119tno\u015bci matematyczne i informatyczne uczni\u00f3w.",
+      "Projekt \u201eMetropolitalna Liga ENIGMY\u201d, zrealizowany przez Fundacj\u0119 Future Minds i Stowarzyszenie Metropolia Pozna\u0144 z finansowaniem europejskim, znacz\u0105co wzmocni\u0142 umiej\u0119tno\u015bci matematyczne i informatyczne uczni\u00f3w. Inicjatywa ta, \u0142\u0105cz\u0105c konkursy mi\u0119dzyszkolne z edukacyjnymi celami, po\u0142o\u017cy\u0142a podwaliny pod dalszy rozw\u00f3j kszta\u0142cenia w regionie.",
     image: "/images/Logo-Enigma.png",
+    secondaryImage: "/images/Obszar-roboczy-1.png",
   },
   {
-    title: 'Pol\'and Rock 2022 "Budujemy państwo prawa"',
+    title: 'Pol\'and Rock 2022 "Budujemy pa\u0144stwo prawa"',
     description:
-      'Fundacja we współpracy z Okręgową Izbą Radców Prawnych, zrealizowała projekt "Budujemy państwo prawa" na festiwalu Pol\'and Rock 2022, kładąc nacisk na prawa dziecka oraz zasady funkcjonowania państwa prawa poprzez interaktywne warsztaty z wykorzystaniem klocków LEGO®.',
-    image: "/images/Obszar-roboczy-1.png",
+      'Fundacja we wsp\u00f3\u0142pracy z Okr\u0119gow\u0105 Izb\u0105 Radc\u00f3w Prawnych, zrealizowa\u0142a projekt "Budujemy pa\u0144stwo prawa" na festiwalu Pol\'and Rock 2022, k\u0142ad\u0105c nacisk na prawa dziecka oraz zasady funkcjonowania pa\u0144stwa prawa poprzez interaktywne warsztaty z wykorzystaniem klock\u00f3w LEGO\u00ae. Inicjatywa ta mia\u0142a na celu nie tylko edukacj\u0119 prawn\u0105, ale r\u00f3wnie\u017c promowanie \u015bwiadomo\u015bci praw dziecka w\u015br\u00f3d m\u0142odszych pokole\u0144.',
+    image: "/images/rock3.png",
   },
   {
     title:
-      "Realizacja grantu od Międzynarodowej Organizacji ds. Migracji ONZ",
+      "Realizacja grantu od Mi\u0119dzynarodowej Organizacji ds. Migracji ONZ",
     description:
-      'Realizacja projektu "Działania integracyjne społeczności za pomocą FIRST LEGO League Explore" została wsparta grantem od Międzynarodowej Organizacji ds. Migracji (IOM). Celem tego projektu było wspieranie integracji polskich i ukraińskich dzieci.',
+      'Realizacja projektu "Dzia\u0142ania integracyjne spo\u0142eczno\u015bci za pomoc\u0105 FIRST LEGO League Explore" zosta\u0142a wsparta grantem od Mi\u0119dzynarodowej Organizacji ds. Migracji (IOM), b\u0119d\u0105cej cz\u0119\u015bci\u0105 Systemu Organizacji Narod\u00f3w Zjednoczonych (ONZ). Celem tego projektu by\u0142o wspieranie integracji polskich i ukrai\u0144skich dzieci w miejscowo\u015bci Karczmiska, wojew\u00f3dztwo Lubelskie, przez wsp\u00f3lne uczestnictwo w edukacyjnych aktywno\u015bciach.',
     image: "/images/IOM.png",
   },
   {
-    title: "Noc Naukowców",
+    title: "Noc Naukowc\u00f3w",
     description:
-      "Od wielu lat Fundacja wraz z Wydziałem Matematyki i Informatyki na Uniwersytecie Adama Mickiewicza w Poznaniu bierze udział w Nocy Naukowców - największej w Europie imprezie promującej naukę, innowację i badania.",
+      "Od wielu lat Fundacja wraz z Wydzia\u0142em Matematyki i Informatyki na Uniwersytecie Adama Mickiewicza w Poznaniu bierze udzia\u0142 w Nocy Naukowc\u00f3w - najwi\u0119kszej w Europie imprezie promuj\u0105cej nauk\u0119, innowacj\u0119 i badania. Jest organizatorem takich wydarze\u0144 otwartych jak budowanie i programowanie robot\u00f3w (elementy FIRST LEGO League) czy Build The Change.",
     image: "/images/Noc-naukowcow.png",
   },
   {
     title: "Mistrzostwa IT",
     description:
-      "Fundacja współorganizuje Dywizję Robotyki w ramach Mistrzostw IT odbywających się na Poznań Game Arena, prestiżowym wydarzeniu dla entuzjastów nowych technologii w Europie Środkowo-Wschodniej.",
+      "Fundacja wsp\u00f3\u0142organizuje Dywizj\u0119 Robotyki w ramach Mistrzostw IT odbywaj\u0105cych si\u0119 na Pozna\u0144 Game Arena, presti\u017cowym wydarzeniu dla entuzjast\u00f3w nowych technologii w Europie \u015arodkowo-Wschodniej. Wydarzenie stanowi platform\u0119 dla promowania wiedzy, umiej\u0119tno\u015bci i pasji, przygotowuj\u0105c m\u0142odzie\u017c do spe\u0142nienia wymaga\u0144 wsp\u00f3\u0142czesnego rynku pracy.",
+    image: "/images/Obszar-roboczy-3.png",
   },
   {
-    title: "Laboratoria Przyszłości",
+    title: "Laboratoria Przysz\u0142o\u015bci",
     description:
-      "Laboratoria Przyszłości to rządowy program, który wspierał szkoły w całej Polsce w doposażeniu pracowni STEAM. Fundacja wspiera merytorycznie szkoły, które wybrały rozwiązania związane z LEGO Education i FIRST LEGO League.",
+      "Laboratoria Przysz\u0142o\u015bci to rz\u0105dowy program, kt\u00f3ry wspiera\u0142 szko\u0142y w ca\u0142ej Polsce w doposa\u017ceniu pracowni STEAM (m.in. pracowni technicznych, robotycznych czy informatycznych). Fundacja wspiera merytorycznie szko\u0142y, kt\u00f3re wybra\u0142y rozwi\u0105zania zwi\u0105zane z LEGO Education i FIRST LEGO League, oferuj\u0105c kompleksowe wdro\u017cenia i szkolenia dla nauczycieli.",
     image:
       "/images/logo-Laboratoria_Przyszlosci_poziom_biale-1-e1707145414838.png",
+  },
+  {
+    title: "Kto Ty jeste\u015b? - Polak ma\u0142y",
+    description:
+      'Projekt \u201ePodwodny \u015awiat \u2013 edukacja STEAM z klockami LEGO\u201d, realizowany przez Fundacj\u0119 Future Minds, obj\u0105\u0142 120 dzieci z 5 przedszkoli w r\u00f3\u017cnych cz\u0119\u015bciach Polski, rozwijaj\u0105c ich umiej\u0119tno\u015bci w obszarach nauk przyrodniczych, technologii, in\u017cynierii, matematyki i sztuki (STEAM). Projekt finansowany ze \u015brodk\u00f3w Ministra Edukacji w ramach programu "Kto Ty jeste\u015b? - Polak ma\u0142y" na 2024 rok.',
+    image: "/images/04_znak_-siatka_podstawowy_mono_ciemne_tlo-1.png",
+    href: "https://edukacjasteam.pl/",
   },
 ];
 
