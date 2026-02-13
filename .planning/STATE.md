@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 6 in progress — Projekty (plan 01 done, plan 02 remaining)
+**Current focus:** Phase 6 complete — Projekty (oba plany wykonane)
 
 ## Current Position
 
-Phase: 6 of 10 (Projekty)
-Plan: 1 of 2 in current phase
-Status: Plan 06-01 complete — dane projektow i struktura ProjektySection
-Last activity: 2026-02-13 — Phase 6 plan 01 executed (06-01-PLAN.md)
+Phase: 6 of 10 (Projekty) — COMPLETE
+Plan: 2 of 2 in current phase (all done)
+Status: Phase 06-projekty complete — grid kart projektow i strzalka separator
+Last activity: 2026-02-13 — Phase 6 plan 02 executed (06-02-PLAN.md)
 
-Progress: [██████████░░░░░░░░░░░░░░░░] 10/27 (37%)
+Progress: [███████████░░░░░░░░░░░░░░░] 11/27 (41%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 2.7 min
-- Total execution time: 27 min
+- Total plans completed: 11
+- Average duration: 2.6 min
+- Total execution time: 29 min
 
 **By Phase:**
 
@@ -32,10 +32,10 @@ Progress: [██████████░░░░░░░░░░░░░
 | 03-nawigacja | 1/1 | 2 min | 2 min |
 | 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
-| 06-projekty | 1/2 | 4 min | 4 min |
+| 06-projekty | 2/2 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3 min), 04-02 (3 min), 05-01 (3 min), 05-02 (2 min), 06-01 (4 min)
+- Last 5 plans: 04-02 (3 min), 05-01 (3 min), 05-02 (2 min), 06-01 (4 min), 06-02 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -84,6 +84,8 @@ Recent decisions affecting current work:
 - 06-01: Template literals z unicode escape sequences dla polskich znakow w JSX (kompatybilnosc narzedzia Write)
 - 06-01: Brak navLinks w ProjektySection — wbudowany link "Powrot na gore" w StickySection wystarczy
 - 06-01: Jednowyrazowy naglowek "Projekty" (bez br) — zgodnie z Elementorem
+- 06-02: Tag <a> zamiast next/link dla linkow zewnetrznych w kartach projektow (target=_blank)
+- 06-02: Grid grid-cols-3 z gap-0 zamiast flex z w-1/3 (czystsze, responsywne)
 
 ### Pending Todos
 
@@ -96,6 +98,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-13T18:56:21Z
-Stopped at: Completed 06-01-PLAN.md (dane projektow + struktura ProjektySection)
+Last session: 2026-02-13T19:01:07Z
+Stopped at: Completed 06-02-PLAN.md (grid kart projektow + strzalka separator — Phase 06 complete)
 Resume file: None
