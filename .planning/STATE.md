@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 5 complete — Programy Stypendialne (oba plany done, gotowe na Phase 6)
+**Current focus:** Phase 6 in progress — Projekty (plan 01 done, plan 02 remaining)
 
 ## Current Position
 
-Phase: 5 of 10 (Programy Stypendialne) — COMPLETE
-Plan: 2 of 2 in current phase (all done)
-Status: Phase 05 complete — sekcja Programy Stypendialne w pelni zaimplementowana
-Last activity: 2026-02-12 — Phase 5 plan 02 executed (05-02-PLAN.md)
+Phase: 6 of 10 (Projekty)
+Plan: 1 of 2 in current phase
+Status: Plan 06-01 complete — dane projektow i struktura ProjektySection
+Last activity: 2026-02-13 — Phase 6 plan 01 executed (06-01-PLAN.md)
 
-Progress: [█████████░░░░░░░░░░░░░░░░░] 9/27 (33%)
+Progress: [██████████░░░░░░░░░░░░░░░░] 10/27 (37%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 2.6 min
-- Total execution time: 23 min
+- Total plans completed: 10
+- Average duration: 2.7 min
+- Total execution time: 27 min
 
 **By Phase:**
 
@@ -32,9 +32,10 @@ Progress: [█████████░░░░░░░░░░░░░░
 | 03-nawigacja | 1/1 | 2 min | 2 min |
 | 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
+| 06-projekty | 1/2 | 4 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (2 min), 04-01 (3 min), 04-02 (3 min), 05-01 (3 min), 05-02 (2 min)
+- Last 5 plans: 04-01 (3 min), 04-02 (3 min), 05-01 (3 min), 05-02 (2 min), 06-01 (4 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -80,6 +81,9 @@ Recent decisions affecting current work:
 - 05-02: Obrazki kart CTA ladowane dynamicznie z SCHOLARSHIP_CTA_CARDS (nie hardcodowane)
 - 05-02: Layout kart CTA 2+1: dwie 50%/50% + trzecia 87% (zgodnie z Elementor)
 - 05-02: Strzalka separator 60% width z opacity-40
+- 06-01: Template literals z unicode escape sequences dla polskich znakow w JSX (kompatybilnosc narzedzia Write)
+- 06-01: Brak navLinks w ProjektySection — wbudowany link "Powrot na gore" w StickySection wystarczy
+- 06-01: Jednowyrazowy naglowek "Projekty" (bez br) — zgodnie z Elementorem
 
 ### Pending Todos
 
@@ -92,6 +96,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-12T11:04:30Z
-Stopped at: Completed 05-02-PLAN.md (karty CTA + strzalka separator — Phase 5 done)
+Last session: 2026-02-13T18:56:21Z
+Stopped at: Completed 06-01-PLAN.md (dane projektow + struktura ProjektySection)
 Resume file: None
