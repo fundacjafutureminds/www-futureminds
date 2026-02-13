@@ -3,64 +3,12 @@ import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProgramyEdukacyjneSection } from "@/components/sections/ProgramyEdukacyjneSection";
 import { ProgramyStypendialneSection } from "@/components/sections/ProgramyStypendialneSection";
+import { ProjektySection } from "@/components/sections/ProjektySection";
 import { StickySection } from "@/components/ui/StickySection";
 import {
-  PROJECTS,
   TRAINING_SECTION_NAV,
   KNOWLEDGE_SECTION_NAV,
 } from "@/lib/constants";
-
-/* ──────────────────────── PROJEKTY ──────────────────────── */
-
-function ProjektySection() {
-  return (
-    <StickySection id="projekty" title="Projekty" sectionNumber="03">
-      {/* Intro */}
-      <div className="mb-16 space-y-8">
-        <h3 className="max-w-3xl text-3xl leading-snug font-light text-white md:text-4xl">
-          Podejmujemy wyzwania nowoczesnego świata poprzez realizację projektów,
-          które angażują lokalne społeczności
-          <span className="text-fm-green">.</span>
-        </h3>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Przez pryzmat innowacji i współpracy z lokalnymi społecznościami i
-          partnerami na całym świecie, tworzymy rozwiązania mające realny wpływ
-          na poprawę jakości życia.
-        </p>
-      </div>
-
-      {/* Project cards */}
-      <div className="space-y-6">
-        {PROJECTS.map((project) => (
-          <div
-            key={project.title}
-            className="rounded-sm border border-white/10 p-8"
-          >
-            <div className="flex items-start gap-6">
-              {project.image && (
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={80}
-                  height={80}
-                  className="hidden h-16 w-auto shrink-0 opacity-80 brightness-0 invert md:block"
-                />
-              )}
-              <div>
-                <h4 className="mb-3 text-lg font-light text-white">
-                  {project.title}
-                </h4>
-                <p className="leading-relaxed text-fm-text">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </StickySection>
-  );
-}
 
 /* ──────────────────────── SZKOLENIA ──────────────────────── */
 
