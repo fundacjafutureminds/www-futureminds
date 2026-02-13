@@ -1,5 +1,67 @@
 import Image from "next/image";
 import { StickySection } from "@/components/ui/StickySection";
+import { PROJECTS } from "@/lib/constants";
+import type { Project } from "@/lib/types";
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div className="border-l border-[#FFFFFF54] px-[25px] py-6">
+      {/* Logo(s) */}
+      {project.image && (
+        <div className="mb-4 flex items-center gap-4">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={200}
+            height={70}
+            className="h-auto w-auto max-w-[212px]"
+          />
+          {project.secondaryImage && (
+            <Image
+              src={project.secondaryImage}
+              alt=""
+              width={160}
+              height={70}
+              className="h-auto w-auto max-w-[159px]"
+            />
+          )}
+        </div>
+      )}
+
+      {/* Tytul — 22px, font-light (w300), line-height 1.1, letter-spacing 1px */}
+      <h4 className="mb-4 mr-[45px] text-[22px] font-light leading-[1.1] tracking-[1px] text-[#EFEFEF]">
+        {project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-fm-green"
+          >
+            {project.title}
+          </a>
+        ) : (
+          project.title
+        )}
+      </h4>
+
+      {/* Opis — 15px, font-normal (w400), line-height 22px, letter-spacing 0.2px */}
+      <p className="text-[15px] font-normal leading-[22px] tracking-[0.2px] text-[#E8E8E8]">
+        {project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-fm-green"
+          >
+            {project.description}
+          </a>
+        ) : (
+          project.description
+        )}
+      </p>
+    </div>
+  );
+}
 
 export function ProjektySection() {
   return (
@@ -44,8 +106,26 @@ export function ProjektySection() {
             </p>
           </div>
 
-          {/* Grid kart projektow -- placeholder, implementacja w Plan 02 */}
-          {/* TODO: Plan 06-02 doda grid 3-kolumnowy 7 kart projektow + strzalke separator */}
+          {/* Grid 3-kolumnowy kart projektow (3+3+1) */}
+          <div className="grid grid-cols-1 gap-0 lg:grid-cols-3">
+            {PROJECTS.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+
+          {/* Separator strzalka */}
+          <div
+            className="mt-16 flex justify-center"
+            style={{ width: "60%" }}
+          >
+            <Image
+              src="/images/Strzalka-w-dol.png"
+              alt=""
+              width={59}
+              height={13}
+              className="opacity-40"
+            />
+          </div>
         </div>
       </div>
     </StickySection>
