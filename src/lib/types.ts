@@ -52,3 +52,9 @@ export interface ScholarshipCtaCard {
   image: string;
   href: string;
 }
+
+export interface TechIcon {
+  src: string;
+  alt: string;
+  width: number; // naturalna szerokosc w px z Elementora
+}

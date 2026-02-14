@@ -7,6 +7,7 @@ import type {
   ScholarshipCtaCard,
   NavItem,
   StickyNavLink,
+  TechIcon,
 } from "./types";
 
 export const NAV_ITEMS: NavItem[] = [
@@ -223,6 +224,14 @@ export const TRAINING_SECTION_NAV: StickyNavLink[] = [
 
 export const KNOWLEDGE_SECTION_NAV: StickyNavLink[] = [
   { label: "Powrót na górę strony", href: "#home" },
+];
+
+export const TECH_ICONS: TechIcon[] = [
+  { src: "/images/23744_20138_spike5a.png", alt: "SPIKE", width: 149 },
+  { src: "/images/raspberry-pi-svgrepo-com.png", alt: "Raspberry Pi", width: 34 },
+  { src: "/images/arduino-logo-vector-01.png", alt: "Arduino", width: 63 },
+  { src: "/images/python-svgrepo-com.png", alt: "Python", width: 45 },
+  { src: "/images/ai.png", alt: "AI", width: 47 },
 ];
 
 export const FOOTER_LINKS: NavItem[] = [
