@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 6 complete — Projekty (oba plany wykonane)
+**Current focus:** Phase 7 in progress — Szkolenia (plan 01 ukonczony)
 
 ## Current Position
 
-Phase: 6 of 10 (Projekty) — COMPLETE
-Plan: 2 of 2 in current phase (all done)
-Status: Phase 06-projekty complete — grid kart projektow i strzalka separator
-Last activity: 2026-02-13 — Phase 6 plan 02 executed (06-02-PLAN.md)
+Phase: 7 of 10 (Szkolenia) — IN PROGRESS
+Plan: 1 of 2 in current phase
+Status: Plan 07-01 complete — SzkoleniaSection wyekstrahowana z overlayem i naglowkiem
+Last activity: 2026-02-14 — Phase 7 plan 01 executed (07-01-PLAN.md)
 
-Progress: [███████████░░░░░░░░░░░░░░░] 11/27 (41%)
+Progress: [████████████░░░░░░░░░░░░░░] 12/27 (44%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 2.6 min
-- Total execution time: 29 min
+- Total execution time: 31 min
 
 **By Phase:**
 
@@ -33,9 +33,10 @@ Progress: [███████████░░░░░░░░░░░░
 | 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
 | 06-projekty | 2/2 | 6 min | 3 min |
+| 07-szkolenia | 1/2 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (3 min), 05-01 (3 min), 05-02 (2 min), 06-01 (4 min), 06-02 (2 min)
+- Last 5 plans: 05-01 (3 min), 05-02 (2 min), 06-01 (4 min), 06-02 (2 min), 07-01 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -86,6 +87,9 @@ Recent decisions affecting current work:
 - 06-01: Jednowyrazowy naglowek "Projekty" (bez br) — zgodnie z Elementorem
 - 06-02: Tag <a> zamiast next/link dla linkow zewnetrznych w kartach projektow (target=_blank)
 - 06-02: Grid grid-cols-3 z gap-0 zamiast flex z w-1/3 (czystsze, responsywne)
+- 07-01: Unicode escape sequences dla polskich znakow w JSX (kontynuacja locked decision z Phase 6)
+- 07-01: TRAINING_SECTION_NAV przeniesiony z page.tsx do SzkoleniaSection.tsx
+- 07-01: Usuniete elementy nieistniejace w Elementorze: h3 heading, drugi paragraf, etykieta Technologie
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-13T19:01:07Z
-Stopped at: Completed 06-02-PLAN.md (grid kart projektow + strzalka separator — Phase 06 complete)
+Last session: 2026-02-14T16:27:51Z
+Stopped at: Completed 07-01-PLAN.md (SzkoleniaSection z overlayem, naglowkiem i opisem)
 Resume file: None
