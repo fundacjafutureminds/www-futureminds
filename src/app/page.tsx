@@ -4,75 +4,9 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ProgramyEdukacyjneSection } from "@/components/sections/ProgramyEdukacyjneSection";
 import { ProgramyStypendialneSection } from "@/components/sections/ProgramyStypendialneSection";
 import { ProjektySection } from "@/components/sections/ProjektySection";
+import { SzkoleniaSection } from "@/components/sections/SzkoleniaSection";
 import { StickySection } from "@/components/ui/StickySection";
-import {
-  TRAINING_SECTION_NAV,
-  KNOWLEDGE_SECTION_NAV,
-} from "@/lib/constants";
-
-/* ──────────────────────── SZKOLENIA ──────────────────────── */
-
-function SzkoleniaSection() {
-  return (
-    <StickySection
-      id="szkolenia"
-      title="Szkolenia"
-      sectionNumber="04"
-      navLinks={TRAINING_SECTION_NAV}
-    >
-      {/* Intro */}
-      <div className="mb-16 space-y-8">
-        <h3 className="max-w-3xl text-3xl leading-snug font-light text-white md:text-4xl">
-          Dzielimy się naszą{" "}
-          <span className="text-fm-green">wiedzą i doświadczeniem</span>, aby
-          można było ją zastosować podczas pracy z dziećmi.
-        </h3>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Szkolenia dla nauczycieli realizujemy w ramach Akademii LEGO Education
-          i Akademii Future Minds, zapewniając nauczycielom solidne fundamenty w
-          obszarach nowoczesnych technologii: robotyce, sztucznej inteligencji i
-          elektronice oraz innowacyjnych i angażujących metodach nauczania.
-        </p>
-        <p className="max-w-2xl text-lg leading-relaxed font-light text-fm-text">
-          Warsztaty obejmują szeroki zakres programów edukacyjnych przeznaczonych
-          do różnych etapów kształcenia STEAM - od przedszkoli, poprzez
-          nauczanie początkowe, szkoły podstawowe, aż po licea i technika.
-        </p>
-      </div>
-
-      {/* CTA */}
-      <Link
-        href="/szkolenia"
-        className="mb-16 inline-block border border-white/20 px-8 py-3 text-sm tracking-widest text-fm-text-muted uppercase transition-colors hover:border-fm-green hover:text-fm-green"
-      >
-        Poznaj nasze szkolenia
-      </Link>
-
-      {/* Technology icons row */}
-      <div>
-        <p className="mb-6 text-sm tracking-widest text-fm-text-muted uppercase">
-          Technologie
-        </p>
-        <div className="flex flex-wrap items-center gap-8">
-          <Image
-            src="/images/23744_20138_spike5a.png"
-            alt="SPIKE"
-            width={80}
-            height={40}
-            className="h-8 w-auto opacity-60 brightness-0 invert"
-          />
-          <Image
-            src="/images/raspberry-pi-svgrepo-com.png"
-            alt="Raspberry Pi"
-            width={80}
-            height={40}
-            className="h-8 w-auto opacity-60 brightness-0 invert"
-          />
-        </div>
-      </div>
-    </StickySection>
-  );
-}
+import { KNOWLEDGE_SECTION_NAV } from "@/lib/constants";
 
 /* ──────────────────────── BAZA WIEDZY ──────────────────────── */
 
