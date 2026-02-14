@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Programy Edukacyjne** - Sticky sidebar + karty programow FLL/BtC/OZEdukacja
 - [x] **Phase 5: Programy Stypendialne** - Sticky sidebar + partnerzy + karty CTA + blog widget
 - [x] **Phase 6: Projekty** - Sticky sidebar + grid 7 kart projektow
-- [ ] **Phase 7: Szkolenia** - Sticky sidebar + opis + ikony technologii
+- [x] **Phase 7: Szkolenia** - Sticky sidebar + opis + ikony technologii
 - [ ] **Phase 8: Baza Wiedzy** - Sticky sidebar + grid artykulow
 - [ ] **Phase 9: Footer** - Stopka z danymi kontaktowymi i social links
 - [ ] **Phase 10: Integracja i Deploy** - Build, weryfikacja, deploy na Vercel
@@ -127,11 +127,11 @@ Plans:
   3. Link "Poznaj nasze szkolenia" jest klikalny
   4. Rzad ikon technologii (SPIKE, Raspberry Pi, Arduino, Python, AI) jest widoczny
   5. Dekoracyjny overlay szkolenia.png jest widoczny na tle (~20% opacity)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 07-01: Sticky sidebar + opis + overlay
-- [ ] 07-02: Link CTA + rzad ikon technologii
+- [x] 07-01-PLAN.md — Sticky sidebar + opis + overlay
+- [x] 07-02-PLAN.md — Link CTA + rzad ikon technologii
 
 ### Phase 8: Baza Wiedzy
 **Goal**: Uzytkownik scrolluje do sekcji Baza Wiedzy i widzi sticky sidebar, opis oraz grid 6 artykulow/publikacji
@@ -197,7 +197,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 4. Programy Edukacyjne | 2/2 | Complete | 2026-02-12 |
 | 5. Programy Stypendialne | 2/2 | Complete | 2026-02-12 |
 | 6. Projekty | 2/2 | Complete | 2026-02-13 |
-| 7. Szkolenia | 0/2 | Not started | - |
+| 7. Szkolenia | 2/2 | Complete | 2026-02-14 |
 | 8. Baza Wiedzy | 0/2 | Not started | - |
 | 9. Footer | 0/2 | Not started | - |
 | 10. Integracja i Deploy | 0/5 | Not started | - |
