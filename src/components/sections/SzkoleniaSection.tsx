@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
-import { TRAINING_SECTION_NAV } from "@/lib/constants";
+import { TRAINING_SECTION_NAV, TECH_ICONS } from "@/lib/constants";
 
 export function SzkoleniaSection() {
   return (
@@ -48,7 +49,52 @@ export function SzkoleniaSection() {
             </p>
           </div>
 
-          {/* CTA i ikony technologii — Plan 07-02 */}
+          {/* CTA — duzy tekst-link 44px, w600 */}
+          <div className="mb-16">
+            <Link
+              href="/szkolenia"
+              className="inline-block text-[44px] font-semibold leading-none text-white transition-colors hover:text-fm-green"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              Poznaj
+              <br />
+              nasze szkolenia
+            </Link>
+          </div>
+
+          {/* Rzad ikon technologii */}
+          <div className="mb-16 flex flex-wrap items-center">
+            {TECH_ICONS.map((icon, index) => (
+              <div
+                key={icon.alt}
+                className={`flex h-16 items-center justify-center${
+                  index === 0 ? " border-l border-[#FFFFFF54]" : ""
+                }`}
+                style={{ width: 140 }}
+              >
+                <Image
+                  src={icon.src}
+                  alt={icon.alt}
+                  width={icon.width}
+                  height={40}
+                  className="h-8 w-auto brightness-0 invert"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Separator strzalka */}
+          <div className="mt-16 flex justify-center" style={{ width: "60%" }}>
+            <Image
+              src="/images/Strzalka-w-dol.png"
+              alt=""
+              width={59}
+              height={13}
+              className="opacity-40"
+            />
+          </div>
 
         </div>
       </div>
