@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 7 in progress — Szkolenia (plan 01 ukonczony)
+**Current focus:** Phase 7 complete — Szkolenia (2/2 planow ukonczonych)
 
 ## Current Position
 
-Phase: 7 of 10 (Szkolenia) — IN PROGRESS
-Plan: 1 of 2 in current phase
-Status: Plan 07-01 complete — SzkoleniaSection wyekstrahowana z overlayem i naglowkiem
-Last activity: 2026-02-14 — Phase 7 plan 01 executed (07-01-PLAN.md)
+Phase: 7 of 10 (Szkolenia) — COMPLETE
+Plan: 2 of 2 in current phase
+Status: Phase 07 complete — SzkoleniaSection z CTA 44px, 5 ikonami technologii i strzalka separator
+Last activity: 2026-02-14 — Phase 7 plan 02 executed (07-02-PLAN.md)
 
-Progress: [████████████░░░░░░░░░░░░░░] 12/27 (44%)
+Progress: [█████████████░░░░░░░░░░░░░] 13/27 (48%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 2.6 min
-- Total execution time: 31 min
+- Total plans completed: 13
+- Average duration: 2.5 min
+- Total execution time: 33 min
 
 **By Phase:**
 
@@ -33,10 +33,10 @@ Progress: [████████████░░░░░░░░░░░
 | 04-programy-edukacyjne | 2/2 | 6 min | 3 min |
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
 | 06-projekty | 2/2 | 6 min | 3 min |
-| 07-szkolenia | 1/2 | 2 min | 2 min |
+| 07-szkolenia | 2/2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (3 min), 05-02 (2 min), 06-01 (4 min), 06-02 (2 min), 07-01 (2 min)
+- Last 5 plans: 05-02 (2 min), 06-01 (4 min), 06-02 (2 min), 07-01 (2 min), 07-02 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -90,6 +90,9 @@ Recent decisions affecting current work:
 - 07-01: Unicode escape sequences dla polskich znakow w JSX (kontynuacja locked decision z Phase 6)
 - 07-01: TRAINING_SECTION_NAV przeniesiony z page.tsx do SzkoleniaSection.tsx
 - 07-01: Usuniete elementy nieistniejace w Elementorze: h3 heading, drugi paragraf, etykieta Technologie
+- 07-02: CTA jako tekst-link 44px w600 (nie border-button) — zgodnie z Elementorem
+- 07-02: 5 ikon technologii w kontenerach 140px z brightness-0 invert (bez opacity-60)
+- 07-02: SPIKE (pierwsza ikona) z border-l #FFFFFF54 jako separator wizualny
 
 ### Pending Todos
 
@@ -102,6 +105,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-14T16:27:51Z
-Stopped at: Completed 07-01-PLAN.md (SzkoleniaSection z overlayem, naglowkiem i opisem)
+Last session: 2026-02-14T16:31:45Z
+Stopped at: Completed 07-02-PLAN.md (CTA 44px, 5 ikon technologii, strzalka separator)
 Resume file: None
