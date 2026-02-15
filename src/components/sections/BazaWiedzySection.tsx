@@ -1,6 +1,36 @@
 import Image from "next/image";
+import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
-import { KNOWLEDGE_SECTION_NAV } from "@/lib/constants";
+import { ARTICLES, KNOWLEDGE_SECTION_NAV } from "@/lib/constants";
+import type { Article } from "@/lib/types";
+
+function ArticleCard({ article }: { article: Article }) {
+  return (
+    <div className="border-l border-[#FFFFFF54] px-[35px] pt-[5px]">
+      {/* Kategoria 12px uppercase */}
+      <p className="text-[12px] font-normal uppercase leading-[2em] text-fm-text-muted">
+        {article.category}
+      </p>
+      {/* Tytul 22px/w300, hover zielony */}
+      <h4 className="text-[22px] font-light leading-[1.1] text-[#EAEAEA] transition-colors hover:text-fm-green">
+        <Link href={article.href}>{article.title}</Link>
+      </h4>
+      {/* Excerpt 15px */}
+      {article.excerpt && (
+        <p className="mt-5 mb-5 text-[15px] font-normal leading-[22px] tracking-[0.2px] text-[#D9D9D9]">
+          {article.excerpt}
+        </p>
+      )}
+      {/* Przycisk Wiecej — 13px, uppercase, bg #FFFFFF1A */}
+      <Link
+        href={article.href}
+        className="mt-5 inline-block bg-[#FFFFFF1A] px-[30px] py-[8px] text-[13px] font-light uppercase tracking-[1.7px] text-[#E4E4E4] transition-colors hover:text-fm-green"
+      >
+        {`Wi\u0119cej`}
+      </Link>
+    </div>
+  );
+}
 
 export function BazaWiedzySection() {
   return (
@@ -64,7 +94,14 @@ export function BazaWiedzySection() {
             </p>
           </div>
 
-          {/* PLACEHOLDER: Grid artykulow i CTA beda dodane w planie 08-02 */}
+          {/* Grid artykulow 3 kolumny */}
+          <div className="w-[90%]">
+            <div className="grid grid-cols-1 gap-x-[90px] gap-y-[20px] lg:grid-cols-3">
+              {ARTICLES.map((article) => (
+                <ArticleCard key={article.title} article={article} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </StickySection>
