@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 9 complete — Footer pixel-perfect z Elementor (1/1 planow ukonczonych). Nastepna: Phase 10 (Integracja/Deploy)
+**Current focus:** Phase 10 in progress — Animacje fadeIn i integracja (1/3 planow ukonczonych)
 
 ## Current Position
 
-Phase: 9 of 10 (Footer) — COMPLETE
-Plan: 1 of 1 in current phase
-Status: Phase 9 complete — Footer pixel-perfect z Elementor template 12442 (logo FUTURE|MINDS, slogany, linki, SVG ikony, Carrier)
-Last activity: 2026-02-15 — Phase 9 plan 01 executed (09-01-PLAN.md)
+Phase: 10 of 10 (Integracja/Deploy)
+Plan: 1 of 3 in current phase — COMPLETE
+Status: Plan 10-01 complete — FadeIn.tsx + animacje Hero + Programy Edukacyjne
+Last activity: 2026-02-15 — Phase 10 plan 01 executed (10-01-PLAN.md)
 
-Progress: [████████████████░░░░░░░░░░] 16/27 (59%)
+Progress: [█████████████████░░░░░░░░░] 17/19 (89%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
+- Total plans completed: 17
 - Average duration: 2.4 min
-- Total execution time: 39 min
+- Total execution time: 41 min
 
 **By Phase:**
 
@@ -36,9 +36,10 @@ Progress: [████████████████░░░░░░░
 | 07-szkolenia | 2/2 | 4 min | 2 min |
 | 08-baza-wiedzy | 2/2 | 4 min | 2 min |
 | 09-footer | 1/1 | 2 min | 2 min |
+| 10-integracja-deploy | 1/3 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 07-01 (2 min), 07-02 (2 min), 08-01 (2 min), 08-02 (2 min), 09-01 (2 min)
+- Last 5 plans: 08-01 (2 min), 08-02 (2 min), 09-01 (2 min), 10-01 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -105,6 +106,8 @@ Recent decisions affecting current work:
 - 09-01: Inline SVG ikony social media zamiast Font Awesome (projekt nie uzywa FA)
 - 09-01: Tag <a> zamiast next/link dla linkow nawigacyjnych w footerze (linki zewnetrzne i podstrony ktore jeszcze nie istnieja)
 - 09-01: nhgFont jako zmienna lokalna w komponencie Footer (unikniecie powtorzen inline style)
+- 10-01: FadeIn.tsx jako jedyna granica "use client" — sekcje pozostaja Server Components
+- 10-01: directionMap z offsetami 30px (subtelne animacje, nie rozpraszajace)
 
 ### Pending Todos
 
@@ -117,6 +120,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T16:06:13Z
-Stopped at: Completed 09-01-PLAN.md (Footer pixel-perfect z Elementor template 12442 — Phase 9 complete)
+Last session: 2026-02-15T17:37:26Z
+Stopped at: Completed 10-01-PLAN.md (FadeIn.tsx + animacje Hero + Programy Edukacyjne)
 Resume file: None
