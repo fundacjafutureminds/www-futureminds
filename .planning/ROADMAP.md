@@ -154,15 +154,15 @@ Plans:
 **Depends on**: Phase 1
 **Requirements**: FOOT-01, FOOT-02, FOOT-03, FOOT-04
 **Success Criteria** (what must be TRUE):
-  1. Footer wyswietla sie na ciemnym tle z 4 kolumnami informacji
-  2. Logo fundacji i dane kontaktowe sa widoczne
-  3. Social links (Facebook, YouTube, LinkedIn) sa klikalne i prowadza do profili fundacji
+  1. Footer wyswietla sie na ciemnym tle z logo FUTURE|MINDS, sloganami, linkami i ikonami social
+  2. Logo fundacji rozdzielone (FUTURE | kreska | MINDS + Foundation) jest widoczne
+  3. Social links (Facebook, Instagram, LinkedIn, YouTube) sa klikalne SVG ikony
   4. Link do polityki prywatnosci jest widoczny i klikalny
-**Plans**: TBD
+  5. Partner Carrier z logo i linkiem jest widoczny na dole footera
+**Plans:** 1 plan
 
 Plans:
-- [ ] 09-01: Layout footera — 4 kolumny, logo, dane kontaktowe
-- [ ] 09-02: Social links + link polityka prywatnosci
+- [ ] 09-01-PLAN.md — Przebudowa Footer.tsx: logo FUTURE|MINDS, slogany, linki, SVG ikony social, partner Carrier
 
 ### Phase 10: Integracja i Deploy
 **Goal**: Cala strona dziala jako spojna calosc — build przechodzi, obrazki laduja sie, animacje dzialaja, strona jest wdrozona na Vercel
@@ -199,5 +199,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 6. Projekty | 2/2 | Complete | 2026-02-13 |
 | 7. Szkolenia | 2/2 | Complete | 2026-02-14 |
 | 8. Baza Wiedzy | 2/2 | Complete | 2026-02-15 |
-| 9. Footer | 0/2 | Not started | - |
+| 9. Footer | 0/1 | Not started | - |
 | 10. Integracja i Deploy | 0/5 | Not started | - |
