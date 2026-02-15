@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 10 in progress — Animacje fadeIn i integracja (1/3 planow ukonczonych)
+**Current focus:** Phase 10 in progress — Animacje fadeIn we wszystkich sekcjach (2/3 planow ukonczonych)
 
 ## Current Position
 
 Phase: 10 of 10 (Integracja/Deploy)
-Plan: 1 of 3 in current phase — COMPLETE
-Status: Plan 10-01 complete — FadeIn.tsx + animacje Hero + Programy Edukacyjne
-Last activity: 2026-02-15 — Phase 10 plan 01 executed (10-01-PLAN.md)
+Plan: 2 of 3 in current phase — COMPLETE
+Status: Plan 10-02 complete — animacje fadeIn w Stypendia, Projekty, Szkolenia, Baza Wiedzy
+Last activity: 2026-02-15 — Phase 10 plan 02 executed (10-02-PLAN.md)
 
-Progress: [█████████████████░░░░░░░░░] 17/19 (89%)
+Progress: [██████████████████░░░░░░░] 18/19 (94%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17
+- Total plans completed: 18
 - Average duration: 2.4 min
-- Total execution time: 41 min
+- Total execution time: 44 min
 
 **By Phase:**
 
@@ -36,10 +36,10 @@ Progress: [█████████████████░░░░░░
 | 07-szkolenia | 2/2 | 4 min | 2 min |
 | 08-baza-wiedzy | 2/2 | 4 min | 2 min |
 | 09-footer | 1/1 | 2 min | 2 min |
-| 10-integracja-deploy | 1/3 | 2 min | 2 min |
+| 10-integracja-deploy | 2/3 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 08-01 (2 min), 08-02 (2 min), 09-01 (2 min), 10-01 (2 min)
+- Last 5 plans: 08-02 (2 min), 09-01 (2 min), 10-01 (2 min), 10-02 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -108,6 +108,8 @@ Recent decisions affecting current work:
 - 09-01: nhgFont jako zmienna lokalna w komponencie Footer (unikniecie powtorzen inline style)
 - 10-01: FadeIn.tsx jako jedyna granica "use client" — sekcje pozostaja Server Components
 - 10-01: directionMap z offsetami 30px (subtelne animacje, nie rozpraszajace)
+- 10-02: FadeIn className="w-[50%]" na kartach CTA — zachowanie layout flex 50/50 z animacja
+- 10-02: StaggerContainer staggerDelay=0.08 dla logotypow partnerow (9 szt. — szybszy kaskadowy efekt)
 
 ### Pending Todos
 
@@ -120,6 +122,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T17:37:26Z
-Stopped at: Completed 10-01-PLAN.md (FadeIn.tsx + animacje Hero + Programy Edukacyjne)
+Last session: 2026-02-15T17:42:55Z
+Stopped at: Completed 10-02-PLAN.md (animacje fadeIn w Stypendia, Projekty, Szkolenia, Baza Wiedzy)
 Resume file: None
