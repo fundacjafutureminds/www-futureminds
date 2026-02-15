@@ -143,11 +143,11 @@ Plans:
   3. Grid 6 artykulow/publikacji w 3 kolumnach jest widoczny ze statycznymi danymi
   4. Linki do artykulow sa klikalne
   5. Dekoracyjny overlay (Baza-wiedzy.png) jest widoczny na tle (~20% opacity)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 08-01: Sticky sidebar + opis + overlay
-- [ ] 08-02: Grid 6 artykulow z linkami
+- [ ] 08-01-PLAN.md — Ekstrakcja BazaWiedzySection: dane (excerpt), overlay, naglowek 100px, intro heading, opis
+- [ ] 08-02-PLAN.md — Grid 6 artykulow (ArticleCard) + CTA "Pelna baza wiedzy" + obrazek ksiazki
 
 ### Phase 9: Footer
 **Goal**: Uzytkownik scrolluje na sam dol strony i widzi stopke z danymi fundacji, linkami spolecznosciowymi i polityka prywatnosci
