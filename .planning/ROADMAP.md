@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Programy Stypendialne** - Sticky sidebar + partnerzy + karty CTA + blog widget
 - [x] **Phase 6: Projekty** - Sticky sidebar + grid 7 kart projektow
 - [x] **Phase 7: Szkolenia** - Sticky sidebar + opis + ikony technologii
-- [ ] **Phase 8: Baza Wiedzy** - Sticky sidebar + grid artykulow
+- [x] **Phase 8: Baza Wiedzy** - Sticky sidebar + grid artykulow
 - [ ] **Phase 9: Footer** - Stopka z danymi kontaktowymi i social links
 - [ ] **Phase 10: Integracja i Deploy** - Build, weryfikacja, deploy na Vercel
 
@@ -146,8 +146,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 08-01-PLAN.md — Ekstrakcja BazaWiedzySection: dane (excerpt), overlay, naglowek 100px, intro heading, opis
-- [ ] 08-02-PLAN.md — Grid 6 artykulow (ArticleCard) + CTA "Pelna baza wiedzy" + obrazek ksiazki
+- [x] 08-01-PLAN.md — Ekstrakcja BazaWiedzySection: dane (excerpt), overlay, naglowek 100px, intro heading, opis
+- [x] 08-02-PLAN.md — Grid 6 artykulow (ArticleCard) + CTA "Pelna baza wiedzy" + obrazek ksiazki
 
 ### Phase 9: Footer
 **Goal**: Uzytkownik scrolluje na sam dol strony i widzi stopke z danymi fundacji, linkami spolecznosciowymi i polityka prywatnosci
@@ -198,6 +198,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 5. Programy Stypendialne | 2/2 | Complete | 2026-02-12 |
 | 6. Projekty | 2/2 | Complete | 2026-02-13 |
 | 7. Szkolenia | 2/2 | Complete | 2026-02-14 |
-| 8. Baza Wiedzy | 0/2 | Not started | - |
+| 8. Baza Wiedzy | 2/2 | Complete | 2026-02-15 |
 | 9. Footer | 0/2 | Not started | - |
 | 10. Integracja i Deploy | 0/5 | Not started | - |
