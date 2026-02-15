@@ -35,6 +35,7 @@ export interface Article {
   category: string;
   href: string;
   image?: string;
+  excerpt?: string;
 }
 
 export interface BlogPost {

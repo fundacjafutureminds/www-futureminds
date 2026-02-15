@@ -182,6 +182,8 @@ export const ARTICLES: Article[] = [
     category: "Baza wiedzy",
     href: "/publikacje",
     image: "/images/ksiazki.png",
+    excerpt:
+      "Publikacja o metodyce nauczania przez tworzenie i kreatywne dzia\u0142anie w edukacji STEAM.",
   },
   {
     title: 'Robotyka w programie "Laboratoria Przyszłości"',
@@ -189,27 +191,37 @@ export const ARTICLES: Article[] = [
     category: "Baza wiedzy",
     href: "/publikacje",
     image: "/images/ksiazki.png",
+    excerpt:
+      "Analiza wdro\u017Cenia robotyki edukacyjnej w ramach rz\u0105dowego programu Laboratoria Przysz\u0142o\u015Bci.",
   },
   {
     title: "Wpływ edukacji STEAM na rozwój kompetencji przyszłości",
     category: "Baza wiedzy",
     href: "/publikacje",
+    excerpt:
+      "Badanie wp\u0142ywu zintegrowanego nauczania STEAM na kszta\u0142towanie umiej\u0119tno\u015Bci kluczowych.",
   },
   {
     title:
       "FIRST LEGO League jako narzędzie kształtowania umiejętności miękkich",
     category: "Baza wiedzy",
     href: "/publikacje",
+    excerpt:
+      "Jak udzia\u0142 w turniejach FIRST LEGO League rozwija kompetencje spo\u0142eczne i komunikacyjne.",
   },
   {
     title: "Robotyka edukacyjna w polskich szkołach - raport",
     category: "Baza wiedzy",
     href: "/publikacje",
+    excerpt:
+      "Raport o stanie robotyki edukacyjnej w Polsce \u2014 wyzwania, mo\u017Cliwo\u015Bci i rekomendacje.",
   },
   {
     title: "Metodyka nauczania STEAM w kontekście reformy edukacji",
     category: "Baza wiedzy",
     href: "/publikacje",
+    excerpt:
+      "Przegl\u0105d metodyk nauczania STEAM i ich zastosowanie w kontek\u015Bcie polskiej reformy edukacji.",
   },
 ];
 
