@@ -174,14 +174,12 @@ Plans:
   3. Wszystkie 48 obrazkow (w tym overlay, loga, ilustracje) laduja sie bez bledow 404
   4. Animacje fadeIn (fadeInLeft, fadeInRight, fadeInDown) dzialaja na elementach we wszystkich sekcjach
   5. Strona jest wdrozona na Vercel i dostepna publicznie
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 10-01: Animacje fadeIn we wszystkich sekcjach
-- [ ] 10-02: Dekoracyjne overlay — weryfikacja i poprawki
-- [ ] 10-03: Build verification + naprawa bledow TypeScript
-- [ ] 10-04: Weryfikacja renderingu desktop 1280px+ i obrazkow
-- [ ] 10-05: Deploy na Vercel
+- [ ] 10-01-PLAN.md — Komponent FadeIn (Framer Motion whileInView) + animacje Hero i Programy Edukacyjne
+- [ ] 10-02-PLAN.md — Animacje fadeIn w Programy Stypendialne, Projekty, Szkolenia, Baza Wiedzy
+- [ ] 10-03-PLAN.md — Build verification, deploy na Vercel, wizualna weryfikacja
 
 ## Progress
 
@@ -200,4 +198,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 7. Szkolenia | 2/2 | Complete | 2026-02-14 |
 | 8. Baza Wiedzy | 2/2 | Complete | 2026-02-15 |
 | 9. Footer | 1/1 | Complete | 2026-02-15 |
-| 10. Integracja i Deploy | 0/5 | Not started | - |
+| 10. Integracja i Deploy | 0/3 | Not started | - |
