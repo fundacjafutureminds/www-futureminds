@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Projekty** - Sticky sidebar + grid 7 kart projektow
 - [x] **Phase 7: Szkolenia** - Sticky sidebar + opis + ikony technologii
 - [x] **Phase 8: Baza Wiedzy** - Sticky sidebar + grid artykulow
-- [ ] **Phase 9: Footer** - Stopka z danymi kontaktowymi i social links
+- [x] **Phase 9: Footer** - Stopka z danymi kontaktowymi i social links
 - [ ] **Phase 10: Integracja i Deploy** - Build, weryfikacja, deploy na Vercel
 
 ## Phase Details
@@ -162,7 +162,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 09-01-PLAN.md — Przebudowa Footer.tsx: logo FUTURE|MINDS, slogany, linki, SVG ikony social, partner Carrier
+- [x] 09-01-PLAN.md — Przebudowa Footer.tsx: logo FUTURE|MINDS, slogany, linki, SVG ikony social, partner Carrier
 
 ### Phase 10: Integracja i Deploy
 **Goal**: Cala strona dziala jako spojna calosc — build przechodzi, obrazki laduja sie, animacje dzialaja, strona jest wdrozona na Vercel
@@ -199,5 +199,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 6. Projekty | 2/2 | Complete | 2026-02-13 |
 | 7. Szkolenia | 2/2 | Complete | 2026-02-14 |
 | 8. Baza Wiedzy | 2/2 | Complete | 2026-02-15 |
-| 9. Footer | 0/1 | Not started | - |
+| 9. Footer | 1/1 | Complete | 2026-02-15 |
 | 10. Integracja i Deploy | 0/5 | Not started | - |
