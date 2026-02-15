@@ -66,6 +66,13 @@ Wierna kopia wizualna obecnej strony — identyczny wygląd, ale na szybkim, now
 - Partner logos: 9 (nie 5 jak w starych constants)
 - Dekoracyjne PNG overlay na tłach sekcji ~20% opacity
 
+### Oryginalne projekty Adobe Illustrator
+- User posiada oryginalne pliki .ai z projektami strony FutureMinds sprzed kompromisów Elementora
+- Wizja bliższa oryginalnemu zamysłowi — bez ograniczeń WordPress/Elementor
+- Przydatne jako źródło ilustracji (rakieta, turbiny, wiatraki) i kompozycji
+- Teraz na Next.js/React nie ma ograniczeń Elementora — można wrócić do oryginalnej wizji
+- Dostępne na żądanie — poprosić usera o eksport SVG/PNG gdy potrzebne
+
 ### Istniejący kod
 - Next.js 16.1.6, App Router, TypeScript
 - Tailwind CSS v4 z `@theme` w globals.css

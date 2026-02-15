@@ -62,7 +62,7 @@ Kazdy task commitniety atomicznie:
 1. **Task 1: Utworzyc SzkoleniaSection.tsx z overlayem, naglowkiem 100px i opisem** - `8f81fbc` (feat)
 2. **Task 2: Zaktualizowac page.tsx — import SzkoleniaSection z osobnego pliku** - `098504a` (refactor)
 
-**Plan metadata:** [hash po ukonczeniu] (docs: complete plan)
+**Plan metadata:** `9a01175` (docs: complete plan)
 
 ## Files Created/Modified
 - `src/components/sections/SzkoleniaSection.tsx` - Nowy komponent sekcji Szkolenia z StickySection, overlayem szkolenia.png, naglowkiem 100px, opisem z Elementora
