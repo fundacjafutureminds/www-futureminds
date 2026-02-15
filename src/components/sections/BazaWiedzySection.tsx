@@ -102,6 +102,30 @@ export function BazaWiedzySection() {
               ))}
             </div>
           </div>
+
+          {/* CTA + obrazek ksiazki */}
+          <div className="mt-16 w-[80%]">
+            <Link
+              href="/publikacje"
+              className="inline-block text-[44px] font-semibold leading-none text-white transition-colors hover:text-fm-green"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              {`Pe\u0142na baza wiedzy`}
+            </Link>
+            <div className="mt-8">
+              <Link href="/publikacje">
+                <Image
+                  src="/images/ksiazki.png"
+                  alt="Publikacje"
+                  width={259}
+                  height={200}
+                  className="h-auto w-[259px]"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </StickySection>
