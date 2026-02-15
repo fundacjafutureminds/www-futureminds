@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 8 complete — Baza Wiedzy (2/2 planow ukonczonych). Nastepna: Phase 9 (Footer)
+**Current focus:** Phase 9 complete — Footer pixel-perfect z Elementor (1/1 planow ukonczonych). Nastepna: Phase 10 (Integracja/Deploy)
 
 ## Current Position
 
-Phase: 8 of 10 (Baza Wiedzy) — COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase 8 complete — BazaWiedzySection kompletna z gridem artykulow, CTA i obrazkiem ksiazki
-Last activity: 2026-02-15 — Phase 8 plan 02 executed (08-02-PLAN.md)
+Phase: 9 of 10 (Footer) — COMPLETE
+Plan: 1 of 1 in current phase
+Status: Phase 9 complete — Footer pixel-perfect z Elementor template 12442 (logo FUTURE|MINDS, slogany, linki, SVG ikony, Carrier)
+Last activity: 2026-02-15 — Phase 9 plan 01 executed (09-01-PLAN.md)
 
-Progress: [███████████████░░░░░░░░░░░] 15/27 (56%)
+Progress: [████████████████░░░░░░░░░░] 16/27 (59%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
-- Average duration: 2.5 min
-- Total execution time: 37 min
+- Total plans completed: 16
+- Average duration: 2.4 min
+- Total execution time: 39 min
 
 **By Phase:**
 
@@ -35,9 +35,10 @@ Progress: [███████████████░░░░░░░░
 | 06-projekty | 2/2 | 6 min | 3 min |
 | 07-szkolenia | 2/2 | 4 min | 2 min |
 | 08-baza-wiedzy | 2/2 | 4 min | 2 min |
+| 09-footer | 1/1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 06-02 (2 min), 07-01 (2 min), 07-02 (2 min), 08-01 (2 min), 08-02 (2 min)
+- Last 5 plans: 07-01 (2 min), 07-02 (2 min), 08-01 (2 min), 08-02 (2 min), 09-01 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -100,6 +101,10 @@ Recent decisions affecting current work:
 - 08-02: ArticleCard z border-l i padding 5px 35px 0 35px — zgodnie z Elementor premium-addon-blog
 - 08-02: Grid gap-x 90px i gap-y 20px — zgodnie z Elementor column_spacing i posts_spacing
 - 08-02: Brak strzalki separatora — ostatnia sekcja przed footerem (potwierdzone w Elementor research)
+- 09-01: Logo FUTURE|MINDS jako tekst rozdzielony zielona kreska (nie FMF-white.png) — zgodnie z Elementor template 12442
+- 09-01: Inline SVG ikony social media zamiast Font Awesome (projekt nie uzywa FA)
+- 09-01: Tag <a> zamiast next/link dla linkow nawigacyjnych w footerze (linki zewnetrzne i podstrony ktore jeszcze nie istnieja)
+- 09-01: nhgFont jako zmienna lokalna w komponencie Footer (unikniecie powtorzen inline style)
 
 ### Pending Todos
 
@@ -112,6 +117,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T15:27:17Z
-Stopped at: Completed 08-02-PLAN.md (grid artykulow, CTA i obrazek ksiazki — Phase 8 complete)
+Last session: 2026-02-15T16:06:13Z
+Stopped at: Completed 09-01-PLAN.md (Footer pixel-perfect z Elementor template 12442 — Phase 9 complete)
 Resume file: None
