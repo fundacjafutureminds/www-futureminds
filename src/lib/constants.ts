@@ -277,3 +277,9 @@ export const SOCIAL_LINKS: NavItem[] = [
     href: "https://www.youtube.com/@firstlegoleaguepolska",
   },
 ];
+
+export const CARRIER_PARTNER = {
+  text: "Strona powsta\u0142a dzi\u0119ki wsparciu strategicznego partnera, firmy Carrier",
+  logo: "/images/carrier-logo.png",
+  href: "https://www.carrier.com/commercial/pl/pl/",
+};
