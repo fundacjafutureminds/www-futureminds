@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 8 in progress — Baza Wiedzy (1/2 planow ukonczonych)
+**Current focus:** Phase 8 complete — Baza Wiedzy (2/2 planow ukonczonych). Nastepna: Phase 9 (Footer)
 
 ## Current Position
 
-Phase: 8 of 10 (Baza Wiedzy)
-Plan: 1 of 2 in current phase
-Status: 08-01 complete — BazaWiedzySection z overlayem, naglowkiem 100px i opisem
-Last activity: 2026-02-15 — Phase 8 plan 01 executed (08-01-PLAN.md)
+Phase: 8 of 10 (Baza Wiedzy) — COMPLETE
+Plan: 2 of 2 in current phase
+Status: Phase 8 complete — BazaWiedzySection kompletna z gridem artykulow, CTA i obrazkiem ksiazki
+Last activity: 2026-02-15 — Phase 8 plan 02 executed (08-02-PLAN.md)
 
-Progress: [██████████████░░░░░░░░░░░░] 14/27 (52%)
+Progress: [███████████████░░░░░░░░░░░] 15/27 (56%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 14
+- Total plans completed: 15
 - Average duration: 2.5 min
-- Total execution time: 35 min
+- Total execution time: 37 min
 
 **By Phase:**
 
@@ -34,10 +34,10 @@ Progress: [██████████████░░░░░░░░░
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
 | 06-projekty | 2/2 | 6 min | 3 min |
 | 07-szkolenia | 2/2 | 4 min | 2 min |
-| 08-baza-wiedzy | 1/2 | 2 min | 2 min |
+| 08-baza-wiedzy | 2/2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 06-01 (4 min), 06-02 (2 min), 07-01 (2 min), 07-02 (2 min), 08-01 (2 min)
+- Last 5 plans: 06-02 (2 min), 07-01 (2 min), 07-02 (2 min), 08-01 (2 min), 08-02 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -97,6 +97,9 @@ Recent decisions affecting current work:
 - 08-01: Sidebar title "Wiedza" (jednowyrazowy) zamiast "Baza wiedzy" — zgodnie z Elementorem
 - 08-01: 2 warstwy overlay (Baza-wiedzy.png + baza-wieedzy.png) dla pelnej wiernosci z Elementorem
 - 08-01: Unicode escape sequences kontynuacja (locked decision z Phase 6/7)
+- 08-02: ArticleCard z border-l i padding 5px 35px 0 35px — zgodnie z Elementor premium-addon-blog
+- 08-02: Grid gap-x 90px i gap-y 20px — zgodnie z Elementor column_spacing i posts_spacing
+- 08-02: Brak strzalki separatora — ostatnia sekcja przed footerem (potwierdzone w Elementor research)
 
 ### Pending Todos
 
@@ -109,6 +112,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T15:23:28Z
-Stopped at: Completed 08-01-PLAN.md (BazaWiedzySection z overlayem, naglowkiem 100px i opisem)
+Last session: 2026-02-15T15:27:17Z
+Stopped at: Completed 08-02-PLAN.md (grid artykulow, CTA i obrazek ksiazki — Phase 8 complete)
 Resume file: None
