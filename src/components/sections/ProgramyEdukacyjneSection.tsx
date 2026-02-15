@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
 export function ProgramyEdukacyjneSection() {
@@ -25,16 +26,18 @@ export function ProgramyEdukacyjneSection() {
 
         {/* Treść z z-10 */}
         <div className="relative z-10">
-          {/* Duży nagłówek dekoracyjny 100px */}
-          <h2
-            className="mb-16 text-section text-[#EFEFEF]"
-            style={{
-              fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-            }}
-          >
-            Programy
-            <br /> edukacyjne
-          </h2>
+          {/* Duzy naglowek dekoracyjny 100px z fadeInDown */}
+          <FadeIn direction="down">
+            <h2
+              className="mb-16 text-section text-[#EFEFEF]"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              Programy
+              <br /> edukacyjne
+            </h2>
+          </FadeIn>
 
           {/* Intro headings z zielonymi akcentami */}
           <div className="mb-16 space-y-8">
@@ -88,40 +91,42 @@ export function ProgramyEdukacyjneSection() {
             ))}
           </div>
 
-          {/* Sekcja "szyte na miarę" — programy autorskie */}
-          <div className="mt-20">
-            <h3 className="mb-6 max-w-3xl text-heading text-[#FFFFFFF5]">
-              Tworzymy również autorskie programy edukacyjne dostosowane do{" "}
-              <span className="text-fm-green">
-                indywidualnych potrzeb i specyfiki regionu{" "}
-              </span>
-              lub branży<span className="text-fm-green">.</span>
-            </h3>
-            <div className="space-y-6">
-              <p className="max-w-2xl text-body text-[#E8E8E8]">
-                Niezależnie od tego, czy chodzi o specyfikę gospodarczą danego
-                regionu, wymagania konkretnego sektora, nasze programy są
-                projektowane tak, aby odpowiadały na{" "}
+          {/* Sekcja "szyte na miare" — programy autorskie z fadeIn */}
+          <FadeIn>
+            <div className="mt-20">
+              <h3 className="mb-6 max-w-3xl text-heading text-[#FFFFFFF5]">
+                Tworzymy również autorskie programy edukacyjne dostosowane do{" "}
                 <span className="text-fm-green">
-                  wyzwania i potrzeby społeczności
+                  indywidualnych potrzeb i specyfiki regionu{" "}
                 </span>
-                , w której będą realizowane.
-              </p>
-              <p className="max-w-2xl text-body text-[#E8E8E8]">
-                Dzięki bliskim relacjom z biznesem i organizacjami pozarządowymi
-                wypracowujemy programy, które odpowiadają{" "}
-                <span className="text-fm-green">
-                  na rzeczywiste potrzeby rynku pracy
-                </span>{" "}
-                i pomagają budować kompetencje przyszłości.
-              </p>
-              <p className="max-w-2xl text-body text-[#E8E8E8]">
-                Szyte na miarę programy edukacyjne{" "}
-                <em>FIRST</em> to nasze unikalne rozwiązania, które łączą globalną
-                metodologię z lokalnymi potrzebami.
-              </p>
+                lub branży<span className="text-fm-green">.</span>
+              </h3>
+              <div className="space-y-6">
+                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                  Niezależnie od tego, czy chodzi o specyfikę gospodarczą danego
+                  regionu, wymagania konkretnego sektora, nasze programy są
+                  projektowane tak, aby odpowiadały na{" "}
+                  <span className="text-fm-green">
+                    wyzwania i potrzeby społeczności
+                  </span>
+                  , w której będą realizowane.
+                </p>
+                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                  Dzięki bliskim relacjom z biznesem i organizacjami pozarządowymi
+                  wypracowujemy programy, które odpowiadają{" "}
+                  <span className="text-fm-green">
+                    na rzeczywiste potrzeby rynku pracy
+                  </span>{" "}
+                  i pomagają budować kompetencje przyszłości.
+                </p>
+                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                  Szyte na miarę programy edukacyjne{" "}
+                  <em>FIRST</em> to nasze unikalne rozwiązania, które łączą globalną
+                  metodologię z lokalnymi potrzebami.
+                </p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Separator strzałka */}
           <div className="mt-16 flex justify-center">
