@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Wierna kopia wizualna futureminds.edu.pl na szybkim, nowoczesnym stacku
-**Current focus:** Phase 7 complete — Szkolenia (2/2 planow ukonczonych)
+**Current focus:** Phase 8 in progress — Baza Wiedzy (1/2 planow ukonczonych)
 
 ## Current Position
 
-Phase: 7 of 10 (Szkolenia) — COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase 07 complete — SzkoleniaSection z CTA 44px, 5 ikonami technologii i strzalka separator
-Last activity: 2026-02-14 — Phase 7 plan 02 executed (07-02-PLAN.md)
+Phase: 8 of 10 (Baza Wiedzy)
+Plan: 1 of 2 in current phase
+Status: 08-01 complete — BazaWiedzySection z overlayem, naglowkiem 100px i opisem
+Last activity: 2026-02-15 — Phase 8 plan 01 executed (08-01-PLAN.md)
 
-Progress: [█████████████░░░░░░░░░░░░░] 13/27 (48%)
+Progress: [██████████████░░░░░░░░░░░░] 14/27 (52%)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: 2.5 min
-- Total execution time: 33 min
+- Total execution time: 35 min
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Progress: [█████████████░░░░░░░░░░
 | 05-programy-stypendialne | 2/2 | 5 min | 2.5 min |
 | 06-projekty | 2/2 | 6 min | 3 min |
 | 07-szkolenia | 2/2 | 4 min | 2 min |
+| 08-baza-wiedzy | 1/2 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-02 (2 min), 06-01 (4 min), 06-02 (2 min), 07-01 (2 min), 07-02 (2 min)
+- Last 5 plans: 06-01 (4 min), 06-02 (2 min), 07-01 (2 min), 07-02 (2 min), 08-01 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -93,6 +94,9 @@ Recent decisions affecting current work:
 - 07-02: CTA jako tekst-link 44px w600 (nie border-button) — zgodnie z Elementorem
 - 07-02: 5 ikon technologii w kontenerach 140px z brightness-0 invert (bez opacity-60)
 - 07-02: SPIKE (pierwsza ikona) z border-l #FFFFFF54 jako separator wizualny
+- 08-01: Sidebar title "Wiedza" (jednowyrazowy) zamiast "Baza wiedzy" — zgodnie z Elementorem
+- 08-01: 2 warstwy overlay (Baza-wiedzy.png + baza-wieedzy.png) dla pelnej wiernosci z Elementorem
+- 08-01: Unicode escape sequences kontynuacja (locked decision z Phase 6/7)
 
 ### Pending Todos
 
@@ -105,6 +109,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-14T16:31:45Z
-Stopped at: Completed 07-02-PLAN.md (CTA 44px, 5 ikon technologii, strzalka separator)
+Last session: 2026-02-15T15:23:28Z
+Stopped at: Completed 08-01-PLAN.md (BazaWiedzySection z overlayem, naglowkiem 100px i opisem)
 Resume file: None
