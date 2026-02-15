@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { ARTICLES, KNOWLEDGE_SECTION_NAV } from "@/lib/constants";
 import type { Article } from "@/lib/types";
 
@@ -64,14 +65,16 @@ export function BazaWiedzySection() {
 
         <div className="relative z-10">
           {/* Duzy naglowek dekoracyjny 100px */}
-          <h2
-            className="mb-16 text-section text-[#EFEFEF]"
-            style={{
-              fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-            }}
-          >
-            {`Baza wiedzy`}
-          </h2>
+          <FadeIn direction="down">
+            <h2
+              className="mb-16 text-section text-[#EFEFEF]"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              {`Baza wiedzy`}
+            </h2>
+          </FadeIn>
 
           {/* Intro heading z zielonym akcentem + opis */}
           <div className="mb-16 w-[60%] space-y-8">
@@ -96,11 +99,13 @@ export function BazaWiedzySection() {
 
           {/* Grid artykulow 3 kolumny */}
           <div className="w-[90%]">
-            <div className="grid grid-cols-1 gap-x-[90px] gap-y-[20px] lg:grid-cols-3">
-              {ARTICLES.map((article) => (
-                <ArticleCard key={article.title} article={article} />
-              ))}
-            </div>
+            <FadeIn>
+              <div className="grid grid-cols-1 gap-x-[90px] gap-y-[20px] lg:grid-cols-3">
+                {ARTICLES.map((article) => (
+                  <ArticleCard key={article.title} article={article} />
+                ))}
+              </div>
+            </FadeIn>
           </div>
 
           {/* CTA + obrazek ksiazki */}

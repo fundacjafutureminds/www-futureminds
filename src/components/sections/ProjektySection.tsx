@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { StickySection } from "@/components/ui/StickySection";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { PROJECTS } from "@/lib/constants";
 import type { Project } from "@/lib/types";
 
@@ -80,14 +81,16 @@ export function ProjektySection() {
 
         <div className="relative z-10">
           {/* Duzy naglowek dekoracyjny 100px */}
-          <h2
-            className="mb-16 text-section text-[#EFEFEF]"
-            style={{
-              fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-            }}
-          >
-            Projekty
-          </h2>
+          <FadeIn direction="down">
+            <h2
+              className="mb-16 text-section text-[#EFEFEF]"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              Projekty
+            </h2>
+          </FadeIn>
 
           {/* Intro naglowki z zielonymi akcentami */}
           <div className="mb-16 space-y-8">

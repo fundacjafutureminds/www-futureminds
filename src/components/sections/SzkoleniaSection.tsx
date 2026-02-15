@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { TRAINING_SECTION_NAV, TECH_ICONS } from "@/lib/constants";
 
 export function SzkoleniaSection() {
@@ -25,15 +26,17 @@ export function SzkoleniaSection() {
 
         <div className="relative z-10">
           {/* Duzy naglowek dekoracyjny 100px */}
-          <h2
-            className="mb-16 text-section text-[#EFEFEF]"
-            style={{
-              fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-            }}
-          >
-            Szkolenia
-            <br /> dla nauczycieli
-          </h2>
+          <FadeIn direction="down">
+            <h2
+              className="mb-16 text-section text-[#EFEFEF]"
+              style={{
+                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
+              }}
+            >
+              Szkolenia
+              <br /> dla nauczycieli
+            </h2>
+          </FadeIn>
 
           {/* Opis — pelny tekst z Elementora (19px, w200, #E8E8E8) */}
           <div className="mb-16 space-y-8">
