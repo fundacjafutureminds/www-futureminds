@@ -66,7 +66,18 @@ function ProjectCard({ project }: { project: Project }) {
 
 export function ProjektySection() {
   return (
-    <StickySection id="projekty" title="Projekty" sectionNumber="03">
+    <StickySection
+      id="projekty"
+      title="Projekty"
+      sectionNumber="03"
+      header={
+        <FadeIn direction="down">
+          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+            Projekty
+          </h2>
+        </FadeIn>
+      }
+    >
       <div className="relative">
         {/* Overlay dekoracyjny trybik3.png */}
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -80,18 +91,6 @@ export function ProjektySection() {
         </div>
 
         <div className="relative z-10">
-          {/* Duzy naglowek dekoracyjny 100px */}
-          <FadeIn direction="down">
-            <h2
-              className="mb-16 text-section text-[#EFEFEF]"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
-            >
-              Projekty
-            </h2>
-          </FadeIn>
-
           {/* Intro naglowki z zielonymi akcentami */}
           <div className="mb-16 space-y-8">
             <h3 className="max-w-3xl text-heading text-[#FFFFFFF5]">

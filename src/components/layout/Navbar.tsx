@@ -51,9 +51,6 @@ export function Navbar() {
           <Link
             href={item.href}
             className="ml-5 text-[20px] font-light leading-[1em] tracking-[1.1px] text-[#EAEAEA] transition-colors hover:text-fm-green"
-            style={{
-              fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-            }}
           >
             {item.label}
           </Link>

@@ -40,6 +40,13 @@ export function BazaWiedzySection() {
       title="Wiedza"
       sectionNumber="05"
       navLinks={KNOWLEDGE_SECTION_NAV}
+      header={
+        <FadeIn direction="down">
+          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+            {`Baza wiedzy`}
+          </h2>
+        </FadeIn>
+      }
     >
       <div className="relative">
         {/* Overlay 1: subtelny pattern Baza-wiedzy.png */}
@@ -64,18 +71,6 @@ export function BazaWiedzySection() {
         </div>
 
         <div className="relative z-10">
-          {/* Duzy naglowek dekoracyjny 100px */}
-          <FadeIn direction="down">
-            <h2
-              className="mb-16 text-section text-[#EFEFEF]"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
-            >
-              {`Baza wiedzy`}
-            </h2>
-          </FadeIn>
-
           {/* Intro heading z zielonym akcentem + opis */}
           <div className="mb-16 w-[60%] space-y-8">
             <h3 className="max-w-3xl text-heading text-[#FFFFFFF5]">
@@ -113,9 +108,6 @@ export function BazaWiedzySection() {
             <Link
               href="/publikacje"
               className="inline-block text-[44px] font-semibold leading-none text-white transition-colors hover:text-fm-green"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
             >
               {`Pe\u0142na baza wiedzy`}
             </Link>

@@ -16,6 +16,14 @@ export function ProgramyStypendialneSection() {
       title="Programy Stypendialne"
       sectionNumber="02"
       navLinks={SCHOLARSHIP_SECTION_NAV}
+      header={
+        <FadeIn direction="down">
+          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+            Programy
+            <br /> stypendialne
+          </h2>
+        </FadeIn>
+      }
     >
       <div className="relative">
         {/* Overlay 1: Tło stypendia */}
@@ -40,19 +48,6 @@ export function ProgramyStypendialneSection() {
         </div>
 
         <div className="relative z-10">
-          {/* Duży nagłówek dekoracyjny 100px */}
-          <FadeIn direction="down">
-            <h2
-              className="mb-16 text-section text-[#EFEFEF]"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
-            >
-              Programy
-              <br /> stypendialne
-            </h2>
-          </FadeIn>
-
           {/* Layout 60/40 */}
           <div className="flex gap-0">
             {/* Lewa kolumna 60% — intro headings + logotypy */}
@@ -144,10 +139,6 @@ export function ProgramyStypendialneSection() {
                   <div className="w-full space-y-6 pr-8">
                     <h3
                       className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
-                      style={{
-                        fontFamily:
-                          "'neue-haas-grotesk-display', var(--font-sans)",
-                      }}
                     >
                       {card.title}
                       <br />
@@ -180,10 +171,6 @@ export function ProgramyStypendialneSection() {
               <div className="mt-12 w-[87%] space-y-6">
                 <h3
                   className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
-                  style={{
-                    fontFamily:
-                      "'neue-haas-grotesk-display', var(--font-sans)",
-                  }}
                 >
                   {SCHOLARSHIP_CTA_CARDS[2].title}
                   <br />

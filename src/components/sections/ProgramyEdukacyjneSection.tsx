@@ -11,6 +11,14 @@ export function ProgramyEdukacyjneSection() {
       title="Programy Edukacyjne"
       sectionNumber="01"
       navLinks={EDUCATION_SECTION_NAV}
+      header={
+        <FadeIn direction="down">
+          <h2 className="mb-32 text-section font-medium text-fm-text">
+            Programy
+            <br /> edukacyjne
+          </h2>
+        </FadeIn>
+      }
     >
       <div className="relative">
         {/* Overlay dekoracyjny */}
@@ -26,20 +34,9 @@ export function ProgramyEdukacyjneSection() {
 
         {/* Treść z z-10 */}
         <div className="relative z-10">
-          {/* Duzy naglowek dekoracyjny z fadeInDown */}
-          <FadeIn direction="down">
-            <h2
-              className="mb-16 text-[110px] font-thin leading-[1.1] text-[#EFEFEF]"
-              style={{ fontFamily: "'Geomanist'" }}
-            >
-              Programy
-              <br /> edukacyjne
-            </h2>
-          </FadeIn>
-
           {/* Intro headings z zielonymi akcentami */}
           <div className="mb-16 space-y-8">
-            <h3 className="max-w-3xl text-heading text-[#FFFFFFF5]">
+            <h3 className="mb-6 max-w-3xl text-heading text-fm-text">
               Realizujemy{" "}
               <span className="text-fm-green">globalne i lokalne </span>
               programy edukacyjne, które uzupełniają braki systemu edukacyjnego
@@ -67,7 +64,7 @@ export function ProgramyEdukacyjneSection() {
             {PROGRAMS.map((program) => (
               <div
                 key={program.title}
-                className="border-l border-[#FFFFFF3B] py-8 pl-6"
+                className="py-8"
               >
                 <Image
                   src={program.logo}
@@ -76,7 +73,7 @@ export function ProgramyEdukacyjneSection() {
                   height={70}
                   className="mb-6 h-12 w-auto"
                 />
-                <p className="mb-6 max-w-lg text-[17px] font-extralight leading-relaxed text-[#E8E8E8]">
+                <p className="mb-6 max-w-lg text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
                   {program.description}
                 </p>
                 <Link
@@ -92,7 +89,7 @@ export function ProgramyEdukacyjneSection() {
           {/* Sekcja "szyte na miare" — programy autorskie z fadeIn */}
           <FadeIn>
             <div className="mt-20">
-              <h3 className="mb-6 max-w-3xl text-heading text-[#FFFFFFF5]">
+              <h3 className="mb-6 max-w-3xl text-heading text-fm-text">
                 Tworzymy również autorskie programy edukacyjne dostosowane do{" "}
                 <span className="text-fm-green">
                   indywidualnych potrzeb i specyfiki regionu{" "}

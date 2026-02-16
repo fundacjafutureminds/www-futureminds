@@ -8,6 +8,7 @@ interface StickySectionProps {
   sectionNumber?: string;
   variant?: "dark" | "light";
   navLinks?: StickyNavLink[];
+  header?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export function StickySection({
   sectionNumber,
   variant = "dark",
   navLinks,
+  header,
   children,
 }: StickySectionProps) {
   const isDark = variant === "dark";
@@ -24,24 +26,37 @@ export function StickySection({
   return (
     <section
       id={id}
-      className={isDark ? "pt-52 text-fm-text" : "pt-52 bg-white text-fm-dark"}
+      className={`relative ${isDark ? "pt-52 text-fm-text" : "pt-52 bg-white text-fm-dark"}`}
     >
+      {/* Vertical separator line */}
+      <div className="pointer-events-none absolute top-28 bottom-20 left-[320px] hidden w-px bg-white/5 lg:block" />
+      {/* Decorative header above two-column layout */}
+      {header && (
+        <>
+          <div className="px-6 lg:ml-[350px] lg:px-12">
+            {header}
+          </div>
+          <hr className="my-16 border-t border-white/10" />
+        </>
+      )}
+
       <div className="flex">
         {/* Left sticky sidebar */}
         <div className="hidden w-[350px] shrink-0 lg:block">
-          <div className="sticky top-0 flex h-screen flex-col justify-between pt-[330px] pb-12 pl-0">
+          <div className="sticky top-0 pt-16 pl-0">
             <div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-[23px]">
                 <Image
                   src="/images/Green-Triangle.png"
                   alt=""
-                  width={20}
-                  height={20}
+                  width={30}
+                  height={30}
+                  className="mt-[6px] h-[22px] w-auto shrink-0"
                 />
                 {/* sectionNumber ukryty tymczasowo */}
                 <h2
-                  className={`max-w-[200px] text-sidebar ${
-                    isDark ? "text-white" : "text-fm-dark"
+                  className={`max-w-[250px] text-sidebar ${
+                    isDark ? "text-fm-text" : "text-fm-dark"
                   }`}
                 >
                   {title}
@@ -54,7 +69,7 @@ export function StickySection({
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="flex items-center gap-[24px] text-body text-[#E8E8E8] transition-colors hover:text-fm-green"
+                      className="flex items-center gap-[24px] text-[18px] font-extralight tracking-[0.75px] text-[#E8E8E8] transition-colors hover:text-fm-green"
                     >
                       <span
                         className="inline-block h-0 w-0 shrink-0 border-t-[7px] border-b-[7px] border-l-[10px] border-t-transparent border-b-transparent border-l-white/60"
@@ -69,9 +84,13 @@ export function StickySection({
 
             <Link
               href="#home"
-              className="mt-12 text-xs text-fm-green underline transition-colors hover:text-fm-green-dark"
+              className="mt-12 flex items-center gap-[24px] text-[16px] font-extralight text-fm-green transition-colors hover:text-fm-green-dark"
             >
-              Powrot na gore strony
+              <span
+                className="inline-block h-0 w-0 shrink-0 border-t-[7px] border-b-[7px] border-l-[10px] border-t-transparent border-b-transparent border-l-fm-green"
+                aria-hidden="true"
+              />
+              Powrót na górę strony
             </Link>
           </div>
         </div>

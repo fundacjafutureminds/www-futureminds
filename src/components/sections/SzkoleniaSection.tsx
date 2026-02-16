@@ -11,6 +11,14 @@ export function SzkoleniaSection() {
       title="Szkolenia"
       sectionNumber="04"
       navLinks={TRAINING_SECTION_NAV}
+      header={
+        <FadeIn direction="down">
+          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+            Szkolenia
+            <br /> dla nauczycieli
+          </h2>
+        </FadeIn>
+      }
     >
       <div className="relative">
         {/* Overlay szkolenia.png */}
@@ -25,19 +33,6 @@ export function SzkoleniaSection() {
         </div>
 
         <div className="relative z-10">
-          {/* Duzy naglowek dekoracyjny 100px */}
-          <FadeIn direction="down">
-            <h2
-              className="mb-16 text-section text-[#EFEFEF]"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
-            >
-              Szkolenia
-              <br /> dla nauczycieli
-            </h2>
-          </FadeIn>
-
           {/* Opis — pelny tekst z Elementora (19px, w200, #E8E8E8) */}
           <div className="mb-16 space-y-8">
             <p className="max-w-2xl text-body text-[#E8E8E8]">
@@ -57,9 +52,6 @@ export function SzkoleniaSection() {
             <Link
               href="/szkolenia"
               className="inline-block text-[44px] font-semibold leading-none text-white transition-colors hover:text-fm-green"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
             >
               Poznaj
               <br />

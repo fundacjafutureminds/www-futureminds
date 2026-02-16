@@ -30,8 +30,6 @@ function SocialIcon({ name }: { name: string }) {
 }
 
 export function Footer() {
-  const nhgFont = { fontFamily: "'neue-haas-grotesk-display', var(--font-sans)" };
-
   return (
     <footer className="border-t border-white/10">
       <div className="mx-auto max-w-[1400px] px-8 py-16">
@@ -42,7 +40,6 @@ export function Footer() {
           <div className="flex w-[40%] flex-col items-end">
             <span
               className="text-[40px] font-extralight uppercase leading-none tracking-normal text-white"
-              style={nhgFont}
             >
               FUTURE
             </span>
@@ -64,13 +61,11 @@ export function Footer() {
           <div className="flex w-[40%] flex-col items-start">
             <span
               className="text-[40px] font-medium uppercase leading-none tracking-normal text-white"
-              style={nhgFont}
             >
               MINDS
             </span>
             <span
               className="text-[11px] font-medium uppercase leading-none tracking-normal text-white"
-              style={nhgFont}
             >
               Foundation
             </span>
@@ -83,7 +78,6 @@ export function Footer() {
           <div className="w-[40%] text-right">
             <p
               className="text-[30px] font-light leading-[1.2] tracking-[1px] text-white"
-              style={nhgFont}
             >
               {`Nauka i technologia`}
               <br />
@@ -98,7 +92,6 @@ export function Footer() {
           <div className="w-[40%] text-left">
             <p
               className="text-[30px] font-semibold leading-[1.2] tracking-[1px] text-white"
-              style={nhgFont}
             >
               {`Edukacja`}
               <br />
@@ -118,7 +111,6 @@ export function Footer() {
               key={link.label}
               href={link.href}
               className="text-[16px] font-light leading-none tracking-[1.1px] text-[#EAEAEA] transition-colors hover:text-fm-green"
-              style={nhgFont}
             >
               {link.label}
             </a>
@@ -150,7 +142,6 @@ export function Footer() {
         {/* H) Partner Carrier */}
         <p
           className="text-center text-[17px] font-normal tracking-[0.5px] text-white"
-          style={nhgFont}
         >
           {CARRIER_PARTNER.text}
         </p>

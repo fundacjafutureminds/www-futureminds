@@ -14,7 +14,7 @@ export function SectionHeading({
   return (
     <div className={`mb-12 ${centered ? "text-center" : ""}`}>
       <h2
-        className={`font-serif text-3xl font-bold md:text-4xl ${
+        className={`text-3xl font-bold md:text-4xl ${
           light ? "text-white" : "text-fm-dark"
         }`}
       >
