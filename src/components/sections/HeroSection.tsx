@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col justify-center bg-fm-dark"
+      className="relative flex h-screen flex-col justify-center"
     >
       {/* Warstwa 0: Ilustracja rakiety (dekoracyjne tlo) */}
       <div className="pointer-events-none absolute inset-0">
@@ -13,7 +13,7 @@ export function HeroSection() {
           src="/images/dzieci-panorama4.png"
           alt=""
           fill
-          className="object-contain object-bottom opacity-[0.15]"
+          className="object-cover object-center opacity-[0.15]"
           aria-hidden="true"
         />
       </div>

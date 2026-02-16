@@ -33,7 +33,7 @@ export function Footer() {
   const nhgFont = { fontFamily: "'neue-haas-grotesk-display', var(--font-sans)" };
 
   return (
-    <footer className="border-t border-white/10 bg-fm-dark-bg">
+    <footer className="border-t border-white/10">
       <div className="mx-auto max-w-[1400px] px-8 py-16">
 
         {/* A) Logo FUTURE | MINDS (rozdzielone z zielona kreska) */}

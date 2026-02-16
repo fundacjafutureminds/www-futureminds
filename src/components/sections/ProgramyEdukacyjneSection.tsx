@@ -26,13 +26,11 @@ export function ProgramyEdukacyjneSection() {
 
         {/* Treść z z-10 */}
         <div className="relative z-10">
-          {/* Duzy naglowek dekoracyjny 100px z fadeInDown */}
+          {/* Duzy naglowek dekoracyjny z fadeInDown */}
           <FadeIn direction="down">
             <h2
-              className="mb-16 text-section text-[#EFEFEF]"
-              style={{
-                fontFamily: "'neue-haas-grotesk-display', var(--font-sans)",
-              }}
+              className="mb-16 text-[110px] font-thin leading-[1.1] text-[#EFEFEF]"
+              style={{ fontFamily: "'Geomanist'" }}
             >
               Programy
               <br /> edukacyjne

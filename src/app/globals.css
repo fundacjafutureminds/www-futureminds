@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Geomanist';
+  src: url('/fonts/geomanist-thin-webfont.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --font-sans: var(--font-plus-jakarta);
 }
@@ -46,5 +54,8 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-fm-text);
-  background-color: var(--color-fm-dark);
+  background-color: transparent;
+  background-image: url('/images/Tlo-Szary-ciemny-wyostrzony.png');
+  background-repeat: repeat;
+  background-size: auto;
 }
