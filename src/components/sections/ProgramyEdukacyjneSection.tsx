@@ -36,7 +36,7 @@ export function ProgramyEdukacyjneSection() {
         <div className="relative z-10">
           {/* Intro headings z zielonymi akcentami */}
           <div className="mb-16 space-y-8">
-            <h3 className="mb-6 max-w-3xl text-heading text-fm-text">
+            <h3 className="mb-[72px] max-w-3xl text-heading text-fm-text">
               Realizujemy{" "}
               <span className="text-fm-green">globalne i lokalne </span>
               programy edukacyjne, które uzupełniają braki systemu edukacyjnego
