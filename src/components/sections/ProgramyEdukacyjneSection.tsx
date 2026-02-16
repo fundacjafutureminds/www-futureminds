@@ -64,21 +64,22 @@ export function ProgramyEdukacyjneSection() {
               {PROGRAMS.map((program) => (
                 <StaggerItem
                   key={program.title}
-                  className="py-20"
+                  className="pb-20 [&:not(:first-child)]:pt-20"
                 >
                   <Image
                     src={program.logo}
                     alt={program.title}
-                    width={200}
-                    height={70}
-                    className="mb-4 h-12 w-auto"
+                    width={program.logoWidth ?? 200}
+                    height={program.logoHeight ?? 70}
+                    className="mb-4 w-auto"
+                    style={{ height: program.logoHeight ?? 70 }}
                   />
                   <p className="mb-4 text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
                     {program.description}
                   </p>
                   <Link
                     href={program.href}
-                    className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+                    className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-fm-dark"
                   >
                     WIĘCEJ
                   </Link>

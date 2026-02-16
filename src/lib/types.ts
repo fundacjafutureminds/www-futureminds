@@ -19,6 +19,8 @@ export interface Program {
   description: string;
   href: string;
   logo: string;
+  logoWidth?: number;
+  logoHeight?: number;
 }
 
 export interface Project {
@@ -44,6 +46,12 @@ export interface BlogPost {
   excerpt: string;
   href: string;
   image?: string;
+}
+
+export interface NewsPost {
+  title: string;
+  category: string;
+  date: string; // ISO date string, e.g. "2026-02-16T14:30:00"
 }
 
 export interface ScholarshipCtaCard {

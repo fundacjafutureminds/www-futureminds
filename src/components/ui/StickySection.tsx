@@ -30,7 +30,7 @@ export function StickySection({
   return (
     <section
       id={id}
-      className={`relative ${isDark ? "pt-52 text-fm-text" : "pt-52 bg-white text-fm-dark"}`}
+      className={`relative ${isDark ? "pt-96 text-fm-text" : "pt-96 bg-white text-fm-dark"}`}
     >
       {/* Vertical separator line — scroll-linked, bottom to top */}
       <ScrollLine

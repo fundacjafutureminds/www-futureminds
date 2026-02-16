@@ -4,6 +4,7 @@ import type {
   Project,
   Article,
   BlogPost,
+  NewsPost,
   ScholarshipCtaCard,
   NavItem,
   StickyNavLink,
@@ -28,6 +29,8 @@ export const PROGRAMS: Program[] = [
       "FIRST LEGO League to inicjatywa edukacyjna, łącząca pasje do robotyki z naukami ścisłymi, zachęcając młodzież do odkrywania świata nauki i innowacji. Drużyny z całego świata spotykają się na turniejach, projektując roboty i proponując rozwiązania dla rzeczywistych wyzwań naukowych. W Polsce program FIRST LEGO League jest organizowany od 2008 roku, a fundacja Future Minds jest jego jedynym oficjalnym organizatorem.",
     href: "/fll",
     logo: "/images/Logo-First-Lego-League.png",
+    logoWidth: 200,
+    logoHeight: 63,
   },
   {
     title: "Build the Change",
@@ -35,6 +38,8 @@ export const PROGRAMS: Program[] = [
       '"Build the Change" koncentruje się na dawaniu dzieciom głosu i umożliwianiu im wyrażania swoich nadziei i pomysłów na lepszą przyszłość. Dzieci wykorzystują swoją kreatywność do rozwiązywania rzeczywistych wyzwań za pomocą klocków LEGO® i innych kreatywnych materiałów – wszystko to osiągane jest poprzez uczenie się poprzez zabawę.',
     href: "https://www.lego.com/en-us/sustainability/children/build-the-change",
     logo: "/images/Logo-FIRST-LEGO-LEAGUE-biel-13.png",
+    logoWidth: 200,
+    logoHeight: 78,
   },
   {
     title: "OZEdukacja",
@@ -42,6 +47,8 @@ export const PROGRAMS: Program[] = [
       "Program OZEdukacja, stworzony z inicjatywy Fundacji Enea Energia Wspólnoty i realizowany przez Fundację Future Minds, to ogólnopolski program edukacyjny dla uczniów klas 6–8, którego celem jest budowanie świadomości energetycznej i promocja odnawialnych źródeł energii. Program obejmuje konkurs, filmy edukacyjne i scenariusze lekcji.",
     href: "https://www.oze.edu.pl/",
     logo: "/images/logo-short-light-1024x363.png",
+    logoWidth: 200,
+    logoHeight: 71,
   },
   {
     title: "Edukacja Energetyczna",
@@ -49,6 +56,8 @@ export const PROGRAMS: Program[] = [
       "Program ten kształtuje świadomość energetyczną u dzieci, prowadząc je przez cały cykl energii - od produkcji, przez przechowywanie, po jej wykorzystanie. Dzięki analizie różnorodnych źródeł energii, dzieci uczą się świadomych wyborów, zwłaszcza w kontekście odnawialnych źródeł. Główne projekty badawcze koncentrują się na zielonej energii, oszczędzaniu i innowacyjnych rozwiązaniach dla bezpieczeństwa energetycznego.",
     href: "http://energia.fll.edu.pl",
     logo: "/images/Lobo-Edukacja-Energetyczna.png",
+    logoWidth: 200,
+    logoHeight: 33,
   },
 ];
 
@@ -275,6 +284,49 @@ export const SOCIAL_LINKS: NavItem[] = [
   {
     label: "YouTube",
     href: "https://www.youtube.com/@firstlegoleaguepolska",
+  },
+];
+
+export const NEWS_POSTS: NewsPost[] = [
+  {
+    title: "Ruszają zapisy do FIRST LEGO League Discover 2025/2026",
+    category: "FIRST LEGO League",
+    date: "2026-02-14T10:00:00",
+  },
+  {
+    title: "Finał krajowy FIRST LEGO League Challenge — relacja",
+    category: "FIRST LEGO League",
+    date: "2026-02-10T16:30:00",
+  },
+  {
+    title: "Warsztaty Build the Change w Gdańsku",
+    category: "Build the Change",
+    date: "2026-02-05T09:00:00",
+  },
+  {
+    title: "Nowa edycja programu OZEdukacja dla klas 6–8",
+    category: "OZEdukacja",
+    date: "2026-01-28T12:00:00",
+  },
+  {
+    title: "Fundacja Future Minds partnerem Nocy Naukowców 2026",
+    category: "Wydarzenie",
+    date: "2026-01-20T14:15:00",
+  },
+  {
+    title: "Szkolenie dla nauczycieli — SPIKE Prime w praktyce",
+    category: "Szkolenia",
+    date: "2026-01-15T11:00:00",
+  },
+  {
+    title: "Wyniki konkursu Edukacja Energetyczna — edycja zimowa",
+    category: "Edukacja Energetyczna",
+    date: "2026-01-08T10:30:00",
+  },
+  {
+    title: "Podsumowanie roku 2025 — co udało się osiągnąć",
+    category: "Fundacja",
+    date: "2025-12-30T09:00:00",
   },
 ];
 
