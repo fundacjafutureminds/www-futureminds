@@ -18,7 +18,7 @@ export function ProgramyStypendialneSection() {
       navLinks={SCHOLARSHIP_SECTION_NAV}
       header={
         <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
             Programy
             <br /> stypendialne
           </h2>

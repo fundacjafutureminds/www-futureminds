@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { StickyNavLink } from "@/lib/types";
+import { ScrollLine } from "@/components/ui/ScrollLine";
 
 interface StickySectionProps {
   id?: string;
@@ -9,6 +10,8 @@ interface StickySectionProps {
   variant?: "dark" | "light";
   navLinks?: StickyNavLink[];
   header?: React.ReactNode;
+  /** Optional second vertical divider line (CSS left value, e.g. "60%") */
+  contentDividerLeft?: string;
   children: React.ReactNode;
 }
 
@@ -19,6 +22,7 @@ export function StickySection({
   variant = "dark",
   navLinks,
   header,
+  contentDividerLeft,
   children,
 }: StickySectionProps) {
   const isDark = variant === "dark";
@@ -28,19 +32,32 @@ export function StickySection({
       id={id}
       className={`relative ${isDark ? "pt-52 text-fm-text" : "pt-52 bg-white text-fm-dark"}`}
     >
-      {/* Vertical separator line */}
-      <div className="pointer-events-none absolute top-28 bottom-20 left-[320px] hidden w-px bg-white/5 lg:block" />
+      {/* Vertical separator line — scroll-linked, bottom to top */}
+      <ScrollLine
+        direction="vertical"
+        className="pointer-events-none absolute top-28 bottom-20 left-[300px] hidden w-px bg-white/5 lg:block"
+      />
       {/* Decorative header above two-column layout */}
       {header && (
         <>
           <div className="px-6 lg:ml-[350px] lg:px-12">
             {header}
           </div>
-          <hr className="my-16 border-t border-white/10" />
+          <ScrollLine
+            direction="horizontal"
+            className="my-16 h-px w-full bg-white/10"
+          />
         </>
       )}
 
-      <div className="flex">
+      <div className="relative flex">
+        {/* Content divider — starts at hr level (top of flex), ends at bottom-20 */}
+        {contentDividerLeft && (
+          <div
+            className="pointer-events-none absolute -top-16 bottom-20 hidden w-px bg-white/5 lg:block"
+            style={{ left: contentDividerLeft }}
+          />
+        )}
         {/* Left sticky sidebar */}
         <div className="hidden w-[350px] shrink-0 lg:block">
           <div className="sticky top-0 pt-16 pl-0">
@@ -97,7 +114,7 @@ export function StickySection({
 
 
         {/* Right scrollable content */}
-        <div className="min-w-0 flex-1 px-6 py-12 lg:px-12">
+        <div className="min-w-0 flex-1 px-6 pt-16 pb-12 lg:px-12">
           {/* Mobile title */}
           <h2
             className={`mb-8 text-3xl font-light lg:hidden ${

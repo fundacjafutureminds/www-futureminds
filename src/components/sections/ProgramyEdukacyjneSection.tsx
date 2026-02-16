@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
-import { FadeIn } from "@/components/ui/FadeIn";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
 export function ProgramyEdukacyjneSection() {
@@ -11,9 +11,10 @@ export function ProgramyEdukacyjneSection() {
       title="Programy Edukacyjne"
       sectionNumber="01"
       navLinks={EDUCATION_SECTION_NAV}
+      contentDividerLeft="calc(350px + 48px + (100% - 350px - 48px) * 0.4 + 48px)"
       header={
         <FadeIn direction="down">
-          <h2 className="mb-32 text-section font-medium text-fm-text">
+          <h2 className="mb-32 text-section font-thin text-fm-text">
             Programy
             <br /> edukacyjne
           </h2>
@@ -32,63 +33,63 @@ export function ProgramyEdukacyjneSection() {
           />
         </div>
 
-        {/* Treść z z-10 */}
+        {/* Treść z z-10 — dwie kolumny: tekst intro | karty programów */}
         <div className="relative z-10">
-          {/* Intro headings z zielonymi akcentami */}
-          <div className="mb-16 space-y-8">
-            <h3 className="mb-[72px] max-w-3xl text-heading text-fm-text">
-              Realizujemy{" "}
-              <span className="text-fm-green">globalne i lokalne </span>
-              programy edukacyjne, które uzupełniają braki systemu edukacyjnego
-              <span className="text-fm-green">.</span>
-            </h3>
-            <p className="max-w-2xl text-body text-[#E8E8E8]">
-              Dążymy do kształtowania odpowiedzialnego i zaangażowanego
-              społeczeństwa, które myśli krytycznie i jest gotowe na dynamicznie
-              zmieniający się świat.
-            </p>
-            <p className="max-w-2xl text-body text-[#E8E8E8]">
-              Naszą misją jest sprawienie, aby głos dzieci był słyszalny oraz
-              wykorzystanie ich pomysłów i wizji do inspirowania liderów na całym
-              świecie.
-            </p>
-          </div>
-
-          {/* Etykieta */}
-          <p className="mb-8 text-[18px] font-extralight text-[#E8E8E8]">
-            Globalne programy edukacyjne:
-          </p>
-
-          {/* Karty programów — grid 2-kolumnowy */}
-          <div className="grid grid-cols-1 gap-0 lg:grid-cols-2">
-            {PROGRAMS.map((program) => (
-              <div
-                key={program.title}
-                className="py-8"
-              >
-                <Image
-                  src={program.logo}
-                  alt={program.title}
-                  width={200}
-                  height={70}
-                  className="mb-6 h-12 w-auto"
-                />
-                <p className="mb-6 max-w-lg text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
-                  {program.description}
+          {/* Dwie kolumny: tekst intro (sticky) | karty programów (scrolluje) */}
+          <div className="relative flex flex-col gap-12 lg:flex-row lg:gap-24">
+            {/* Środkowa kolumna — sticky dopóki prawa się scrolluje */}
+            <div className="lg:w-2/5">
+              <div className="sticky top-16 space-y-8">
+                <h3 className="max-w-3xl text-heading text-fm-text">
+                  Realizujemy{" "}
+                  <span className="text-fm-green">globalne i lokalne </span>
+                  programy edukacyjne, które uzupełniają braki systemu edukacyjnego
+                  <span className="text-fm-green">.</span>
+                </h3>
+                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                  Dążymy do kształtowania odpowiedzialnego i zaangażowanego
+                  społeczeństwa, które myśli krytycznie i jest gotowe na dynamicznie
+                  zmieniający się świat.
                 </p>
-                <Link
-                  href={program.href}
-                  className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
-                >
-                  WIĘCEJ
-                </Link>
+                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                  Naszą misją jest sprawienie, aby głos dzieci był słyszalny oraz
+                  wykorzystanie ich pomysłów i wizji do inspirowania liderów na całym
+                  świecie.
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Prawa kolumna — karty programów w kolumnie, staggered fade-in */}
+            <StaggerContainer staggerDelay={0.15} className="flex flex-col lg:w-3/5 lg:pl-[120px] lg:pr-[80px]">
+              {PROGRAMS.map((program) => (
+                <StaggerItem
+                  key={program.title}
+                  className="py-20"
+                >
+                  <Image
+                    src={program.logo}
+                    alt={program.title}
+                    width={200}
+                    height={70}
+                    className="mb-4 h-12 w-auto"
+                  />
+                  <p className="mb-4 text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
+                    {program.description}
+                  </p>
+                  <Link
+                    href={program.href}
+                    className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+                  >
+                    WIĘCEJ
+                  </Link>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
 
           {/* Sekcja "szyte na miare" — programy autorskie z fadeIn */}
           <FadeIn>
-            <div className="mt-20">
+            <div className="mt-40 lg:w-2/5">
               <h3 className="mb-6 max-w-3xl text-heading text-fm-text">
                 Tworzymy również autorskie programy edukacyjne dostosowane do{" "}
                 <span className="text-fm-green">

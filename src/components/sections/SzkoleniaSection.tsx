@@ -13,7 +13,7 @@ export function SzkoleniaSection() {
       navLinks={TRAINING_SECTION_NAV}
       header={
         <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
             Szkolenia
             <br /> dla nauczycieli
           </h2>

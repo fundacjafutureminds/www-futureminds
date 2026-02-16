@@ -72,7 +72,7 @@ export function ProjektySection() {
       sectionNumber="03"
       header={
         <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
             Projekty
           </h2>
         </FadeIn>

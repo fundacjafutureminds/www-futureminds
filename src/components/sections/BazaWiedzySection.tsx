@@ -42,7 +42,7 @@ export function BazaWiedzySection() {
       navLinks={KNOWLEDGE_SECTION_NAV}
       header={
         <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-medium text-[#EFEFEF]">
+          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
             {`Baza wiedzy`}
           </h2>
         </FadeIn>
