@@ -94,7 +94,7 @@ export function HandwriteTitle({
         d={d}
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="0.8"
         vectorEffect="non-scaling-stroke"
         strokeLinecap="round"
         strokeLinejoin="round"
