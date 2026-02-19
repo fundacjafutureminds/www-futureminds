@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 Phase: 10 of 10 (Integracja/Deploy)
 Plan: 2 of 3 in current phase — COMPLETE
 Status: Plan 10-02 complete — animacje fadeIn w Stypendia, Projekty, Szkolenia, Baza Wiedzy
-Last activity: 2026-02-15 — Phase 10 plan 02 executed (10-02-PLAN.md)
+Last activity: 2026-02-18 - Completed quick task 1: Fonttools centerline paths for HandwriteTitle animation
 
 Progress: [██████████████████░░░░░░░] 18/19 (94%)
 
@@ -119,6 +119,12 @@ None.
 
 - Font neue-haas-grotesk-display wymaga Adobe Fonts embed code od usera (fallback: system sans-serif)
 - Opacity ilustracji hero (0.15) moze wymagac wizualnego dostrojenia
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Fonttools centerline paths for HandwriteTitle animation | 2026-02-18 | 25445a3 | [1-fonttools-centerline-paths-for-handwrite](./quick/1-fonttools-centerline-paths-for-handwrite/) |
 
 ## Session Continuity
 
