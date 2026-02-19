@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+import { HandwriteTitle } from "@/components/ui/HandwriteTitle";
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
 export function ProgramyEdukacyjneSection() {
@@ -13,12 +14,13 @@ export function ProgramyEdukacyjneSection() {
       navLinks={EDUCATION_SECTION_NAV}
       contentDividerLeft="calc(350px + 48px + (100% - 350px - 48px) * 0.4 + 48px)"
       header={
-        <FadeIn direction="down">
-          <h2 className="mb-32 text-section font-thin text-fm-text">
-            Programy
-            <br /> edukacyjne
-          </h2>
-        </FadeIn>
+        <HandwriteTitle
+          text={"Programy\nedukacyjne"}
+          className="mb-32 w-full max-w-[980px] text-white/10"
+          charDuration={0.8}
+          charStagger={0.15}
+          startDelay={0.3}
+        />
       }
     >
       <div className="relative">
