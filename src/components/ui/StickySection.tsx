@@ -35,7 +35,7 @@ export function StickySection({
     >
       {/* Vertical separator line */}
       <div
-        className="pointer-events-none absolute top-28 bottom-20 left-[300px] hidden w-px bg-white/5 lg:block"
+        className="pointer-events-none absolute top-96 bottom-20 left-[300px] hidden w-px bg-white/5 lg:block"
       />
       {/* Decorative header above two-column layout */}
       {header && (
