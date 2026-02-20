@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 Phase: 10 of 10 (Integracja/Deploy)
 Plan: 2 of 3 in current phase — COMPLETE
 Status: Plan 10-02 complete — animacje fadeIn w Stypendia, Projekty, Szkolenia, Baza Wiedzy
-Last activity: 2026-02-18 - Completed quick task 1: Fonttools centerline paths for HandwriteTitle animation
+Last activity: 2026-02-20 - Completed quick task 2: ProgramyStypendialneSection na jasne tlo
 
 Progress: [██████████████████░░░░░░░] 18/19 (94%)
 
@@ -110,6 +110,10 @@ Recent decisions affecting current work:
 - 10-01: directionMap z offsetami 30px (subtelne animacje, nie rozpraszajace)
 - 10-02: FadeIn className="w-[50%]" na kartach CTA — zachowanie layout flex 50/50 z animacja
 - 10-02: StaggerContainer staggerDelay=0.08 dla logotypow partnerow (9 szt. — szybszy kaskadowy efekt)
+- quick-2: StickySection variant="light" — isDark ternary dla hr, navlinks, strzalek, content dividera
+- quick-2: Kolory tekstu na jasnym tle: #2b2f33 (naglowki), #3C3C3C (body), #6b6b6b (muted)
+- quick-2: Logotypy partnerow bez brightness-0 invert na jasnym tle
+- quick-2: Overlay dekoracyjne zmniejszone na jasnym tle (Tlo-STYPENDIA opacity-10, skrzydlo2 opacity-0.08)
 
 ### Pending Todos
 
@@ -125,9 +129,10 @@ None.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 1 | Fonttools centerline paths for HandwriteTitle animation | 2026-02-18 | 25445a3 | [1-fonttools-centerline-paths-for-handwrite](./quick/1-fonttools-centerline-paths-for-handwrite/) |
+| 2 | ProgramyStypendialneSection na jasne tlo | 2026-02-20 | e94d7f0 | [2-sekcja-programystypendialnesection-na-ja](./quick/2-sekcja-programystypendialnesection-na-ja/) |
 
 ## Session Continuity
 
-Last session: 2026-02-19T00:06:19Z
-Stopped at: Completed quick-1-01-PLAN.md (fonttools centerline paths + HandwriteTitle charMap)
+Last session: 2026-02-20T16:54:36Z
+Stopped at: Completed quick-2-PLAN.md (ProgramyStypendialneSection na jasne tlo)
 Resume file: None
