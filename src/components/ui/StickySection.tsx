@@ -60,7 +60,7 @@ export function StickySection({
         )}
         {/* Left sticky sidebar */}
         <div className="hidden w-[350px] shrink-0 lg:block">
-          <div className="sticky top-0 pt-16 pl-0">
+          <div className="sticky top-16 pt-16 pl-0">
             <div>
               <div className="flex items-start gap-[23px]">
                 <Image

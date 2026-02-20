@@ -94,17 +94,15 @@ export function HandwriteTitle({
         d={d}
         fill="none"
         stroke="currentColor"
-        strokeWidth="0.8"
+        strokeWidth="1"
         vectorEffect="non-scaling-stroke"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        initial={{ pathLength: 0 }}
-        animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{
-          pathLength: {
-            duration: edgeDuration,
-            delay: charDelay + edgeIdx * (edgeDuration * 0.3),
-            ease: "easeInOut",
+          opacity: {
+            duration: 0.6,
+            delay: charDelay,
+            ease: "easeOut",
           },
         }}
       />

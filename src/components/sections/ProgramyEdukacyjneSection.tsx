@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
-import { HandwriteTitle } from "@/components/ui/HandwriteTitle";
+
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
 export function ProgramyEdukacyjneSection() {
@@ -14,13 +14,9 @@ export function ProgramyEdukacyjneSection() {
       navLinks={EDUCATION_SECTION_NAV}
       contentDividerLeft="calc(350px + 48px + (100% - 350px - 48px) * 0.4 + 48px)"
       header={
-        <HandwriteTitle
-          text={"Programy\nedukacyjne"}
-          className="mb-32 w-full max-w-[980px] text-white/10"
-          charDuration={0.8}
-          charStagger={0.15}
-          startDelay={0.3}
-        />
+        <div className="mb-32 w-full max-w-[980px] text-[200px] font-thin leading-[0.95] text-fm-text">
+          Programy<br />edukacyjne
+        </div>
       }
     >
       <div className="relative">
@@ -41,7 +37,7 @@ export function ProgramyEdukacyjneSection() {
           <div className="relative flex flex-col gap-12 lg:flex-row lg:gap-24">
             {/* Środkowa kolumna — sticky dopóki prawa się scrolluje */}
             <div className="lg:w-2/5">
-              <div className="sticky top-16 space-y-8">
+              <div className="sticky top-32 space-y-8">
                 <h3 className="max-w-3xl text-heading text-fm-text">
                   Realizujemy{" "}
                   <span className="text-fm-green">globalne i lokalne </span>
