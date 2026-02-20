@@ -12,13 +12,14 @@ import {
 export function ProgramyStypendialneSection() {
   return (
     <StickySection
+      variant="light"
       id="programy-stypendialne"
       title="Programy Stypendialne"
       sectionNumber="02"
       navLinks={SCHOLARSHIP_SECTION_NAV}
       header={
         <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
+          <h2 className="mb-16 text-section font-thin text-[#2b2f33]">
             Programy
             <br /> stypendialne
           </h2>
@@ -32,7 +33,7 @@ export function ProgramyStypendialneSection() {
             src="/images/Tlo-STYPENDIA.png"
             alt=""
             fill
-            className="object-contain object-right opacity-20"
+            className="object-contain object-right opacity-10"
             aria-hidden="true"
           />
         </div>
@@ -42,7 +43,7 @@ export function ProgramyStypendialneSection() {
             src="/images/skrzydlo2.png"
             alt=""
             fill
-            className="object-contain object-right-top opacity-[0.18]"
+            className="object-contain object-right-top opacity-[0.08]"
             aria-hidden="true"
           />
         </div>
@@ -53,18 +54,18 @@ export function ProgramyStypendialneSection() {
             {/* Lewa kolumna 60% — intro headings + logotypy */}
             <div className="w-[60%] space-y-8">
               {/* Intro heading z zielonym akcentem */}
-              <h3 className="max-w-3xl text-heading text-[#EFEFEF]">
+              <h3 className="max-w-3xl text-heading text-[#2b2f33]">
                 Łączymy{" "}
                 <span className="text-fm-green">
                   odpowiedzialne społecznie firmy
                 </span>{" "}
                 z dziećmi, które potrzebują wsparcia na starcie.
               </h3>
-              <p className="max-w-2xl text-body text-[#E8E8E8]">
+              <p className="max-w-2xl text-body text-[#3C3C3C]">
                 Sukces opiera się na duchu dzielenia się - dzielenia się wiedzą,
                 doświadczeniem i możliwościami.
               </p>
-              <p className="max-w-2xl text-body text-[#E8E8E8]">
+              <p className="max-w-2xl text-body text-[#3C3C3C]">
                 Poprzez umożliwienie młodym ludziom uczestnictwa w
                 międzynarodowych programach edukacyjnych, nie tylko umacniamy ich
                 kompetencje w obszarze nauki, technologii, inżynierii i
@@ -75,7 +76,7 @@ export function ProgramyStypendialneSection() {
 
               {/* Partnerzy strategiczni — grid 9 logotypów */}
               <div className="pt-8">
-                <p className="mb-8 text-body text-[#E8E8E8]">
+                <p className="mb-8 text-body text-[#3C3C3C]">
                   Partnerzy strategiczni
                 </p>
                 <StaggerContainer staggerDelay={0.08} className="flex max-w-[600px] flex-wrap items-center gap-6">
@@ -86,7 +87,7 @@ export function ProgramyStypendialneSection() {
                         alt={partner.name}
                         width={140}
                         height={50}
-                        className="h-10 w-auto opacity-70 brightness-0 invert transition-opacity hover:opacity-100"
+                        className="h-10 w-auto opacity-70 transition-opacity hover:opacity-100"
                       />
                     </StaggerItem>
                   ))}
@@ -101,20 +102,20 @@ export function ProgramyStypendialneSection() {
                   {SCHOLARSHIP_BLOG_POSTS.map((post) => (
                     <div
                       key={post.title}
-                      className="border-l border-[#FFFFFF54] py-0 pl-[35px] pr-[35px]"
+                      className="border-l border-black/15 py-0 pl-[35px] pr-[35px]"
                     >
-                      <p className="text-[12px] font-normal uppercase leading-[2em] text-fm-text-muted">
+                      <p className="text-[12px] font-normal uppercase leading-[2em] text-[#6b6b6b]">
                         {post.category}
                       </p>
-                      <h4 className="text-[22px] font-light leading-[1.1] text-[#EAEAEA] transition-colors hover:text-fm-green">
+                      <h4 className="text-[22px] font-light leading-[1.1] text-[#2b2f33] transition-colors hover:text-fm-green">
                         <Link href={post.href}>{post.title}</Link>
                       </h4>
-                      <p className="mt-5 mb-5 text-[15px] font-normal leading-[22px] tracking-[0.2px] text-[#D9D9D9]">
+                      <p className="mt-5 mb-5 text-[15px] font-normal leading-[22px] tracking-[0.2px] text-[#3C3C3C]">
                         {post.excerpt}
                       </p>
                       <Link
                         href={post.href}
-                        className="inline-block border-b border-white/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:border-fm-green hover:text-fm-green"
+                        className="inline-block border-b border-black/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#2b2f33] transition-colors hover:border-fm-green hover:text-fm-green"
                       >
                         Więcej
                       </Link>
@@ -138,7 +139,7 @@ export function ProgramyStypendialneSection() {
                 >
                   <div className="w-full space-y-8 pr-8">
                     <h3
-                      className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
+                      className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#2b2f33]"
                     >
                       {card.title}
                       <br />
@@ -157,7 +158,7 @@ export function ProgramyStypendialneSection() {
                     />
                     <Link
                       href={card.href}
-                      className="inline-block border-b border-white/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:border-fm-green hover:text-fm-green"
+                      className="inline-block border-b border-black/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#2b2f33] transition-colors hover:border-fm-green hover:text-fm-green"
                     >
                       Więcej
                     </Link>
@@ -170,7 +171,7 @@ export function ProgramyStypendialneSection() {
             <FadeIn>
               <div className="mt-12 w-[87%] space-y-8">
                 <h3
-                  className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
+                  className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#2b2f33]"
                 >
                   {SCHOLARSHIP_CTA_CARDS[2].title}
                   <br />
@@ -189,7 +190,7 @@ export function ProgramyStypendialneSection() {
                 />
                 <Link
                   href={SCHOLARSHIP_CTA_CARDS[2].href}
-                  className="inline-block border-b border-white/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:border-fm-green hover:text-fm-green"
+                  className="inline-block border-b border-black/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#2b2f33] transition-colors hover:border-fm-green hover:text-fm-green"
                 >
                   Więcej
                 </Link>
@@ -204,7 +205,7 @@ export function ProgramyStypendialneSection() {
               alt=""
               width={59}
               height={13}
-              className="opacity-40"
+              className="opacity-40 invert"
             />
           </div>
         </div>
