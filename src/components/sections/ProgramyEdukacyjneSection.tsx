@@ -14,9 +14,11 @@ export function ProgramyEdukacyjneSection() {
       navLinks={EDUCATION_SECTION_NAV}
       contentDividerLeft="calc(350px + 48px + (100% - 350px - 48px) * 0.4 + 48px)"
       header={
-        <div className="mb-32 w-full max-w-[980px] text-[200px] font-thin leading-[0.95] text-fm-text">
-          Programy<br />edukacyjne
-        </div>
+        <FadeIn direction="right">
+          <div className="mb-32 w-full max-w-[980px] text-[200px] font-thin leading-[0.95] text-fm-text">
+            Programy<br />edukacyjne
+          </div>
+        </FadeIn>
       }
     >
       <div className="relative">
@@ -58,32 +60,41 @@ export function ProgramyEdukacyjneSection() {
             </div>
 
             {/* Prawa kolumna — karty programów w kolumnie, staggered fade-in */}
-            <StaggerContainer staggerDelay={0.15} className="flex flex-col lg:w-3/5 lg:pl-[120px] lg:pr-[80px]">
-              {PROGRAMS.map((program) => (
-                <StaggerItem
+            <div className="relative flex flex-col lg:w-3/5">
+              {PROGRAMS.map((program, index) => (
+                <FadeIn
                   key={program.title}
-                  className="pb-20 [&:not(:first-child)]:pt-20"
+                  direction="right"
+                  delay={index * 0.15}
+                  className="relative pb-32 [&:not(:first-child)]:pt-32"
                 >
-                  <Image
-                    src={program.logo}
-                    alt={program.title}
-                    width={program.logoWidth ?? 200}
-                    height={program.logoHeight ?? 70}
-                    className="mb-4 w-auto"
-                    style={{ height: program.logoHeight ?? 70 }}
+                  <div className="lg:pl-[120px] lg:pr-[80px]">
+                    <Image
+                      src={program.logo}
+                      alt={program.title}
+                      width={program.logoWidth ?? 200}
+                      height={program.logoHeight ?? 70}
+                      className="mb-12 w-auto"
+                      style={{ height: program.logoHeight ?? 70 }}
+                    />
+                    <p className="mb-12 text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
+                      {program.description}
+                    </p>
+                    <Link
+                      href={program.href}
+                      className="inline-block text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:text-fm-green"
+                    >
+                      Więcej
+                    </Link>
+                  </div>
+                  {/* Linia: od lewej krawędzi kolumny do prawej krawędzi viewportu */}
+                  <div
+                    className="absolute bottom-0 h-px bg-white/10"
+                    style={{ left: '10px', right: '-200px' }}
                   />
-                  <p className="mb-4 text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
-                    {program.description}
-                  </p>
-                  <Link
-                    href={program.href}
-                    className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-fm-dark"
-                  >
-                    WIĘCEJ
-                  </Link>
-                </StaggerItem>
+                </FadeIn>
               ))}
-            </StaggerContainer>
+            </div>
           </div>
 
           {/* Sekcja "szyte na miare" — programy autorskie z fadeIn */}

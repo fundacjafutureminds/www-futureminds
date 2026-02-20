@@ -112,12 +112,14 @@ export function ProgramyStypendialneSection() {
                       <p className="mt-5 mb-5 text-[15px] font-normal leading-[22px] tracking-[0.2px] text-[#D9D9D9]">
                         {post.excerpt}
                       </p>
-                      <Link
-                        href={post.href}
-                        className="inline-block bg-[#FFFFFF1A] px-[30px] py-[8px] text-[13px] font-light uppercase tracking-[1.7px] text-[#E4E4E4]"
-                      >
-                        Więcej
-                      </Link>
+                      <div className="-ml-[35px] border-b border-white/10 pb-2 transition-colors hover:border-fm-green">
+                        <Link
+                          href={post.href}
+                          className="ml-[35px] inline-block text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:text-fm-green"
+                        >
+                          Więcej
+                        </Link>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -136,7 +138,7 @@ export function ProgramyStypendialneSection() {
                   delay={0.4}
                   className="w-[50%]"
                 >
-                  <div className="w-full space-y-6 pr-8">
+                  <div className="w-full space-y-8 pr-8">
                     <h3
                       className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
                     >
@@ -157,9 +159,9 @@ export function ProgramyStypendialneSection() {
                     />
                     <Link
                       href={card.href}
-                      className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+                      className="inline-block border-b border-white/10 pb-2 text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:border-fm-green hover:text-fm-green"
                     >
-                      WIECEJ &gt;
+                      Więcej
                     </Link>
                   </div>
                 </FadeIn>
@@ -168,7 +170,7 @@ export function ProgramyStypendialneSection() {
 
             {/* Trzecia karta — szersza (~87%) */}
             <FadeIn>
-              <div className="mt-12 w-[87%] space-y-6">
+              <div className="mt-12 w-[87%] space-y-8">
                 <h3
                   className="text-[42px] font-semibold leading-[1.1] tracking-[0.6px] text-[#EFEFEF]"
                 >
@@ -189,7 +191,7 @@ export function ProgramyStypendialneSection() {
                 />
                 <Link
                   href={SCHOLARSHIP_CTA_CARDS[2].href}
-                  className="inline-block rounded-[2px] bg-[#FFFFFF0A] px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white"
+                  className="inline-block rounded-[2px] border border-white/10 bg-transparent px-[30px] pt-[17px] pb-[15px] text-[10px] font-light uppercase tracking-[2px] leading-none text-[#FFFFFFF2] transition-colors hover:bg-fm-green hover:text-white hover:border-fm-green"
                 >
                   WIECEJ &gt;
                 </Link>
