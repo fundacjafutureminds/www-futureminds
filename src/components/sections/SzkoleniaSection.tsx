@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { TextReveal } from "@/components/ui/TextReveal";
 import { TRAINING_SECTION_NAV, TECH_ICONS } from "@/lib/constants";
 
 export function SzkoleniaSection() {
@@ -12,12 +13,10 @@ export function SzkoleniaSection() {
       sectionNumber="04"
       navLinks={TRAINING_SECTION_NAV}
       header={
-        <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
-            Szkolenia
-            <br /> dla nauczycieli
-          </h2>
-        </FadeIn>
+        <TextReveal
+          text={"Szkolenia\ndla nauczycieli"}
+          className="mb-16 text-section font-thin text-[#EFEFEF]"
+        />
       }
     >
       <div className="relative">

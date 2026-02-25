@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { TextReveal } from "@/components/ui/TextReveal";
 import { PROJECTS } from "@/lib/constants";
 import type { Project } from "@/lib/types";
 
@@ -71,11 +72,10 @@ export function ProjektySection() {
       title="Projekty"
       sectionNumber="03"
       header={
-        <FadeIn direction="down">
-          <h2 className="mb-16 text-section font-thin text-[#EFEFEF]">
-            Projekty
-          </h2>
-        </FadeIn>
+        <TextReveal
+          text="Projekty"
+          className="mb-16 text-section font-thin text-[#EFEFEF]"
+        />
       }
     >
       <div className="relative">
