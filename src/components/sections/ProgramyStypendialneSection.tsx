@@ -18,7 +18,7 @@ export function ProgramyStypendialneSection() {
       sectionNumber="02"
       navLinks={SCHOLARSHIP_SECTION_NAV}
       header={
-        <h2 className="mb-16 text-section font-thin text-black/15">
+        <h2 className="mb-16 text-section font-thin text-black/18">
           Programy<br />stypendialne
         </h2>
       }
@@ -51,18 +51,18 @@ export function ProgramyStypendialneSection() {
             {/* Lewa kolumna 60% — intro headings + logotypy */}
             <div className="w-[60%] space-y-8">
               {/* Intro heading z zielonym akcentem */}
-              <h3 className="max-w-3xl text-heading text-[#2b2f33]">
+              <h3 className="max-w-3xl text-heading font-[450] text-[#5a5f66]">
                 Łączymy{" "}
                 <span className="text-fm-green">
                   odpowiedzialne społecznie firmy
                 </span>{" "}
                 z dziećmi, które potrzebują wsparcia na starcie.
               </h3>
-              <p className="max-w-2xl text-body text-[#3C3C3C]">
+              <p className="max-w-2xl text-[23px] font-extralight leading-[1.7] text-[#555] [-webkit-text-stroke:0.3px]">
                 Sukces opiera się na duchu dzielenia się - dzielenia się wiedzą,
                 doświadczeniem i możliwościami.
               </p>
-              <p className="max-w-2xl text-body text-[#3C3C3C]">
+              <p className="max-w-2xl text-[23px] font-extralight leading-[1.7] text-[#555] [-webkit-text-stroke:0.3px]">
                 Poprzez umożliwienie młodym ludziom uczestnictwa w
                 międzynarodowych programach edukacyjnych, nie tylko umacniamy ich
                 kompetencje w obszarze nauki, technologii, inżynierii i
@@ -73,7 +73,7 @@ export function ProgramyStypendialneSection() {
 
               {/* Partnerzy strategiczni — grid 9 logotypów */}
               <div className="pt-8">
-                <p className="mb-8 text-body text-[#3C3C3C]">
+                <p className="mb-8 text-[23px] font-extralight leading-[1.7] text-[#555] [-webkit-text-stroke:0.3px]">
                   Partnerzy strategiczni
                 </p>
                 <StaggerContainer staggerDelay={0.08} className="flex max-w-[600px] flex-wrap items-center gap-6">

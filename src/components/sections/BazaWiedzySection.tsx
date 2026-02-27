@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { TextReveal } from "@/components/ui/TextReveal";
 import { ARTICLES, KNOWLEDGE_SECTION_NAV } from "@/lib/constants";
 import type { Article } from "@/lib/types";
 
@@ -41,9 +42,10 @@ export function BazaWiedzySection() {
       sectionNumber="05"
       navLinks={KNOWLEDGE_SECTION_NAV}
       header={
-        <h2 className="mb-16 text-section font-thin text-white/15">
-          Baza wiedzy
-        </h2>
+        <TextReveal
+          text="Baza wiedzy"
+          className="mb-16 text-section font-thin text-[#EFEFEF]"
+        />
       }
     >
       <div className="relative">

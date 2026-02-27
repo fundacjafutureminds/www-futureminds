@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
 export function ProgramyEdukacyjneSection() {

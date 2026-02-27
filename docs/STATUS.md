@@ -1,12 +1,24 @@
 # Status: www-futureminds
 
 ## Aktualny stan
-**Branch:** main | **Faza:** scroll-restoration fix DrawLine + FadeIn
+**Branch:** main | **Faza:** animowane linie + szablon dark/light
 **Ostatnia sesja:** 2026-02-27
-Stan z c87626d (plain h2 font-thin + DrawLine animowane linie + FadeIn fix). DrawLine.tsx naprawiony — `whileInView` zastąpiony ręcznym `useAnimation` + IO + setTimeout(150ms) fallback. FadeIn ujednolicony tym samym patternem. Wymaga testów manualnych w przeglądarce (Playwright nie symuluje scroll restoration wiernie).
+Cofnięto DrawLine (revert do d97ac14) — pionowe linie statyczne, poziome animowane Framer Motion `scaleX`. Linia pozioma podzielona na 3 segmenty (origin-left/origin-right/origin-left). Pionowa linia podzielona na 2 segmenty (nad/pod hr) z dynamicznym pomiarem symetrii. Rozpoczęto szablon light (ProgramyStypendialne): body 23px/extralight/`-webkit-text-stroke:0.3px`/`#555`, heading font-[450]/`#5a5f66`.
 
 ## Ostatnie zmiany
 <!-- /wrap dopisuje na gorze, max 15 wpisow, starsze kasuje -->
+
+### 2026-02-27 — Animowane linie (Framer Motion scaleX) + szablon light
+- Cofnięto DrawLine.tsx (revert do d97ac14) — pionowe linie wróciły do statycznych `<div>` (DrawLine powodował brak widoczności pionowej linii)
+- Linia pozioma w StickySection: podzielona na 3 segmenty `motion.div` z `scaleX: 0→1` — segment 1 origin-left, segment 2 origin-right, segment 3 origin-left (wyrastają od pionowych linii na zewnątrz)
+- Pionowa linia sidebar: podzielona na 2 segmenty (górny: header area, dolny: flex content) — animowane `scaleY: 0→1` z `origin-top`
+- Górny segment: dynamiczny `top` obliczany z `useEffect` + `useRef` — symetryczny gap nad tytułem = gap pod tytułem do hr
+- Linie rozjaśnione: pionowe bg-white/5→8, poziome bg-white/10→15 (dark); analogicznie light
+- ProgramyEdukacyjne + ProjektySection: TextReveal → plain `<h2>` font-thin
+- **Szablon light** (ProgramyStypendialne): body 23px/extralight/-webkit-text-stroke:0.3px/#555, heading font-[450]/#5a5f66, section title text-black/18
+- Decyzja: CHOSE `-webkit-text-stroke:0.3px` BECAUSE font-weight 200-300 ma nierówny rendering na Windows ClearType (litery o/e/c mają krzywe wpadające między piksele); stroke pogrubia bez zmiany weight
+- FAILED: DrawLine SVG `pathLength` animacja na pionowych liniach — linie niewidoczne po revert; wrócono do statycznych div
+- FAILED: font-weight 300 na jasnym tle — ClearType nierówno renderuje krzywe liter; 200 renderuje czysto (za cienkie kreski nie używają subpixeli) ale za cienkie optycznie
 
 ### 2026-02-27 — Fix DrawLine scroll restoration (whileInView → useAnimation + IO)
 - DrawLine.tsx: zastąpiono Framer Motion `whileInView` na `useAnimation` + ręczny `IntersectionObserver` + `setTimeout(150ms)` fallback — ten sam pattern co FadeIn
@@ -41,6 +53,8 @@ Stan z c87626d (plain h2 font-thin + DrawLine animowane linie + FadeIn fix). Dra
 ## Decyzje
 | Data | Decyzja | Dlaczego | Odrzucone |
 |------|---------|----------|-----------|
+| 2026-02-27 | Linia pozioma: 3 segmenty Framer Motion scaleX (nie DrawLine SVG) | DrawLine SVG pathLength powodował niewidoczne pionowe linie; scaleX na div jest prostsze i stabilne | DrawLine SVG pathLength (usunięto) |
+| 2026-02-27 | Light body: font-200 + `-webkit-text-stroke:0.3px` | ClearType na Windows nierówno renderuje weight 300 na jasnym tle; 200+stroke daje równy rendering z optyczną grubością | font-weight 300 (nierówne litery), font-weight 400 (za grube) |
 | 2026-02-27 | Framer Motion dla DrawLine (nie GSAP) | GSAP ScrollTrigger koliduje z Framer Motion whileInView, powoduje znikanie sidebaru | GSAP ScrollTrigger (testowano, sidebar znikał) |
 | 2026-02-27 | Section titles jako plain h2 font-thin text-white/15 | SVG stroke-draw nie dał satysfakcjonującego efektu (outline paths), Maciej czeka na single-line font od Atipo | TextReveal SVG stroke-draw (usunięto) |
 | 2026-02-27 | FadeIn: ręczny useEffect + IO zamiast whileInView | whileInView nie triggeruje się po scroll restoration (refresh w środku strony) | Framer Motion whileInView (buggy przy scroll restoration) |
