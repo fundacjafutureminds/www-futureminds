@@ -39,33 +39,43 @@ export function FadeIn({
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!ref.current || hasAnimated.current) return;
+    const el = ref.current;
+    if (!el || hasAnimated.current) return;
+
+    let observer: IntersectionObserver | null = null;
+    let timer: ReturnType<typeof setTimeout> | null = null;
 
     const trigger = () => {
       if (hasAnimated.current) return;
       hasAnimated.current = true;
       controls.start({ opacity: 1, x: 0, y: 0 });
+      observer?.disconnect();
+      if (timer) clearTimeout(timer);
     };
 
-    // Check immediately if already in viewport (scroll restoration)
-    const rect = ref.current.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
-      trigger();
-      return;
-    }
+    const checkViewport = () => {
+      if (hasAnimated.current) return false;
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight + 100 && rect.bottom > -100;
+    };
 
-    // Otherwise observe for scroll
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          trigger();
-          observer.disconnect();
-        }
-      },
+    // Check immediately (sync scroll restoration)
+    if (checkViewport()) { trigger(); return; }
+
+    // Delayed check catches async scroll restoration
+    timer = setTimeout(() => { if (checkViewport()) trigger(); }, 150);
+
+    // IO for normal scrolling
+    observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) trigger(); },
       { threshold: 0.1, rootMargin: "100px" }
     );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
+    observer.observe(el);
+
+    return () => {
+      if (timer) clearTimeout(timer);
+      observer?.disconnect();
+    };
   }, [controls]);
 
   const offset = directionMap[direction];
