@@ -3,7 +3,7 @@
 ## Aktualny stan
 **Branch:** main | **Faza:** animowane linie + szablon dark/light
 **Ostatnia sesja:** 2026-02-27
-Cofnięto DrawLine (revert do d97ac14) — pionowe linie statyczne, poziome animowane Framer Motion `scaleX`. Linia pozioma podzielona na 3 segmenty (origin-left/origin-right/origin-left). Pionowa linia podzielona na 2 segmenty (nad/pod hr) z dynamicznym pomiarem symetrii. Rozpoczęto szablon light (ProgramyStypendialne): body 23px/extralight/`-webkit-text-stroke:0.3px`/`#555`, heading font-[450]/`#5a5f66`.
+Cofnięto DrawLine (revert do d97ac14) — pionowe linie statyczne, poziome animowane Framer Motion `scaleX`. Linia pozioma podzielona na 3 segmenty (origin-left/origin-right/origin-left). Pionowa linia podzielona na 2 segmenty (nad/pod hr) z dynamicznym pomiarem symetrii. Rozpoczęto szablon light (ProgramyStypendialne): body 23px/extralight/`-webkit-text-stroke:0.3px`/`#555`, heading font-[450]/`#484d54`.
 
 ## Ostatnie zmiany
 <!-- /wrap dopisuje na gorze, max 15 wpisow, starsze kasuje -->

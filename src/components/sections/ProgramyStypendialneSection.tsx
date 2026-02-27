@@ -51,7 +51,7 @@ export function ProgramyStypendialneSection() {
             {/* Lewa kolumna 60% — intro headings + logotypy */}
             <div className="w-[60%] space-y-8">
               {/* Intro heading z zielonym akcentem */}
-              <h3 className="max-w-3xl text-heading font-[450] text-[#5a5f66]">
+              <h3 className="max-w-3xl text-heading font-[450] text-[#484d54]">
                 Łączymy{" "}
                 <span className="text-fm-green">
                   odpowiedzialne społecznie firmy
