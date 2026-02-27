@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { StickySection } from "@/components/ui/StickySection";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
-import { TextReveal } from "@/components/ui/TextReveal";
 import {
   PARTNER_LOGOS,
   SCHOLARSHIP_SECTION_NAV,
@@ -19,10 +18,9 @@ export function ProgramyStypendialneSection() {
       sectionNumber="02"
       navLinks={SCHOLARSHIP_SECTION_NAV}
       header={
-        <TextReveal
-          text={"Programy\nstypendialne"}
-          className="mb-16 text-section font-thin text-[#2b2f33]"
-        />
+        <h2 className="mb-16 text-section font-thin text-black/15">
+          Programy<br />stypendialne
+        </h2>
       }
     >
       <div className="relative">

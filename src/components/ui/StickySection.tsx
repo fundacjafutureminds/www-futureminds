@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { StickyNavLink } from "@/lib/types";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { DrawLine } from "@/components/ui/DrawLine";
 
 
 interface StickySectionProps {
@@ -43,9 +44,12 @@ export function StickySection({
             }
       }
     >
-      {/* Vertical separator line */}
-      <div
-        className={`pointer-events-none absolute top-96 bottom-20 left-[300px] hidden w-px lg:block ${isDark ? "bg-white/5" : "bg-black/8"}`}
+      {/* Vertical separator line — draw animation */}
+      <DrawLine
+        direction="vertical"
+        stroke={isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.08)"}
+        className="pointer-events-none absolute top-96 bottom-20 left-[300px] hidden lg:block"
+        duration={1.5}
       />
       {/* Decorative header above two-column layout */}
       {header && (
@@ -53,18 +57,56 @@ export function StickySection({
           <div className="px-6 lg:ml-[350px] lg:px-12">
             {header}
           </div>
-          <div
-            className={`my-16 h-px w-full ${isDark ? "bg-white/10" : "bg-black/10"}`}
-          />
+          {/* Horizontal line — segmented at vertical line intersections, no gaps */}
+          <div className="relative my-16 hidden h-px w-full lg:block">
+            {/* Segment 1: left edge → sidebar line (300px) */}
+            <DrawLine
+              direction="horizontal"
+              stroke={isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"}
+              className="absolute top-0 left-0 h-px"
+              style={{ width: "300px" }}
+              duration={0.8}
+            />
+            {/* Segment 2: sidebar line → contentDivider or right edge */}
+            <DrawLine
+              direction="horizontal"
+              stroke={isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"}
+              className="absolute top-0 h-px"
+              style={{
+                left: "300px",
+                width: contentDividerLeft
+                  ? `calc(${contentDividerLeft} - 300px)`
+                  : "calc(100% - 300px)",
+              }}
+              duration={1.0}
+              delay={0.2}
+            />
+            {/* Segment 3: contentDivider → right edge (only if contentDivider exists) */}
+            {contentDividerLeft && (
+              <DrawLine
+                direction="horizontal"
+                stroke={isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"}
+                className="absolute top-0 right-0 h-px"
+                style={{ left: contentDividerLeft }}
+                duration={0.8}
+                delay={0.4}
+              />
+            )}
+          </div>
+          {/* Mobile: single line */}
+          <div className={`my-16 h-px w-full lg:hidden ${isDark ? "bg-white/10" : "bg-black/10"}`} />
         </>
       )}
 
       <div className="relative flex">
         {/* Content divider — starts at hr level (top of flex), ends at bottom-20 */}
         {contentDividerLeft && (
-          <div
-            className={`pointer-events-none absolute -top-16 bottom-20 hidden w-px lg:block ${isDark ? "bg-white/5" : "bg-black/8"}`}
+          <DrawLine
+            direction="vertical"
+            stroke={isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.08)"}
+            className="pointer-events-none absolute -top-16 bottom-20 hidden lg:block"
             style={{ left: contentDividerLeft }}
+            duration={1.5}
           />
         )}
         {/* Left sticky sidebar */}

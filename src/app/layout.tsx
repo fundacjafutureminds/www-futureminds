@@ -25,6 +25,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" className={plusJakartaSans.variable}>
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/geomanist-thin-webfont.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="antialiased">
         <main>{children}</main>
         <Footer />

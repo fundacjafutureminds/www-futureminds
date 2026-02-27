@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import type { ReactNode } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useEffect, type ReactNode } from "react";
 
 // Kierunki animacji fadeIn
 type FadeDirection = "up" | "down" | "left" | "right" | "none";
@@ -25,8 +25,7 @@ interface FadeInProps {
 
 /**
  * FadeIn — Client Component wrapper animujacy dzieci z fadeIn scroll-triggered.
- * Uzywa Framer Motion whileInView z viewport={{ once: true }}.
- * Sekcje pozostaja Server Components — FadeIn to jedyna granica "use client".
+ * Uzywa reczny IntersectionObserver + check on mount (scroll restoration fix).
  */
 export function FadeIn({
   children,
@@ -35,12 +34,47 @@ export function FadeIn({
   duration = 0.6,
   className,
 }: FadeInProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!ref.current || hasAnimated.current) return;
+
+    const trigger = () => {
+      if (hasAnimated.current) return;
+      hasAnimated.current = true;
+      controls.start({ opacity: 1, x: 0, y: 0 });
+    };
+
+    // Check immediately if already in viewport (scroll restoration)
+    const rect = ref.current.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+      trigger();
+      return;
+    }
+
+    // Otherwise observe for scroll
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          trigger();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: "100px" }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [controls]);
+
   const offset = directionMap[direction];
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      animate={controls}
       transition={{ delay, duration, ease: "easeOut" }}
       className={className}
     >
@@ -59,7 +93,6 @@ interface StaggerContainerProps {
 
 /**
  * StaggerContainer — kontener uruchamiajacy stagger na dzieciach.
- * Kazde dziecko (StaggerItem) animuje sie z rosnacym opoznieniem.
  */
 export function StaggerContainer({
   children,
@@ -70,7 +103,7 @@ export function StaggerContainer({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1, margin: "100px" }}
       variants={{
         hidden: {},
         visible: { transition: { staggerChildren: staggerDelay } },
@@ -89,7 +122,6 @@ interface StaggerItemProps {
 
 /**
  * StaggerItem — element wewnatrz StaggerContainer.
- * Animacja: opacity 0 -> 1, y 20 -> 0.
  */
 export function StaggerItem({ children, className }: StaggerItemProps) {
   return (
