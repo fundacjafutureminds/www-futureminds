@@ -17,6 +17,8 @@ interface StickySectionProps {
   header?: React.ReactNode;
   /** Optional second vertical divider line (CSS left value, e.g. "60%") */
   contentDividerLeft?: string;
+  /** Optional override background color (for dark variant) */
+  bgColor?: string;
   children: React.ReactNode;
 }
 
@@ -28,6 +30,7 @@ export function StickySection({
   navLinks,
   header,
   contentDividerLeft,
+  bgColor,
   children,
 }: StickySectionProps) {
   const isDark = variant === "dark";
@@ -64,7 +67,9 @@ export function StickySection({
       className={`relative pt-96 ${isDark ? "text-fm-text" : "text-fm-dark"}`}
       style={
         isDark
-          ? undefined
+          ? bgColor
+            ? { backgroundColor: bgColor }
+            : undefined
           : {
               backgroundColor: "#ffffff",
               backgroundImage: "url('/images/szum-lightgrey-1.png')",
@@ -164,7 +169,7 @@ export function StickySection({
                   {/* sectionNumber ukryty tymczasowo */}
                   <h2
                     className={`max-w-[250px] text-sidebar ${
-                      isDark ? "text-fm-text" : "text-fm-dark"
+                      isDark ? "text-fm-text" : "font-medium text-[#484d54]"
                     }`}
                   >
                     {title}
@@ -178,7 +183,7 @@ export function StickySection({
                     <FadeIn key={link.label} direction="left" delay={0.15 + i * 0.1}>
                       <Link
                         href={link.href}
-                        className={`flex items-center gap-[24px] text-[18px] font-extralight tracking-[0.75px] transition-colors hover:text-fm-green ${isDark ? "text-[#E8E8E8]" : "text-[#3C3C3C]"}`}
+                        className={`flex items-center gap-[24px] text-[18px] font-extralight tracking-[0.75px] transition-colors hover:text-fm-green ${isDark ? "text-[#E8E8E8]" : "text-[#3C3C3C] [&]:[-webkit-text-stroke:0.3px]"}`}
                       >
                         <span
                           className={`inline-block h-0 w-0 shrink-0 border-t-[7px] border-b-[7px] border-l-[10px] border-t-transparent border-b-transparent ${isDark ? "border-l-white/60" : "border-l-black/40"}`}
