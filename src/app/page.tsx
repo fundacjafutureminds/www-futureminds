@@ -29,6 +29,7 @@ export default function Home() {
       <ProjektySection />
       <SzkoleniaSection />
       <BazaWiedzySection />
+      <ProgramyEdukacyjneSection bgColor="#6D28D9" accentColor="#FF6B00" textColor="#ffffff" />
     </>
   );
 }

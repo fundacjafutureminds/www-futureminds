@@ -1,12 +1,23 @@
 # Status: www-futureminds
 
 ## Aktualny stan
-**Branch:** main | **Faza:** animowane linie + szablon dark/light
-**Ostatnia sesja:** 2026-02-27
-Cofnięto DrawLine (revert do d97ac14) — pionowe linie statyczne, poziome animowane Framer Motion `scaleX`. Linia pozioma podzielona na 3 segmenty (origin-left/origin-right/origin-left). Pionowa linia podzielona na 2 segmenty (nad/pod hr) z dynamicznym pomiarem symetrii. Rozpoczęto szablon light (ProgramyStypendialne): body 23px/extralight/`-webkit-text-stroke:0.3px`/`#555`, heading font-[450]/`#484d54`.
+**Branch:** main | **Faza:** szablon dark/light + kolorystyczne warianty sekcji
+**Ostatnia sesja:** 2026-02-28
+Sidebar light: font-medium heading, stroke navlinks, kolor ujednolicony #484d54. Hover na kartach programów (before pseudo-element, 1% opacity, 700ms ease-in-out). ProgramyEdukacyjneSection z propsami bgColor/accentColor/textColor — testowy wariant fioletowy na dole strony. green-test rozbudowany o intensywne nasycone kolory + background-blend-mode:multiply.
 
 ## Ostatnie zmiany
 <!-- /wrap dopisuje na gorze, max 15 wpisow, starsze kasuje -->
+
+### 2026-02-28 — Sidebar light + hover karty + warianty kolorystyczne
+- Sidebar w szablonie light: nagłówek font-medium (500), navlinks z `-webkit-text-stroke:0.3px`, kolor ujednolicony z heading (#484d54)
+- Hover na kartach programów: `before:` pseudo-element pokrywający cały kontener od content dividera do prawej krawędzi (`left:[10px]`, `right:[-200px]`), pierwsza karta `top:[-128px]` do hr
+- Decyzja: CHOSE `before:` pseudo-element na FadeIn BECAUSE hover musi pokrywać cały obszar między liniami, a wewnętrzny div ma padding (REJECTED: hover na wewnętrznym div — nie sięgał do granic linii)
+- Intensywność hover: 1% opacity (`bg-white/[0.01]`), 700ms ease-in-out
+- ProgramyEdukacyjneSection: dodano propsy `bgColor`, `accentColor`, `textColor` — umożliwiają kolorystyczne warianty sekcji
+- StickySection: dodano prop `bgColor` — custom backgroundColor dla dark variant
+- green-test: dodano 24 intensywne nasycone tła + `background-blend-mode: multiply` na teksturze szumu + sekcja porównawcza bez blend mode
+- Testowy wariant fioletowy (`#6D28D9`) z pomarańczowym akcentem (`#FF6B00`) i białym tekstem na dole strony (page.tsx)
+- FAILED: `onMouseEnter/Leave` na Link w Server Component — React error; rozwiązano usunięciem handlerów JS
 
 ### 2026-02-27 — Animowane linie (Framer Motion scaleX) + szablon light
 - Cofnięto DrawLine.tsx (revert do d97ac14) — pionowe linie wróciły do statycznych `<div>` (DrawLine powodował brak widoczności pionowej linii)
@@ -53,6 +64,7 @@ Cofnięto DrawLine (revert do d97ac14) — pionowe linie statyczne, poziome anim
 ## Decyzje
 | Data | Decyzja | Dlaczego | Odrzucone |
 |------|---------|----------|-----------|
+| 2026-02-28 | Hover karty: before: pseudo-element na FadeIn wrapper | Hover musi pokrywać cały kontener między liniami; wewnętrzny div ma padding i nie sięga do granic | Hover na wewnętrznym div (za wąski), hover na FadeIn className (nie sięga do content dividera) |
 | 2026-02-27 | Linia pozioma: 3 segmenty Framer Motion scaleX (nie DrawLine SVG) | DrawLine SVG pathLength powodował niewidoczne pionowe linie; scaleX na div jest prostsze i stabilne | DrawLine SVG pathLength (usunięto) |
 | 2026-02-27 | Light body: font-200 + `-webkit-text-stroke:0.3px` | ClearType na Windows nierówno renderuje weight 300 na jasnym tle; 200+stroke daje równy rendering z optyczną grubością | font-weight 300 (nierówne litery), font-weight 400 (za grube) |
 | 2026-02-27 | Framer Motion dla DrawLine (nie GSAP) | GSAP ScrollTrigger koliduje z Framer Motion whileInView, powoduje znikanie sidebaru | GSAP ScrollTrigger (testowano, sidebar znikał) |

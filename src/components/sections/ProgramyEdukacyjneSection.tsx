@@ -5,10 +5,30 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
 
 import { PROGRAMS, EDUCATION_SECTION_NAV } from "@/lib/constants";
 
-export function ProgramyEdukacyjneSection() {
+interface ProgramyEdukacyjneProps {
+  bgColor?: string;
+  accentColor?: string;
+  textColor?: string;
+}
+
+export function ProgramyEdukacyjneSection({ bgColor, accentColor, textColor }: ProgramyEdukacyjneProps = {}) {
+  // Kolory: domyślne (dark) lub override
+  const ac = accentColor || undefined;
+  const tx = textColor || undefined;
+
+  const accentStyle = ac ? { color: ac } : undefined;
+  const textStyle = tx ? { color: tx } : undefined;
+  const accentClass = ac ? "" : "text-fm-green";
+  const headingClass = tx ? "" : "text-fm-text";
+  const bodyClass = tx ? "" : "text-[#E8E8E8]";
+  const cardTextClass = tx ? "" : "text-[#E8E8E8]";
+  const linkClass = tx ? "" : "text-[#FFFFFFF2]";
+  const hoverClass = ac ? "" : "hover:text-fm-green";
+
   return (
     <StickySection
       id="programy-edukacyjne"
+      bgColor={bgColor}
       title="Programy Edukacyjne"
       sectionNumber="01"
       navLinks={EDUCATION_SECTION_NAV}
@@ -38,18 +58,18 @@ export function ProgramyEdukacyjneSection() {
             {/* Środkowa kolumna — sticky dopóki prawa się scrolluje */}
             <div className="lg:w-2/5">
               <div className="sticky top-32 space-y-8">
-                <h3 className="max-w-3xl text-heading text-fm-text">
+                <h3 className={`max-w-3xl text-heading ${headingClass}`} style={textStyle}>
                   Realizujemy{" "}
-                  <span className="text-fm-green">globalne i lokalne </span>
+                  <span className={accentClass} style={accentStyle}>globalne i lokalne </span>
                   programy edukacyjne, które uzupełniają braki systemu edukacyjnego
-                  <span className="text-fm-green">.</span>
+                  <span className={accentClass} style={accentStyle}>.</span>
                 </h3>
-                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                <p className={`max-w-2xl text-body ${bodyClass}`} style={textStyle}>
                   Dążymy do kształtowania odpowiedzialnego i zaangażowanego
                   społeczeństwa, które myśli krytycznie i jest gotowe na dynamicznie
                   zmieniający się świat.
                 </p>
-                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                <p className={`max-w-2xl text-body ${bodyClass}`} style={textStyle}>
                   Naszą misją jest sprawienie, aby głos dzieci był słyszalny oraz
                   wykorzystanie ich pomysłów i wizji do inspirowania liderów na całym
                   świecie.
@@ -66,7 +86,7 @@ export function ProgramyEdukacyjneSection() {
                     key={program.title}
                     direction="right"
                     delay={index * 0.15}
-                    className={`relative [&:not(:first-child)]:pt-32 ${isLast ? '' : 'pb-32'}`}
+                    className={`group relative [&:not(:first-child)]:pt-32 ${isLast ? '' : 'pb-32'} before:pointer-events-none before:absolute before:top-0 before:bottom-0 before:left-[10px] before:right-[-200px] before:transition-colors before:duration-700 before:ease-in-out hover:before:bg-white/[0.01] first:before:top-[-128px]`}
                   >
                     <div className="lg:pl-[120px] lg:pr-[80px]">
                       <Image
@@ -77,12 +97,13 @@ export function ProgramyEdukacyjneSection() {
                         className="mb-12 w-auto"
                         style={{ height: program.logoHeight ?? 70 }}
                       />
-                      <p className="mb-12 text-[18px] font-extralight leading-relaxed tracking-[0.75px] text-[#E8E8E8]">
+                      <p className={`mb-12 text-[18px] font-extralight leading-relaxed tracking-[0.75px] ${cardTextClass}`} style={textStyle}>
                         {program.description}
                       </p>
                       <Link
                         href={program.href}
-                        className="inline-block text-[11px] font-light uppercase tracking-[3px] text-[#FFFFFFF2] transition-colors hover:text-fm-green"
+                        className={`inline-block text-[11px] font-light uppercase tracking-[3px] transition-colors ${linkClass} ${hoverClass}`}
+                        style={ac ? { color: tx || '#FFFFFFF2' } : undefined}
                       >
                         Więcej
                       </Link>
@@ -103,32 +124,32 @@ export function ProgramyEdukacyjneSection() {
           {/* Sekcja "szyte na miare" — programy autorskie z fadeIn */}
           <FadeIn>
             <div className="mt-40 lg:w-2/5">
-              <h3 className="mb-6 max-w-3xl text-heading text-fm-text">
+              <h3 className={`mb-6 max-w-3xl text-heading ${headingClass}`} style={textStyle}>
                 Tworzymy również autorskie programy edukacyjne dostosowane do{" "}
-                <span className="text-fm-green">
+                <span className={accentClass} style={accentStyle}>
                   indywidualnych potrzeb i specyfiki regionu{" "}
                 </span>
-                lub branży<span className="text-fm-green">.</span>
+                lub branży<span className={accentClass} style={accentStyle}>.</span>
               </h3>
               <div className="space-y-6">
-                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                <p className={`max-w-2xl text-body ${bodyClass}`} style={textStyle}>
                   Niezależnie od tego, czy chodzi o specyfikę gospodarczą danego
                   regionu, wymagania konkretnego sektora, nasze programy są
                   projektowane tak, aby odpowiadały na{" "}
-                  <span className="text-fm-green">
+                  <span className={accentClass} style={accentStyle}>
                     wyzwania i potrzeby społeczności
                   </span>
                   , w której będą realizowane.
                 </p>
-                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                <p className={`max-w-2xl text-body ${bodyClass}`} style={textStyle}>
                   Dzięki bliskim relacjom z biznesem i organizacjami pozarządowymi
                   wypracowujemy programy, które odpowiadają{" "}
-                  <span className="text-fm-green">
+                  <span className={accentClass} style={accentStyle}>
                     na rzeczywiste potrzeby rynku pracy
                   </span>{" "}
                   i pomagają budować kompetencje przyszłości.
                 </p>
-                <p className="max-w-2xl text-body text-[#E8E8E8]">
+                <p className={`max-w-2xl text-body ${bodyClass}`} style={textStyle}>
                   Szyte na miarę programy edukacyjne{" "}
                   <em>FIRST</em> to nasze unikalne rozwiązania, które łączą globalną
                   metodologię z lokalnymi potrzebami.
