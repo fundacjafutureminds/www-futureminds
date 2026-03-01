@@ -1,12 +1,22 @@
 # Status: www-futureminds
 
 ## Aktualny stan
-**Branch:** main | **Faza:** szablon dark/light + kolorystyczne warianty sekcji
-**Ostatnia sesja:** 2026-02-28
-Sidebar light: font-medium heading, stroke navlinks, kolor ujednolicony #484d54. Hover na kartach programów (before pseudo-element, 1% opacity, 700ms ease-in-out). ProgramyEdukacyjneSection z propsami bgColor/accentColor/textColor — testowy wariant fioletowy na dole strony. green-test rozbudowany o intensywne nasycone kolory + background-blend-mode:multiply.
+**Branch:** main | **Faza:** migracja FM→GSAP zakończona, debug linii StickySection
+**Ostatnia sesja:** 2026-03-01
+Migracja Framer Motion → GSAP w 100% zakończona. Zero importów FM w src/, zależność usunięta z package.json. Linie StickySection: div + GSAP scaleX/scaleY (SVG + DrawSVGPlugin odrzucone). Poprawka: CSS opacity-0 + gsap.set/to zamiast inline transform (konflikt React re-render). Strona `/v2` (blend futureminds + invento v3 card layout) jako proof of concept.
 
 ## Ostatnie zmiany
 <!-- /wrap dopisuje na gorze, max 15 wpisow, starsze kasuje -->
+
+### 2026-03-01 — Migracja Framer Motion → GSAP + strona /v2
+- Pełna migracja FM→GSAP: 3 nowe pliki (`gsap-init.ts`, `GsapFadeIn.tsx`, `GsapStagger.tsx`), 4 zmodyfikowane (`FadeIn.tsx` re-export, `StickySection.tsx`, `Navbar.tsx`, `TextReveal.tsx`), 3 usunięte (`HandwriteTitle.tsx`, `TypewriterText.tsx`, `ScrollLine.tsx`), `framer-motion` usunięty z package.json
+- Decyzja: CHOSE div + GSAP scaleX/scaleY dla linii StickySection BECAUSE SVG `<line>` z percentage values (y2="100%") nie działa — SVG bez jawnych atrybutów width/height ma domyślny viewport 300x150 (REJECTED SVG + DrawSVGPlugin)
+- Decyzja: CHOSE CSS opacity-0 + gsap.set({ opacity:1, scaleX:0 }) + gsap.to({ scaleX:1 }) BECAUSE React inline `transform` koliduje z GSAP — setUpperLineTop triggeruje re-render i React nadpisuje GSAP-owe transformy (REJECTED inline transform: "scaleX(0)")
+- GSAP matchMedia("(min-width: 1024px)") — ScrollTrigger tylko na desktop, mobile statyczne linie
+- FAILED: SVG `<line>` + DrawSVGPlugin — SVG viewport 300x150 default, linie niewidoczne/ucięte
+- FAILED: React inline `transform: "scaleX(0)"` + GSAP fromTo — React re-render (z setUpperLineTop) resetuje GSAP transforms
+- Strona `/v2` — blend dark editorial futureminds + card-based invento v3 (rounded-2xl cards, pill buttons, grid layout, glassmorphism, fixed nav z backdrop-blur)
+- **WYMAGA TESTÓW MANUALNYCH** — linie StickySection po fix opacity-0 + gsap.set/to
 
 ### 2026-02-28 — Sidebar light + hover karty + warianty kolorystyczne
 - Sidebar w szablonie light: nagłówek font-medium (500), navlinks z `-webkit-text-stroke:0.3px`, kolor ujednolicony z heading (#484d54)
@@ -64,6 +74,9 @@ Sidebar light: font-medium heading, stroke navlinks, kolor ujednolicony #484d54.
 ## Decyzje
 | Data | Decyzja | Dlaczego | Odrzucone |
 |------|---------|----------|-----------|
+| 2026-03-01 | Migracja FM→GSAP: 100% GSAP, zero FM | Jeden system animacji eliminuje konflikty ScrollTrigger vs whileInView; GSAP obsługuje scroll restoration natywnie | Framer Motion (usunięty) |
+| 2026-03-01 | Linie StickySection: div + GSAP scaleX/scaleY | SVG <line> viewport problem (domyślny 300x150); div zachowuje identyczny layout z oryginałem | SVG + DrawSVGPlugin (viewport sizing) |
+| 2026-03-01 | React+GSAP: CSS opacity-0 + gsap.set/to (nie inline transform) | React re-render nadpisuje inline transform; CSS klasa + GSAP inline eliminuje konflikt | Inline transform: "scaleX(0)" (React override) |
 | 2026-02-28 | Hover karty: before: pseudo-element na FadeIn wrapper | Hover musi pokrywać cały kontener między liniami; wewnętrzny div ma padding i nie sięga do granic | Hover na wewnętrznym div (za wąski), hover na FadeIn className (nie sięga do content dividera) |
 | 2026-02-27 | Linia pozioma: 3 segmenty Framer Motion scaleX (nie DrawLine SVG) | DrawLine SVG pathLength powodował niewidoczne pionowe linie; scaleX na div jest prostsze i stabilne | DrawLine SVG pathLength (usunięto) |
 | 2026-02-27 | Light body: font-200 + `-webkit-text-stroke:0.3px` | ClearType na Windows nierówno renderuje weight 300 na jasnym tle; 200+stroke daje równy rendering z optyczną grubością | font-weight 300 (nierówne litery), font-weight 400 (za grube) |
@@ -80,6 +93,8 @@ Sidebar light: font-medium heading, stroke navlinks, kolor ujednolicony #484d54.
 - **GSAP ScrollTrigger + Framer Motion whileInView**: Koegzystencja powoduje że FadeIn (whileInView) nie triggeruje się — sidebar znika. Rozwiązanie: DrawLine na Framer Motion.
 - **Framer Motion whileInView + scroll restoration**: Po refresh w środku strony, whileInView nie wykrywa elementów już widocznych w viewport. Fix: ręczny getBoundingClientRect check w useEffect.
 - **Double RAF nie łapie scroll restoration**: `requestAnimationFrame` × 2 nie wystarczał — browser może restore'ować scroll PÓŹNIEJ. Fix: `setTimeout(150ms)` jako fallback.
+- **SVG `<line>` z percentage values**: SVG bez jawnych `width`/`height` atrybutów ma domyślny viewport 300×150. `y2="100%"` odnosi się do tego viewportu, nie do CSS dimensions. Linie ucięte/niewidoczne.
+- **React inline transform + GSAP**: `style={{ transform: "scaleX(0)" }}` w React koliduje z GSAP — `setUpperLineTop` triggeruje re-render, React nadpisuje GSAP transforms. Fix: CSS `opacity-0` klasa + `gsap.set/to`.
 
 ## Uwagi kontekstowe
 - Instancja odpowiedzialna: `strona` (web dev)

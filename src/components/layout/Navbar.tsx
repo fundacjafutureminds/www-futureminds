@@ -2,18 +2,45 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { gsap, useGSAP } from "@/lib/gsap-init";
 import { NAV_ITEMS } from "@/lib/constants";
 
 export function Navbar() {
+  const navRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (!navRef.current) return;
+
+      // Logo — fade in from top
+      const logo = navRef.current.querySelector(".nav-logo");
+      if (logo) {
+        gsap.from(logo, { opacity: 0, y: -20, duration: 0.6 });
+      }
+
+      // Nav links — stagger fade in from left
+      const links = navRef.current.querySelectorAll(".nav-link");
+      if (links.length) {
+        gsap.from(links, {
+          opacity: 0,
+          x: -20,
+          duration: 0.5,
+          stagger: 0.1,
+          delay: 0.1,
+        });
+      }
+    },
+    { scope: navRef }
+  );
+
   return (
-    <nav className="sticky top-0 z-30 hidden h-fit w-[350px] shrink-0 self-start lg:flex lg:flex-col">
+    <nav
+      ref={navRef}
+      className="sticky top-0 z-30 hidden h-fit w-[350px] shrink-0 self-start lg:flex lg:flex-col"
+    >
       {/* Logo z animacja fadeInDown */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <div className="nav-logo">
         {/* Spacer gorny (zgodnie z Elementor) */}
         <div className="h-[95px]" />
         <Link href="/" className="ml-10 block">
@@ -25,19 +52,16 @@ export function Navbar() {
             className="h-auto w-[180px]"
           />
         </Link>
-      </motion.div>
+      </div>
 
       {/* Spacer miedzy logo a linkami */}
       <div className="h-[95px]" />
 
       {/* Linki nawigacyjne z animacja fadeInLeft i stagger delay */}
-      {NAV_ITEMS.map((item, index) => (
-        <motion.div
+      {NAV_ITEMS.map((item) => (
+        <div
           key={item.label}
-          className="ml-5 mt-[2px] mb-[-3px] flex items-center"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 * (index + 1), duration: 0.5 }}
+          className="nav-link ml-5 mt-[2px] mb-[-3px] flex items-center"
         >
           {/* Trojkat desaturowany (szary, nie zielony) */}
           <Image
@@ -54,7 +78,7 @@ export function Navbar() {
           >
             {item.label}
           </Link>
-        </motion.div>
+        </div>
       ))}
 
       {/* Spacer przed dekoracyjnym trojkatem */}

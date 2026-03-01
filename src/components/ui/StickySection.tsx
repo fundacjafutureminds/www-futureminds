@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { gsap, useGSAP } from "@/lib/gsap-init";
 import type { StickyNavLink } from "@/lib/types";
 import { FadeIn } from "@/components/ui/FadeIn";
 
@@ -34,6 +34,7 @@ export function StickySection({
   children,
 }: StickySectionProps) {
   const isDark = variant === "dark";
+  const sectionRef = useRef<HTMLElement>(null);
   const headerWrapperRef = useRef<HTMLDivElement>(null);
   const hrRef = useRef<HTMLDivElement>(null);
   const [upperLineTop, setUpperLineTop] = useState(-100);
@@ -61,8 +62,110 @@ export function StickySection({
     return () => window.removeEventListener("resize", measure);
   }, [header]);
 
+  // GSAP line animations — desktop only, div scaleX/scaleY
+  // Strategy: CSS opacity-0 hides lines on render. GSAP.set() makes them
+  // visible at scale 0 (useLayoutEffect timing = before paint). Then
+  // gsap.to() with ScrollTrigger animates scale to 1. React never manages
+  // the transform property, so re-renders can't interfere.
+  useGSAP(
+    () => {
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 1024px)", () => {
+        // Upper vertical line — scales from top
+        const upperLine = section.querySelector(".line-upper");
+        if (upperLine) {
+          gsap.set(upperLine, { opacity: 1, scaleY: 0 });
+          gsap.to(upperLine, {
+            scaleY: 1,
+            duration: 1.0,
+            ease: "power2.inOut",
+            scrollTrigger: {
+              trigger: upperLine,
+              start: "top 90%",
+              once: true,
+            },
+          });
+        }
+
+        // Horizontal segments — triggered by HR container
+        const hrContainer = section.querySelector(".hr-container");
+        if (hrContainer) {
+          const hr1 = section.querySelector(".line-hr1");
+          const hr2 = section.querySelector(".line-hr2");
+          const hr3 = section.querySelector(".line-hr3");
+
+          const lines = [hr1, hr2, hr3].filter(Boolean);
+          gsap.set(lines, { opacity: 1, scaleX: 0 });
+
+          if (hr1) {
+            gsap.to(hr1, {
+              scaleX: 1,
+              duration: 0.8,
+              ease: "power2.inOut",
+              scrollTrigger: {
+                trigger: hrContainer,
+                start: "top 80%",
+                once: true,
+              },
+            });
+          }
+
+          if (hr2) {
+            gsap.to(hr2, {
+              scaleX: 1,
+              duration: 1.0,
+              delay: 0.2,
+              ease: "power2.inOut",
+              scrollTrigger: {
+                trigger: hrContainer,
+                start: "top 80%",
+                once: true,
+              },
+            });
+          }
+
+          if (hr3) {
+            gsap.to(hr3, {
+              scaleX: 1,
+              duration: 0.8,
+              delay: 0.2,
+              ease: "power2.inOut",
+              scrollTrigger: {
+                trigger: hrContainer,
+                start: "top 80%",
+                once: true,
+              },
+            });
+          }
+        }
+
+        // Lower vertical line — scales from top
+        const lowerLine = section.querySelector(".line-lower");
+        if (lowerLine) {
+          gsap.set(lowerLine, { opacity: 1, scaleY: 0 });
+          gsap.to(lowerLine, {
+            scaleY: 1,
+            duration: 1.5,
+            delay: 0.3,
+            ease: "power2.inOut",
+            scrollTrigger: {
+              trigger: lowerLine,
+              start: "top 95%",
+              once: true,
+            },
+          });
+        }
+      });
+    },
+    { scope: sectionRef }
+  );
+
   return (
     <section
+      ref={sectionRef}
       id={id}
       className={`relative pt-96 ${isDark ? "text-fm-text" : "text-fm-dark"}`}
       style={
@@ -83,52 +186,36 @@ export function StickySection({
         <>
           {/* Header content area with upper vertical line segment */}
           <div ref={headerWrapperRef} className="relative flex flex-col">
-            <motion.div
-              className={`pointer-events-none absolute bottom-[-65px] left-[300px] hidden w-px origin-top lg:block ${isDark ? "bg-white/8" : "bg-black/12"}`}
+            <div
+              className={`line-upper pointer-events-none absolute bottom-[-65px] left-[300px] hidden w-px origin-top opacity-0 lg:block ${isDark ? "bg-white/8" : "bg-black/12"}`}
               style={{ top: upperLineTop }}
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 1.0, ease: "easeInOut" }}
             />
             <div className="px-6 lg:ml-[350px] lg:px-12">
               {header}
             </div>
           </div>
           {/* Horizontal line — 3 segments, each grows outward from vertical lines */}
-          <div ref={hrRef} className="relative my-16 hidden h-px w-full lg:block">
+          <div ref={hrRef} className="hr-container relative my-16 hidden h-px w-full lg:block">
             {/* Segment 1: left edge → sidebar line — grows left to right */}
-            <motion.div
-              className={`absolute top-0 left-0 h-px origin-left ${isDark ? "bg-white/15" : "bg-black/15"}`}
+            <div
+              className={`line-hr1 absolute top-0 left-0 h-px origin-left opacity-0 ${isDark ? "bg-white/15" : "bg-black/15"}`}
               style={{ width: "300px" }}
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
             />
             {/* Segment 2: sidebar line → contentDivider or right edge — grows right to left */}
-            <motion.div
-              className={`absolute top-0 h-px origin-right ${isDark ? "bg-white/15" : "bg-black/15"}`}
+            <div
+              className={`line-hr2 absolute top-0 h-px origin-right opacity-0 ${isDark ? "bg-white/15" : "bg-black/15"}`}
               style={{
                 left: "300px",
                 width: contentDividerLeft
                   ? `calc(${contentDividerLeft} - 300px)`
                   : "calc(100% - 300px)",
               }}
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1.0, delay: 0.2, ease: "easeInOut" }}
             />
             {/* Segment 3: contentDivider → right edge — grows left to right */}
             {contentDividerLeft && (
-              <motion.div
-                className={`absolute top-0 right-0 h-px origin-left ${isDark ? "bg-white/15" : "bg-black/15"}`}
+              <div
+                className={`line-hr3 absolute top-0 right-0 h-px origin-left opacity-0 ${isDark ? "bg-white/15" : "bg-black/15"}`}
                 style={{ left: contentDividerLeft }}
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
               />
             )}
           </div>
@@ -139,12 +226,8 @@ export function StickySection({
 
       <div className="relative flex">
         {/* Lower vertical sidebar line — from hr to near bottom */}
-        <motion.div
-          className={`pointer-events-none absolute top-[-65px] bottom-20 left-[300px] hidden w-px origin-top lg:block ${isDark ? "bg-white/8" : "bg-black/12"}`}
-          initial={{ scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true, amount: 0.01 }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }}
+        <div
+          className={`line-lower pointer-events-none absolute top-[-65px] bottom-20 left-[300px] hidden w-px origin-top opacity-0 lg:block ${isDark ? "bg-white/8" : "bg-black/12"}`}
         />
         {/* Content divider — starts at hr level (top of flex), ends at bottom-20 */}
         {contentDividerLeft && (

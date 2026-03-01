@@ -1,12 +1,8 @@
 "use client";
 
 import { useRef, useMemo, useCallback } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { gsap, useGSAP } from "@/lib/gsap-init";
 import pathData from "./handwrite-paths.json";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 interface CharData {
   paths: string[];
